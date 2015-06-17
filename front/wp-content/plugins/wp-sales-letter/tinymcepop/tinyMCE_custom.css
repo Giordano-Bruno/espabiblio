@@ -1,0 +1,93 @@
+#sample_text_box{
+	position:relative;
+	display:none;
+	padding:20px;
+	margin-bottom: 30px;
+	width:600px;
+	background-color:#fff;
+	border: 3px solid #ccc;
+	z-index:10000;
+	/* CSS3 styling for latest browsers */
+	-moz-box-shadow:0 0 20px 5px #808080;
+	-webkit-box-shadow: 0 0 20px #808080;
+	border-radius:6px 6px; 
+	-moz-border-radius: 6px; 
+}
+#sample_text_box .close {
+	background-image:url('close.png');
+	position:absolute;
+	right:-15px;
+	top:-15px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
+}
+#category_sample_label{
+	margin: 5px 5px;
+}
+#category_sample{
+	margin: 5px 5px;
+	padding:0!important
+}
+.category_sample_text{
+	display:block;
+	padding: 10px 15px 5px 15px;
+	margin: 10px 5px 15px 5px;
+	height:150px;
+	overflow-y: scroll;
+	border: 1px solid #e5e5e5;
+	border-top-color: #f2f2f2;
+	border-bottom-color: #ccc;
+	background-color:#FAFAFA;
+}
+
+.category_sample_text h1 {
+	line-height: 150%;}
+	
+.category_sample_text span{
+	display:block;
+	padding: 10px;
+	margin-bottom:5px;
+	border: 1px solid #e5e5e5;
+	border-top-color: #ededed;
+	border-bottom-color: #ccc;
+	background-color:#f2f2f2;
+	font-size:11px;
+	line-height:17px;
+	cursor:pointer;
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none; 
+}
+.category_sample_text span:hover{
+	background-color:#fff;
+}
+#preview_tinyMCE{
+	margin: 10px 5px 25px 5px;
+	border-top-color: #ededed;
+	border-bottom-color: #ccc;
+	background-color:#f2f2f2;
+}
+.add-tinyMCE-text{
+	position:absolute;
+	right:20px; 
+	bottom:9px 
+}
+.cancel-tinyMCE-text{
+	position:absolute;
+	left:20px; 
+	bottom:9px 
+}
+
+/* the overlayed element */
+.simple_overlay {
+	
+	/* must be initially hidden */
+	display:none;
+	
+	/* place overlay on top of other elements */
+	
+}
+
+/* close button positioned on upper right corner */

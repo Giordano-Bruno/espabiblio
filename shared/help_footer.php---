@@ -1,0 +1,25 @@
+<!-- **************************************************************************************
+     * Footer, Modificado 02/2015 JALG para usar footer general.
+     **************************************************************************************-->
+<!-- **********************************
+<br><br><br>
+</font>
+<font face="Arial, Helvetica, sans-serif" size="1" color="<?php echo H(OBIB_PRIMARY_FONT_COLOR);?>">
+<center>
+  <br><br>
+  Powered by OpenBiblio<br>
+  Copyright &copy; 2002 Dave Stevens<br>
+  under the
+  <a href="../doc/copying.html">GNU General Public License</a>
+</center>
+<br>
+</font>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+***-->
+
+
+<?php require_once("../shared/footer.php"); ?>

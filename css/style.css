@@ -1,0 +1,138 @@
+/*********************************************************
+ *  Body Style
+ *********************************************************/
+body {
+  background-color: #ffffff;
+  font-family: sans-serif;
+  font-size: 13px;
+}
+
+/*********************************************************
+ *  Font Styles
+ *********************************************************/
+font.primary {
+  color: #000000;
+  font-size: 13px;
+  font-family: verdana,arial,helvetica;
+}
+font.error {
+  color: #aa0000;
+  font-size: 13px;
+  font-family: verdana,arial,helvetica;
+  font-weight: bold;
+}
+h1 {
+  font-size: 5px;
+  font-family: verdana,arial,helvetica;
+  font-weight: normal;
+}
+
+/*********************************************************
+ *  Link Styles
+ *********************************************************/
+a:link {
+  color: #0000aa;
+}
+a:visited {
+  color: #0000aa;
+}
+
+/* ---------------------- Form ---------------------- */
+
+a.library-name:link,
+a.library-name:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#errorMsg {
+  background: #ffcccc;
+  margin: 10px 0;
+  padding: 3px;
+}
+
+a.add_field {
+	text-decoration: none;
+}
+
+a.add_field:hover {
+	font-weight: bold;
+}
+
+table td.label {
+	width: 150px;
+}
+
+table.table_advanced_search_1 {
+	margin-bottom: 20px;
+}
+
+fieldset {
+	border: 1px solid #666;
+}
+
+fieldset legend {
+	font-size: 130%;
+}
+
+fieldset, fieldset.collapsible {
+	padding: 15px 10px;
+	border: 1px solid #DDD;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+fieldset.collapsed {
+	border-bottom-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	margin-bottom: 0;
+	margin-left: 3px;
+}
+
+legend.collapsible {
+	color: #2C93EF;
+	cursor: pointer;
+}
+
+/* --------------------- Navigations ---------------------- */
+
+td.nav a {
+	text-decoration: none;
+}
+
+td.nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+td.nav li {
+	list-style-type: none;
+	margin: 3px 0;
+	padding: 5px 0 5px 5px;
+	background-color: #999;
+}
+
+td.nav li:hover,
+td.nav li.active li:hover {
+	background-color: #fff;
+}
+
+td.nav li.active {
+	background-color: #fff;
+}
+
+td.nav li.active li {
+	background-color: #ccc;
+}
+
+.center {
+	text-align: center;
+}
+
+.box {
+    margin: 20px 0;
+}

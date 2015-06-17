@@ -1,0 +1,54 @@
+/*
+IE-specific styles
+*/
+#header-wrap,
+#header-wrap > * {
+	z-index: 0:
+}
+#header h1,
+#header h2 {
+	margin-top: 56px;
+}
+#menu, #menu > * {
+	z-index: 99999;
+}
+#menu {
+	position: relative;
+}
+#menu ul ul {
+	border-right: 1px solid rgb(100, 100, 100);
+	border-left: 1px solid rgb(100, 100, 100);
+}
+#menu ul ul li {
+	border-bottom: 1px solid rgb(100, 100, 100);
+}
+.hr {
+	margin-top: 0;
+}
+.required {
+	vertical-align: text-top;
+}
+#sidebar-2 #searchform div {
+	margin-left: -12px;
+}
+.sidebar #searchform div #searchsubmit {
+	position: relative;
+	top: 3px;
+	left: 12px;
+}
+.sidebar #searchform div #s {
+	margin-left: 25px;
+}
+.content-sidebar-sidebar .sidebar #searchform div #s {
+	width: 119px;
+}
+.credit {
+	line-height: 125%;
+}
+#footer-wrap-outer {
+	margin-top: 0;
+}
+#footer {
+	height: auto !important;
+	height: 30px;
+}

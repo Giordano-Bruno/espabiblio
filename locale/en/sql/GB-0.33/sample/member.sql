@@ -1,0 +1,1 @@
+insert into %prfx%member values (null, '1001', sysdate(), sysdate(), 1, 'Lara', 'José', 'Calle Norte', '22-2222', '55-5555555', '044-55-888888888', 'joanlaga@hotmail.com', 'joanlaga.png', md5('admin'), '1966-20-04', 'campo para observaciones o lo que se requiera', 1, 'Y', sysdate());

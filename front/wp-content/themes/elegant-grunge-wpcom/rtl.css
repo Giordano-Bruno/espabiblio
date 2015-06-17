@@ -1,0 +1,293 @@
+/*
+RTL styles
+*/
+
+/* =Basics
+-------------------------------------------------------------- */
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+	font-family: Arial, Tahoma, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Times New Roman", Times, serif;
+}
+
+
+/* =CSS Images
+-------------------------------------------------------------- */
+#header {
+	background: url(images/rtl-header.png) no-repeat center;
+}
+.no-sidebar div #header {
+	background-image: url(images/rtl-header-no-sidebar.png);
+}
+.content-sidebar-sidebar div #header {
+	background-image: url(images/rtl-header-double-sidebar.png);
+}
+.sidebar-content #header {
+	background-image: url(images/header.png);
+}
+#content-container {
+	background: url(images/rtl-body.png) repeat-y center top;
+}
+.no-sidebar #content-container {
+	background-image: url(images/rtl-body-no-sidebar.png);
+}
+.content-sidebar-sidebar #content-container {
+	background-image: url(images/rtl-body-double-sidebar.png);
+}
+.sidebar-content #content-container {
+	background-image: url(images/body.png);
+}
+#footer-wrap {
+	background: url(images/rtl-footer.png) no-repeat center top;
+}
+.no-sidebar #footer-wrap {
+	background-image: url(images/rtl-footer-no-sidebar.png);
+}
+.content-sidebar-sidebar #footer-wrap {
+	background-image: url(images/rtl-footer-double-sidebar.png);
+}
+.sidebar-content #footer-wrap {
+	background-image: url(images/footer.png);
+}
+
+
+/* =Layout
+-------------------------------------------------------------- */
+#content-body {
+	float: right;
+	width: 490px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#header h1,
+#header h2 {
+	font: 2.2em / 169px "Times New Roman", Times, serif;
+	margin: 0 0.5em 0 0;
+	float: right;
+}
+#blog-description {
+	left: 0;
+	right: 1.3em;
+	font-family: "Times New Roman", Times, serif;
+	margin: 0 0 0 30px;
+}
+#menu .menu-header li,
+div.menu li {
+	float: right;
+}
+#menu a {
+	padding-left: 40px;
+	padding-right: 0;
+	font-family: "Times New Roman", Times, serif;
+}
+#menu ul ul {
+	left: auto;
+	right: 0;
+	float: right;
+	padding-right: 0
+}
+#menu ul ul ul {
+	left: auto;
+	right: 100%;
+}
+#sidebar {
+	float: left;
+	font-size: 0.9em;
+	width: 220px;
+	position: relative;
+	left: 0;
+	right: 0;
+}
+.content-sidebar-sidebar #sidebar {
+	font-size: 0.8em;
+	float: right;
+	position: relative;
+	right: 28px;
+	width: 181px;
+}
+.content-sidebar-sidebar #sidebar-2 {
+	font-size: 0.8em;
+	float: left;
+	position: relative;
+	right: -8px;
+	width: 169px;
+}
+.post .post-author {
+	position: relative;
+	right: 0;
+	width: 100%;
+	text-align: right;
+}
+.post .post-date {
+	float: left;
+	font-family: "Times New Roman", Times, serif;
+}
+.post .post-date a,
+.post .post-date span {
+	margin: 4px 4px 0 0;
+}
+.wp-post-image {
+	float: left;
+	margin: 0 0 0 10px;
+}
+.more-link {
+	background: url(images/rtl-more-link.png) right 50% no-repeat;
+	margin-right: 20px;
+	padding-right: 30px;
+}
+.gallery {
+	position: relative;
+	left: 0;
+	right: 10px;
+}
+*:first-child + html .gallery-item {/*target IE7*/
+	float: right !important;
+}
+.gallery-item .frame-outer img {/*target IE8*/
+	position: relative;
+	left: 3px;
+}
+*:first-child + html .gallery-item .frame-outer img {/*target IE7*/
+	position: relative;
+	left: 0;
+}
+.gallery-item .frame-outer img:last-child {/*target modern css3 browsers*/
+	position: relative;
+	left: 0;
+}
+.gallery-caption {
+	margin-right: 0;
+}
+#wp-calendar th {
+	text-align: right !important;
+}
+#footer #subscribe-rss {
+	margin: -68px -100px 0 0;
+	right: 0;
+}
+#footer .widget > ul,
+#footer .widget > ol,
+#footer .widget div > ul,
+#footer .widget div > ol {
+	list-style: none;
+	padding-left: 0;
+	padding-right: 0;
+}
+#footer ul,
+#footer ol {
+	list-style: none;
+	padding-left: 0;
+	padding-right: 15px;
+}
+#footer .credit {
+	float: left;
+}
+.navigation .next {
+	float: right;
+}
+.navigation .previous {
+	float: left;
+}
+
+
+/* =Sidebar-Search
+-------------------------------------------------------------- */
+.sidebar #searchform div {
+	background-image: url(images/rtl-searchform.jpg);
+	margin-right: -29px;
+}
+#footer #searchform div {
+	background: url(images/rtl-searchform-footer.png) left top no-repeat;
+}
+#sidebar-2 #searchform div {
+	margin-right: 0;
+	position: relative;
+	left: 10px;
+}
+.sidebar #searchform div #s,
+#footer #searchform div #s {
+	margin-left: 0;
+	margin-right: 19px;
+}
+.sidebar #searchform div #searchsubmit {
+	margin-left: 0;
+	margin-right: 4px;
+}
+#footer #searchform div #searchsubmit {
+	margin-left: 0;
+	margin-right: 8px;
+}
+.content-sidebar-sidebar .sidebar #searchform div {
+	background-image: url(images/rtl-searchform-double-sidebar.jpg);
+	margin-left: 0;
+	margin-right: -3px;
+}
+.content-sidebar-sidebar .sidebar #searchform div #s {
+	margin-right: 19px;
+	margin-left: 0;
+}
+
+
+/* =Comments
+-------------------------------------------------------------- */
+.avatar {
+	float: right;
+	margin: 0 0 0 10px !important;
+}
+#commentlist li .comment-content,
+#commentlist li .before-comment,
+#commentlist li .after-comment,
+#commentlist li .after-comment div {
+	background: transparent url(images/rtl-comment.jpg) no-repeat top left;
+}
+#commentlist li.bypostauthor .comment-content,
+#commentlist li.bypostauthor .before-comment,
+#commentlist li.bypostauthor .after-comment,
+#commentlist li.bypostauthor .after-comment div {
+	background-image: url(images/rtl-comment-author.jpg);
+	color: #000;
+}
+#commentlist {
+	margin-left: 0px;
+	margin-right: 40px;
+}
+#commentlist li {
+	margin-left: 0;
+	margin-right: 30px;
+}
+#commentlist li .before-comment {
+	margin-right: -27px;
+	background-position: top right;
+	right: 0px;
+}
+#commentlist li .after-comment {
+	background-position: bottom left;
+}
+#commentlist li .after-comment div {
+	margin-right: -27px;
+	background-position: bottom right;
+}
+.comment-text {
+	margin-left: 42px;
+	margin-right: 10px;
+}
+.trackback .comment-text,
+.pingback .comment-text {
+	margin-left: 42px;
+	margin-right: 0;
+}
+#commentlist .comment .reply {
+	text-align: left;
+	left: 25px;
+}
+#commentform input[type="text"] {
+	float: left;
+}

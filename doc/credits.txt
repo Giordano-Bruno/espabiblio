@@ -1,0 +1,37 @@
+  <li>
+	<p>&nbsp;</p>
+<p>año 2011</p>
+<p>Traducción al español de esta versión José Antonio Lara Galindo 
+joanlaga@hotmail.com</p>
+Traducciones menores:
+Ajuste para instalacion en español.
+Correcion de las ayudas y traducion de gran parte de ellas.
+
+<p>año 2005</p>
+<p>Traducción de la versión 6.0 de openbiblio&nbsp; y adecuación para Latino 
+América, Jorge Lara C. ( espabiblio Ver. 2.0 ). ---</p>
+<p>&nbsp;</p>
+
+Ó©ïÓ©¡Ó©ƒÓ©òÓ╣îÓ╣üÓ©ºÓ©úÓ╣îÓ©ÖÓ©ÁÓ╣ëÓ©×Ó©▒Ó©ÆÓ©ÖÓ©▓Ó©òÓ╣êÓ©¡Ó©êÓ©▓Ó©üÓ╣éÓ©øÓ©úÓ╣üÓ©üÓ©úÓ©í OpenBiblio version 0.6.1 database version 0.6.0 Ó╣éÓ©öÓ©ó Dave Stevens┬á (Ó©¬Ó©çÓ©ºÓ©ÖÓ©ÑÓ©┤Ó©éÓ©¬Ó©┤Ó©ùÓ©ÿÓ©┤Ó╣î ┬® 2002-2005 ) Ó©ïÓ©ÂÓ╣êÓ©çÓ©¡Ó©óÓ©╣Ó╣êÓ©áÓ©▓Ó©óÓ╣âÓ©òÓ╣ëÓ©ÑÓ©┤Ó©éÓ©¬Ó©┤Ó©ùÓ©ÿÓ©┤Ó╣î GNU General Public License┬á
+
+Ó©ùÓ©ÁÓ©íÓ©×Ó©▒Ó©ÆÓ©ÖÓ©▓Ó©øÓ©úÓ©░Ó©üÓ©¡Ó©ÜÓ©öÓ╣ëÓ©ºÓ©ó:
+
+* Ó©üÓ©▓Ó©úÓ©×Ó©▒Ó©ÆÓ©ÖÓ©▓Ó╣éÓ©øÓ©úÓ╣üÓ©üÓ©úÓ©íÓ╣ÇÓ©×Ó©┤Ó╣êÓ©íÓ╣ÇÓ©òÓ©┤Ó©í Ó╣éÓ©öÓ©ó Ó╣éÓ©¡Ó╣ÇÓ©×Ó╣êÓ©ÖÓ©öÓ©úÓ©ÁÓ©í (http://opendream.co.th)
+* Ó©üÓ©▓Ó©úÓ©×Ó©▒Ó©ÆÓ©ÖÓ©▓Ó©áÓ©▓Ó©®Ó©▓Ó╣äÓ©ùÓ©ó Ó╣éÓ©öÓ©ó Ó©äÓ©©Ó©ôÓ©øÓ©úÓ©░Ó©¬Ó©┤Ó©ùÓ©ÿÓ©┤Ó╣îÓ©èÓ©▒Ó©ó Ó╣ÇÓ©ÑÓ©┤Ó©¿Ó©úÓ©▒Ó©òÓ©ÖÓ╣ÇÓ©äÓ©½Ó©üÓ©▓Ó©Ñ
+* Ó©üÓ©▓Ó©úÓ©üÓ©│Ó©½Ó©ÖÓ©öÓ©äÓ©ºÓ©▓Ó©íÓ©òÓ╣ëÓ©¡Ó©çÓ©üÓ©▓Ó©úÓ©éÓ©¡Ó©çÓ╣éÓ©øÓ©úÓ╣üÓ©üÓ©úÓ©íÓ╣üÓ©ÑÓ©░Ó╣üÓ©ÖÓ©░Ó©ÖÓ©│Ó©üÓ©▓Ó©úÓ╣âÓ©èÓ╣ëÓ©çÓ©▓Ó©Ö Ó╣éÓ©öÓ©ó Ó©ØÓ╣êÓ©▓Ó©óÓ©ÜÓ©úÓ©┤Ó©üÓ©▓Ó©úÓ©äÓ©ºÓ©▓Ó©íÓ©úÓ©╣Ó╣ëÓ©ùÓ©▓Ó©çÓ©ºÓ©┤Ó©ùÓ©óÓ©▓Ó©¿Ó©▓Ó©¬Ó©òÓ©úÓ╣îÓ╣üÓ©ÑÓ©░Ó╣ÇÓ©ùÓ©äÓ╣éÓ©ÖÓ╣éÓ©ÑÓ©óÓ©ÁÓ╣üÓ©½Ó╣êÓ©çÓ©èÓ©▓Ó©òÓ©┤ (STKS) Ó©¬Ó©│Ó©ÖÓ©▒Ó©üÓ©çÓ©▓Ó©ÖÓ©×Ó©▒Ó©ÆÓ©ÖÓ©▓Ó©ºÓ©┤Ó©ùÓ©óÓ©▓Ó©¿Ó©▓Ó©¬Ó©òÓ©úÓ╣îÓ╣üÓ©ÑÓ©░Ó╣ÇÓ©ùÓ©äÓ╣éÓ©ÖÓ╣éÓ©ÑÓ©óÓ©ÁÓ╣üÓ©½Ó╣êÓ©çÓ©èÓ©▓Ó©òÓ©┤ (Ó©¬Ó©ºÓ©ùÓ©è.)┬á
+
+Fonts: 
+* Free 3 of 9 Fonts by Matthew Welch (1997)
+
+Frameworks:
+* CloudFusion - http://getcloudfusion.com
+* License: Simplified BSD License - http://opensource.org/licenses/bsd-license.php
+
+OpenURL features:
+* function from Zotero > OpenURL COinS support
+* http://www.zotero.org/support/dev/making_coins
+
+funciones de traduccion en back-end de Dotproyect
+* Processes the entries in the translation form.
+* @version $Revision: 6149 $
+* @author Andrew Eddie <users.sourceforge.net>

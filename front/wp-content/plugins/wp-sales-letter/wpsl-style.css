@@ -1,0 +1,251 @@
+/*
+Plugin Name: WP Sales Letter
+Plugin URI: http://WPSalesLetter.com
+Description: Sales Letter Plugin
+Version: 1.1.8
+	Copyright: (c) 2011 Armand Morin Network.
+	License: GNU/GPL Version 2 or later. http://www.gnu.org/licenses/gpl.html
+*/
+/***************************************************************************************/
+/* 			PAGE PROPERTIES			*/
+/***************************************************************************************/
+#wpsl {font-size: 15px; font-family: Arial; line-height: 150%; }
+strong {font-weight: bold;}
+#wpsl p, #wpsl .feature {font-family: Arial; font-size: 15px; color: black; line-height: 150%;}
+#wpsl {margin: 0px auto 0px auto; width: 96%;}
+#namedate {margin: 0px 0px 25px 0px; line-height: 150%;}
+#wpsl ul { list-style: square inside; margin: 0 0 20px 1.5em; }
+#wpsl ul li { margin-left: 20px;}
+#wpsl ol { list-style: decimal inside; margin: 0 0 22px 1.5em; }
+#wpsl p {margin-bottom: 18px;}
+/***************************************************************************************/
+/* 			HEADERS			*/
+/***************************************************************************************/
+#wpsl h1 { text-align: center; font-weight: bold !important; font-size: 28px; font-family: Arial; letter-spacing: -1pt; margin: 0px auto 20px auto; width: 95%; line-height: 120%;}
+#wpsl h2,h3,h4,h5,h6 { margin-bottom: 18px;}
+/***************************************************************************************/
+/* 			FEATURES			*/
+/***************************************************************************************/
+#wpsl .bullet2 .feature, #wpsl .bullet3 .feature, #wpsl .bullet4 .feature, #wpsl .bullet5 .feature {margin-bottom: 10px; font-weight: bold !important;}
+#wpsl .bullet2 { margin-left: 40px; padding-left: 45px; background-position: 0px -2px; line-height: 150%; margin-bottom: 20px; background-image: url('images/bullet2.png'); background-repeat: no-repeat; background-position: 0px -2px;} 
+#wpsl .bullet3 { margin-left: 40px; padding-left: 45px; background-position: 0px -2px; line-height: 150%; margin-bottom: 20px; background-image: url('images/bullet3.png'); background-repeat: no-repeat; background-position: 0px -2px;} 
+#wpsl .bullet4 { margin-left: 40px; padding-left: 45px; background-position: 0px -2px; line-height: 150%; margin-bottom: 20px; background-image: url('images/bullet4.png'); background-repeat: no-repeat; background-position: 0px -2px;} 
+#wpsl .bullet5 { margin-left: 40px; padding-left: 45px; background-position: 0px -2px; line-height: 150%; margin-bottom: 20px; background-image: url('images/bullet5.png'); background-repeat: no-repeat; background-position: 0px -2px;} 
+/***************************************************************************************/
+/* 			TESTIMONIALS			*/
+/***************************************************************************************/
+#wpsl .testimonialgray { width: 700px; background-color: #EFEFEF; border: 3px solid #CCCCCC; border-right: none; border-left: none; margin: 0 auto 25px; padding: 15px; }
+#wpsl .testimonialblue { width: 700px; background-color: #F1F4FA; border: 3px solid #C0CADA; border-right: none; border-left: none; margin: 0 auto 25px; padding: 15px; }
+#wpsl .testimonialgreen { width: 700px; background-color:#EDFCD5; border:3px solid #D4EBAF; border-right: none; border-left: none; margin:0 auto 25px; padding:15px; }
+#wpsl .testimonialyellow { width: 700px; background-color:#FFF9CD; border:3px solid #EFE3AE; border-right: none; border-left: none; margin:0 auto 25px; padding:15px; }
+#wpsl .testimonialblue img, .testimonialgreen img,.testimonialyellow img,.testimonialgray img{ float:left; margin-right:15px; }
+#wpsl .testimonialblue p, .testimonialgreen p,.testimonialyellow p,.testimonialgray p{ line-height:150%; font-size:15px; margin:0 0 12px; }
+#wpsl .testimonialblue h2, .testimonialgreen h2,.testimonialyellow h2,.testimonialgray h2{ text-align:center; font-weight:bold; font-size:22px; letter-spacing:-1pt; }
+#wpsl .audiobox {margin-top: 15px;}
+/***************************************************************************************/
+/* 			GUARANTEE			*/
+/***************************************************************************************/
+#wpsl #guaranteebox { width: 700px; background-image:url('images/certBorder.gif'); margin: 25px auto 25px auto; padding: 15px;}
+#wpsl #guarantee { background-color: #F1F8E9; padding: 15px 15px 10px 15px; margin: 0px auto 0px auto;}
+#wpsl #guaranteeboxblue { width: 700px; background-image:url('images/certBorderblue.gif'); margin: 25px auto 25px auto; padding: 15px;}
+#wpsl #guaranteeblue { background-color: #F1F4FA; padding: 15px 15px 10px 15px; margin: 0px auto 0px auto;}
+/***************************************************************************************/
+/* 			DEFAULT WORDPRES STYLING		*/
+/***************************************************************************************/
+#wpsl img { margin: 0; padding:3px; border: 1px solid #ccc; background-color: #fff;}
+#wpsl img.size-auto, img.size-large, img.size-full, img.size-medium { max-width: 100%; height: auto; }
+#wpsl .alignleft, 
+#wpsl img.alignleft {
+	display: inline; float: left; margin-right: 24px; margin-top: 4px; }
+#wpsl .alignright,
+#wpsl img.alignright { display: inline; float: right; margin-left: 24px; margin-top: 4px; }
+#wpsl.aligncenter,
+#wpsl img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#wpsl img.alignleft,
+#wpsl img.alignright,
+#wpsl img.aligncenter {
+	margin-bottom: 12px;
+}
+#wpsl .wp-caption {
+	background: #f1f1f1;
+	border: none;
+	-khtml-border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 20px;
+	max-width: 632px !important; /* prevent too-wide images from breaking layout */
+	padding: 4px;
+	text-align: center;
+}
+#wpsl .wp-caption img {
+	margin: 5px;
+}
+#wpsl .wp-caption p.wp-caption-text {
+	margin: 0 0 4px;
+}
+#wpsl .wp-smiley {
+	margin: 0;
+}
+tr th,thead th,label,tr th,thead th { font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; }
+pre { font-family: "Courier 10 Pitch", Courier, monospace;}
+code, code var { font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;}
+dl {
+	margin: 0 0 24px 0;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin-bottom: 18px;
+}
+strong {
+	font-weight: bold;
+}
+cite,
+em,
+i {
+	border: none;
+	font-style: italic;
+}
+big {
+	font-size: 131.25%;
+}
+ins {
+	background: #ffc;
+	border: none;
+}
+del {
+	text-decoration: line-through;
+}
+blockquote {
+	font-style: italic;
+	padding: 0 3em;
+}
+blockquote cite,
+blockquote em,
+blockquote i {
+	font-style: normal;
+}
+pre {
+	background: #f7f7f7;
+	line-height: 18px;
+	margin-bottom: 18px;
+	padding: 1.5em;
+}
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+ins {
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 10px;
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+p,
+ul,
+ol,
+dd,
+pre,
+hr {
+	margin-bottom: 24px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+}
+pre,
+kbd,
+tt,
+var {
+	font-size: 15px;
+	line-height: 21px;
+}
+code {
+	font-size: 13px;
+}
+ol {
+	list-style: decimal;
+	margin: 0 0 18px 1.5em;
+}
+ol ol {
+	list-style: upper-alpha;
+}
+ol ol ol {
+	list-style: lower-roman;
+}
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+}
+/***************************************************************************************/
+/* 			ORDER AREA			*/
+/***************************************************************************************/
+ 
+#wpsl #orderarea{width:700px;border:3px;background-color:#FFF9CD; border:3px solid #EFE3AE;border-style:solid;margin:20px auto 30px;padding:15px;}
+#wpsl #orderarea ul { margin-left: 40px; font-size: 15px; line-height:22px;}
+#wpsl #orderarea p {width: 95%; margin: auto;}
+#wpsl #creditcards{width:287px;margin:0 auto 15px;}
+#wpsl .cc {margin-right: 10px; border: none; padding: 0; background-color: transparent;}
+/***************************************************************************************/
+/* 			RED BORDER BUTTON			*/
+/***************************************************************************************/
+#wpsl .redborder {background-color:#950000;width:360px;cursor:pointer;margin:15px auto 15px auto;padding:4px;}
+#wpsl .redborder input.btn {width:360px;height:40px;font-family:Arial;font-size:19px;font-weight:bold;letter-spacing:-1px;cursor:pointer;padding:6px 0; margin: 0px auto 0px auto;}
+#wpsl .redborder:hover{background-color:#090;}
+#wpsl .redborder2 {background-color:#950000;width:400px;cursor:pointer;margin:15px auto 15px auto;padding:4px;}
+#wpsl .redborder2 input.btn {width:400px;height:40px;font-family:Arial;font-size:19px;font-weight:bold;letter-spacing:-1px; color: #000 !important; cursor:pointer;padding:6px 0; margin: 0px auto 0px auto;}
+#wpsl .redborder2:hover {background-color:#090;}
+/***************************************************************************************/
+/* 			VIDEO			*/
+/***************************************************************************************/
+#wpsl #video{clear: both; margin: 0px auto 25px auto;}
+#wpsl #mediaspace {clear: both; margin: 0px auto 25px auto;}
+/***************************************************************************************/
+/* 			BUTTONS			*/
+/***************************************************************************************/
+#wpsl .buttongreen { display: inline-block;  color: #fff !important; font-weight: bold; font-size:1.2em; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#88c841), to(#73b338)); 
+	background: -moz-linear-gradient(center top, #88c841, #73b338);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#88c841, endColorstr=#73b338);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#88c841, endColorstr=#73b338)"; 
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	border-radius: 5px; 
+	behavior: url(border-radius.htc);
+	padding: 10px 25px; 
+	border: 1px solid #73b338; 
+	text-align: center; 
+	-shadow: 0px 1px 0px #6c0909; 
+	text-decoration: none !important;
+	}
+#wpsl .buttongreen:hover { text-decoration: none !important; background: -webkit-gradient(linear, left top, left bottom, from(#73b338), to(#88c841)); background: -moz-linear-gradient(center top, #73b338, #88c841);	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#73b338, endColorstr=#88c841);	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#73b338, endColorstr=#88c841)";}
+#wpsl .buttonorange { text-decoration: none; display: inline-block;color:#fff !important; font-weight:bold; font-size:1.2em; background : -webkit-gradient(linear, left top, left bottom, from(#ffc300), to(#ff8100)); background : -moz-linear-gradient(center top, #ffc300, #ff8100); -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 10px 25px; border: 1px solid #ff8100; text-align: center;	-shadow: 0px 1px 0px #6c0909; margin: 8px auto 25px auto; }
+#wpsl .buttonorange:hover { text-decoration: none !important; background : -webkit-gradient(linear, left top, left bottom, from(#ff8100), to(#ffc300)); background : -moz-linear-gradient(center top, #ff8100, #ffc300); }

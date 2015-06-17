@@ -1,0 +1,2 @@
+INSERT INTO `lookup_settings` (`protocol`, `max_hits`, `keep_dashes`, `callNmbr_type`, `auto_dewey`, `default_dewey`, `auto_cutter`, `cutter_type`, `cutter_word`, `auto_collect`, `fiction_name`, `fiction_code`, `fiction_loc`,                    `fiction_dewey`) 
+VALUES                        ('SRU',           25,         'y',          'LoC',           'n',          '813.52',         'y',         'LoC',            1,           'y',           'Fiction',      1,             'PQ PR PS PT PU PV PW PX PY PZ', '813 823');
