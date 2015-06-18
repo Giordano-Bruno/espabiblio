@@ -93,6 +93,28 @@
 <?php echo $balMsg ?>
 <?php echo $msg ?>
 
+
+<script language="JavaScript">
+<!--
+function popSecondary(url) {
+    var SecondaryWin;
+    SecondaryWin = window.open(url,"secondary","resizable=yes,scrollbars=yes,width=535,height=400");
+    self.name="main";
+}
+function popSecondaryLarge(url) {
+    var SecondaryWin;
+    SecondaryWin = window.open(url,"secondary","toolbar=yes,resizable=yes,scrollbars=yes,width=700,height=500");
+    self.name="main";
+}
+function backToMain(URL) {
+    var mainWin;
+    mainWin = window.open(URL,"main");
+    mainWin.focus();
+    this.close();
+}
+-->
+</script>
+
 <table class="primary">
   <tr><td class="noborder" valign="top">
   <br>
@@ -526,7 +548,7 @@ function hideDueDate() {
 <!--****************************************************************************
     *  Hold form
     **************************************************************************** -->
-<form name="holdForm" method="POST" action="../user/place_hold.php">
+<form name="holdForm" method="POST" action="./place_hold.php">
 <table class="primary">
   <tr>
     <th valign="top" nowrap="yes" align="left">

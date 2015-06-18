@@ -7,7 +7,7 @@
   $tab = "user";
   $nav = "view";
   $restrictInDemo = true;
-  require_once("../shared/logincheck.php");
+  require_once("./logincheck.php");
 
   require_once("../classes/BiblioHold.php");
   require_once("../classes/BiblioHoldQuery.php");
