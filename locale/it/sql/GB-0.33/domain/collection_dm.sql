@@ -1,0 +1,13 @@
+insert into %prfx%collection_dm values (null,'Ficción para adultos','N',21,0.05);
+insert into %prfx%collection_dm values (null,'No ficción para adultos','Y',21,0.05);
+insert into %prfx%collection_dm values (null,'Casetes','N',7,0.05);
+insert into %prfx%collection_dm values (null,'Discos compactos','N',7,0.15);
+insert into %prfx%collection_dm values (null,'Software de Computadora','N',7,0.15);
+insert into %prfx%collection_dm values (null,'Lectura Fácil','N',21,0.05);
+insert into %prfx%collection_dm values (null,'Ficción juvenil','N',21,0.05);
+insert into %prfx%collection_dm values (null,'No ficción juvenil','N',21,0.05);
+insert into %prfx%collection_dm values (null,'Nuevos libros','N',14,0.10);
+insert into %prfx%collection_dm values (null,'Periódicos','N',14,0.05);
+insert into %prfx%collection_dm values (null,'Referencia','N',0,0.00);
+insert into %prfx%collection_dm values (null,'Videos y DVDs','N',3,1.00);
+insert into %prfx%collection_dm values (null,'Libros Digitales','N',3,1.00);
