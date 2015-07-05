@@ -15,6 +15,10 @@ class Localize {
    */
   function Localize ($locale, $section) {//modificar segun este definido en base de datos, como esta en installqyery
 if (is_null($_POST['locale'])){
+
+#FIXME Falla al cambiar de idioma en el modulo admin, es requeredido predefinirlo para el momento de instalar, pero posteriormente debe trabajar con el selector de admin, tambien cambiar en class/istall class/upgrade
+
+	
 //  $locale = $this->getCurrentLocale($fromTablePrfx);
   $locale = "es";
 }else{
