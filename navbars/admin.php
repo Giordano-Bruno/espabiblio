@@ -116,6 +116,16 @@
    <a href="../admin/checkout_privs_list.php" class="alt1"><?php echo $navLoc->getText("adminCheckoutPriv");?></a>
  </li>
 <?php } ?>
+<?php //jalg integra una pequeña funcion para probar el YAZ ?>
+<?php if ($nav == 'yaz-test') { ?>
+ <li class="active">
+   <?php echo $navLoc->getText("Yaz test");?>
+ </li>
+<?php } else { ?>
+ <li>
+   <a href="../lookup2/yazTest.php" class="alt1"><?php echo $navLoc->getText("Yaz test");?></a>
+ </li>
+<?php } ?>
 <?php if ($nav == 'cover_opts') { ?>
  <li class="active">
    <?php echo $navLoc->getText("Cover Lookup Options");?>
