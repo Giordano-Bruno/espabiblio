@@ -67,8 +67,6 @@ $trans["adminMaterialTypes"]	= "\$text = 'Tipos de material';";
 $trans["adminCollections"]	= "\$text = 'Colecciones';";
 $trans["adminThemes"]		= "\$text = 'Temas de diseño';";
 $trans["adminTranslation"]	= "\$text = 'Idiomas';";
-$trans["Yaz test"]	= "\$text = 'Probar YAZ';";
-
 
 #* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
 $trans["Checkout Privs"]	= "\$text = 'Gestionar privilegios';";
