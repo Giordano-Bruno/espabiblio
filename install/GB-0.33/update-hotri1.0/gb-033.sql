@@ -4,7 +4,6 @@ ALTER TABLE %prfx%member ADD COLUMN born_dt date NOT NULL;
 ALTER TABLE %prfx%member ADD COLUMN other text DEFAULT NULL;
 UPDATE %prfx%member SET last_activity_dt=NOW();
 
-ALTER TABLE %prfx%autores CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;
 ALTER TABLE %prfx%biblio CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;
 ALTER TABLE %prfx%biblio_copy CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;
 ALTER TABLE %prfx%biblio_copy_fields CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;

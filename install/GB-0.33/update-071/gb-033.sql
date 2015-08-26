@@ -14,7 +14,6 @@ ALTER TABLE %prfx%settings ADD COLUMN font_size tinyint(3) DEFAULT 14;
 ALTER TABLE %prfx%settings ADD COLUMN inactive_member_after_days smallint(6) DEFAULT 90;
 ALTER TABLE %prfx%settings ADD COLUMN library_aders varchar(70) DEFAULT 'Calle norte no 97, col casadas' AFTER library_hours;
 
-//ALTER TABLE %prfx%autores CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;
 ALTER TABLE %prfx%biblio CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;
 ALTER TABLE %prfx%biblio_copy CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;
 ALTER TABLE %prfx%biblio_copy_fields CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;
