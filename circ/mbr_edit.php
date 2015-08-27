@@ -15,8 +15,8 @@
   require_once("../classes/Localize.php");
   $loc = new Localize(OBIB_LOCALE,$tab);
 
-echo "</br>";
-echo FOTO_PATH;
+// echo "</br>";
+// echo FOTO_PATH;
 
   #****************************************************************************
   #*  Jose Antonio Lara Galindo joanlaga@hotmail.com, modificado para mover el archivo foto del lector.
