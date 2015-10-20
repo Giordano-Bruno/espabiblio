@@ -94,3 +94,4 @@ define("AUTOR_PATH", "/media/autores");
 define("DIGI_PATH", "/media/digitales");
 define('OBI_PORTADAS',"http://covers.openlibrary.org/b/isbn/");
 define('OBI_DIR',"../locale/");
+define("OBIB_TITLE_LARGE", "375");// define el largo de caracteres a mostrar en titulos 

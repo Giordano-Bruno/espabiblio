@@ -448,7 +448,7 @@ $Ruta_Autor = ".." . AUTOR_PATH . "/" . H($biblio->getAuthor());
         <tr>
           <td class="noborder" width="1%" valign="top"><b><?php echo $loc->getText("biblioSearchTitle"); ?>:</b></td>
           <td class="noborder" colspan="3">
-               <a href="../shared/biblio_view.php?bibid=<?php echo HURL($biblio->getBibid());?>&amp;tab=<?php echo HURL($tab);?>"><?php echo  substr(H($biblio->getTitle()),0,OBIB_TITLE_LARGE);?></a></td>
+               <a href="../shared/biblio_view.php?bibid=<?php echo HURL($biblio->getBibid());?>&amp;tab=<?php echo HURL($tab);?>"><?php echo  substr(H($biblio->getTitle()),0,75);?></a></td>
         </tr>
 <?php  //jalg modificado paramostrar title remante 11/dic/2013 ?>
         <tr>
