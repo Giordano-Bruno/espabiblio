@@ -100,7 +100,7 @@
 //joanlaga dic-2013
 
   }
-print_r($_REQUEST);
+
   if (!$_REQUEST['type']) {
     header('Location: ../reports/index.php');
     exit(0);

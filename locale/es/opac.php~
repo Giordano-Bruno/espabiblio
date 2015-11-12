@@ -47,7 +47,7 @@
 $trans["opac_Header"]        = "\$text='Catálogo en linea de acceso público (OPAC)';";
 $trans["opac_WelcomeMsg"]    = "\$text= 'Bienvenido a nuestro Catalogo público en linea de nuestra biblioteca. Busca en nuestro catálogo.';";
 $trans["opac_SearchTitle"]   = "\$text='Buscar bibliografía por frase de búsqueda:';";
-$trans["opac_Keyword"]       = "\$text='Palabras clave';";
+$trans["opac_Keyword"]       = "\$text='Palabra clave';";
 $trans["opac_Title"]         = "\$text='Título';";
 $trans["opac_Author"]        = "\$text='Autor';";
 $trans["opac_Subject"]       = "\$text='Resumen';";

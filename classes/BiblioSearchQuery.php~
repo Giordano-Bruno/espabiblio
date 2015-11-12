@@ -174,13 +174,13 @@ class BiblioSearchQuery extends Query {
       } elseif ($type == OBIB_ADVANCED_SEARCH) {
         $sql = $this->_getAdvancedSearchSQLStatement($words);
         $join .= $sql["join"];
-/*
+
 echo "<br/>";
 print_r($join);
 echo "<br/>";
 echo $sql;
 echo "<br/>";
-*/
+
         $criteria = $sql["criteria"];
       } else {
         $criteria = $this->_getCriteria(array("biblio.title"), $words);
@@ -211,13 +211,13 @@ echo "<br/>";
     $offset = ($page - 1) * $this->_itemsPerPage;
     $limit = $this->_itemsPerPage;
     $sql .= $this->mkSQL("LIMIT %N, %N", $offset, $limit);
-/*
+
 echo "<br/>";
 print_r($join);
 echo "<br/>";
 echo $sql;
 echo "<br/>";
-*/
+
     # Running row count SQL statement
     if (!$this->_query($sqlcount, $this->_loc->getText("biblioSearchQueryErr1"))) {
       return false;

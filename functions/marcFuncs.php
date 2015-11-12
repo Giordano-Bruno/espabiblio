@@ -23,7 +23,7 @@ if ($tab !== "opac"){//02-2015 jalg agragado para mostras MARC solo en modo admi
   
   
 if(!isset($marcSubflds[$arrayIndex])){//JALG 02-2015 modificado por que si no existe el campo MARC genera un error
-# Falta cambiar los textos a locale
+# FIX Falta cambiar los textos a locale
 	echo "</br> <font class=\"error\"> Falla en la definicion de campos MARC: </h> </br>" . " tag = ".  $tag .
 	 "</br> subfield =" . $subfieldCd . 
 	"</br> Favor darlo de alta en mysql o cambiar por un número valido MARC </font> </br>";

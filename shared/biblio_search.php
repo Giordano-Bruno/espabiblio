@@ -138,6 +138,10 @@ echo "</pre>";
       } elseif ($searchType == "material") {        
         $sType = OBIB_SEARCH_MATERIAL;
 // añadido de filtros busquedas 3-2015 JALG
+// añadido de filtros busquedas 11-2015 JALG
+    } elseif ($searchType == "keyword") {//para buscar por palabra clave
+      $sType = OBIB_SEARCH_KEYWORD;
+// añadido de filtros busquedas 11-2015 JALG
       } elseif ($searchType == "advanced") {
         $sType = OBIB_ADVANCED_SEARCH;
         $words = $_POST;

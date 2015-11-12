@@ -37,7 +37,7 @@
   <tr>
     <td nowrap="true" class="primary">
       <select name="searchType">
-        <option value="keyword"<?php if ($lookup !== 'Y') { ?>selected<?php } ?>><?php echo $loc->getText("opac_Keyword");?>
+        <option value="keyword"<?php if ($lookup !== 'Y') { ?> selected<?php } ?>><?php echo $loc->getText("opac_Keyword");?>
         <option value="title" ><?php echo $loc->getText("opac_Title");?>
         <option value="author"><?php echo $loc->getText("opac_Author");?>
         <option value="subject"><?php echo $loc->getText("opac_Subject");?>

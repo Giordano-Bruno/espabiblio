@@ -49,20 +49,17 @@
   <tr>
     <td nowrap="true" class="primary">
       <select name="searchType">
-        <option value="keyword" selected><?php echo $loc->getText("indexKeyword"); ?></option>
-        <option value="title" ><?php echo $loc->getText("indexTitle");?>
+        <option value="title" selected><?php echo $loc->getText("indexTitle");?>
         <option value="author"><?php echo $loc->getText("indexAuthor");?>
         <option value="subject"><?php echo $loc->getText("indexSubject");?>
         <option value="isbn"><?php echo $loc->getText("indexISBN");?>
-        <!-- 
-
+        <option value="keyword"><?php echo $loc->getText("indexKeyword"); ?></option>
         <option value="callno"><?php echo $loc->getText("indexCallNmbr"); ?></option>
         <option value="collection"><?php echo $loc->getText("indexCollection"); ?></option>
         <option value="series"><?php echo $loc->getText("indexSeries"); ?></option>	
         <option value="publisher"><?php echo $loc->getText("indexPublisher"); ?></option>
         <option value="id"><?php echo $loc->getText("indexId"); ?></option>
         <option value="material"><?php echo $loc->getText("indexMaterial"); ?></option>
- -->
          <option value="language"><?php echo $loc->getText("Language"); ?></option>
       </select>
       <input type="text" name="searchText" size="30" maxlength="256">
