@@ -15,22 +15,23 @@ class Layout_overdue {
     
     $mbrQ = new MemberQuery;
     
-    $lay = new Lay;
-      $lay->pushFont('Helvetica', 10);
-        $lay->container('Columns', array(
-          'margin-left'=>'1in', 'margin-right'=>'1in',
-          'margin-top'=>'1in', 'margin-bottom'=>'1in',
-        ));
-          $mbr = NULL;
-          $oldmbr = NULL;
-          while ($row = $rpt->each()) {
-            if ($row['mbrid'] != $oldmbr) {
-              if ($oldmbr !== NULL) {
-                $lay->close();
-                $lay->container('Columns', array(
-                  'margin-left'=>'1in', 'margin-right'=>'1in',
-                  'margin-top'=>'1in', 'margin-bottom'=>'1in',
-                ));
+	$lay = new Lay;
+		$lay->pushFont('Helvetica', 10);
+		$lay->container('Columns', array(
+					'margin-left'=>'1in', 'margin-right'=>'1in',
+					'margin-top'=>'1in', 'margin-bottom'=>'1in',
+				));
+		$mbr = NULL;
+		$oldmbr = NULL;
+
+		while ($row = $rpt->each()) {
+			if ($row['mbrid'] != $oldmbr) {
+				if ($oldmbr !== NULL) {
+				$lay->close();
+				$lay->container('Columns', array(
+						'margin-left'=>'1in', 'margin-right'=>'1in',
+						'margin-top'=>'1in', 'margin-bottom'=>'1in',
+						));
               }
               $mbr = $mbrQ->get($row['mbrid']);
               $oldmbr = $row['mbrid'];
@@ -41,9 +42,11 @@ class Layout_overdue {
                 $lay->element('Spacer', array('height'=>14));
                 $lines = array(
                   OBIB_LIBRARY_NAME,
-                  'Aders: '.OBIB_LIBRARY_ADERS,
+                  OBIB_LIBRARY_ADERS,
+//                  'Busytown, IA 11111-2222',//que es??
                   'phone: '.OBIB_LIBRARY_PHONE,
                   'hours: '.OBIB_LIBRARY_HOURS,
+                  'web: '.OBIB_LIBRARY_URL,
                 );
                 foreach ($lines as $l) {
                   $lay->container('TextLine');
@@ -62,33 +65,33 @@ class Layout_overdue {
               }
               $lay->element('Spacer', array('height'=>14));
               $lay->container('TextLine');
-                $lay->text('Dear '.$mbr->getFirstName().' '.$mbr->getLastName().':');
-              $lay->close();
-              $lay->element('Spacer', array('height'=>9));
-              $lay->container('Paragraph');
-                $lay->container('TextLines');
-                  $lay->text('Our records show that the following library items '
-                             . 'are checked out under your name and are past due.  Please '
-                             . 'return them as soon as possible and pay any late fees due.');
-                $lay->close();
-              $lay->close();
-              $lay->element('Spacer', array('height'=>28));
-              $lay->container('TextLine');
-                $lay->text('Sincerely,');
-              $lay->close();
-              $lay->element('Spacer', array('height'=>14));
-              $lay->container('TextLine');
-                $lay->text('The library staff at '.OBIB_LIBRARY_NAME);
-              $lay->close();
-              $lay->element('Spacer', array('height'=>14));
-              $lay->pushFont('Times-Italic', 12);
-                $lay->container('Line');
-                  $lay->container('TextLine', array('width'=>'1.5in', 'underline'=>1));
-                    $lay->text('Title');
-                  $lay->close();
-                  $lay->container('TextLine', array('width'=>'1.5in', 'underline'=>1));
-                    $lay->text('Author');
-                  $lay->close();
+              $lay->text('Dear '.$mbr->getFirstName().' '.$mbr->getLastName().':');
+		$lay->close();
+		$lay->element('Spacer', array('height'=>9));
+		$lay->container('Paragraph');
+		$lay->container('TextLines');
+		$lay->text('Our records show that the following library items '
+				. 'are checked out under your name and are past due.  Please '
+				. 'return them as soon as possible and pay any late fees due.');
+		$lay->close();
+		$lay->close();
+		$lay->element('Spacer', array('height'=>28));
+		$lay->container('TextLine');
+		$lay->text('Sincerely,');
+		$lay->close();
+		$lay->element('Spacer', array('height'=>14));
+		$lay->container('TextLine');
+		$lay->text('The library staff at '.OBIB_LIBRARY_NAME);
+		$lay->close();
+		$lay->element('Spacer', array('height'=>14));
+		$lay->pushFont('Times-Italic', 12);
+		$lay->container('Line');
+		$lay->container('TextLine', array('width'=>'1.5in', 'underline'=>1));
+		$lay->text('Title');
+		$lay->close();
+		$lay->container('TextLine', array('width'=>'1.5in', 'underline'=>1));
+		$lay->text('Author');
+		$lay->close();
                   $lay->container('TextLine', array('width'=>'1in', 'underline'=>1));
                     $lay->text('Due Date');
                   $lay->close();

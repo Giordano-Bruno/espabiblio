@@ -17,7 +17,7 @@
 
 $core = false;
 $args = $_SERVER['argv'];
-$prog_name = array_shift(args);
+$prog_name = array_shift($args);
 while (isset($args[0]) and strlen($args[0]>1) and $args[0]{0} == '-') {
 	$arg = array_shift($args);
 	if ($arg{1} == '-') {
@@ -244,7 +244,7 @@ function MakeFontDescriptor($fm,$symbolic)
 	//StemV
 	if(isset($fm['StdVW']))
 		$stemv=$fm['StdVW'];
-	elseif(isset($fm['Weight']) and eregi('(bold|black)',$fm['Weight']))
+	elseif(isset($fm['Weight']) and preg_match('/(bold|black)/i',$fm['Weight']))
 		$stemv=120;
 	else
 		$stemv=70;
@@ -371,7 +371,7 @@ function CheckTTF($file)
 function MakeFont($fontfile,$afmfile,$enc='cp1252',$patch=array(),$type='TrueType')
 {
 	//Generate a font definition file
-	set_magic_quotes_runtime(0);
+	ini_set('magic_quotes_runtime', 0);
 	ini_set('auto_detect_line_endings','1');
 	if($enc)
 	{

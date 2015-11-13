@@ -2,7 +2,9 @@
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
  */
+
 require_once('../classes/Lay.php');
+
 class Layout_labels {
   var $p;
   function paramDefs() {
@@ -40,27 +42,17 @@ class Layout_labels {
                   $lay->text($row['title']);
                 $lay->popFont();
               $lay->close();
-
               $lay->container('TextLine', array('x-align'=>'center'));
                 $lay->pushFont('Code39JK', 24);
                   $lay->text('*'.strtoupper($row['barcode_nmbr']).'*');
                 $lay->popFont();
               $lay->close();
-
               $lay->container('TextLine', array('x-align'=>'center'));
                 $lay->pushFont('Courier', 10);
                   $lay->text(strtoupper($row['barcode_nmbr']));
                 $lay->popFont();
               $lay->close();
             $lay->close();
-
-              $lay->container('TextLine', array('x-align'=>'center'));
-                $lay->pushFont('Courier', 10);
-                  $lay->text(strtoupper($row['barcode_nmbr']));
-                $lay->popFont();
-              $lay->close();
-
-
           }
         $lay->close();
       $lay->close();

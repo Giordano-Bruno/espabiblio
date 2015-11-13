@@ -111,16 +111,15 @@ $trans["Microsoft Excel"]			= "\$text = 'OpenOfice, Libre Ofice,  Microsoft Exce
 #****************************************************************************
 $trans["runReportReturnLink1"]		= "\$text = 'criterios de selección de informe';";
 $trans["runReportReturnLink2"]		= "\$text = 'informe de lista';";
-$trans["runReportTotal"]		= "\$text = 'filas de totales:';";
+$trans["runReportTotal"]				= "\$text = 'filas de totales:';";
 
 #* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-$trans["Print list"]			= "\$text = 'Imprimir la lista';";
-$trans["Labels"]			= "\$text = 'etiquetas';";
+$trans["Print list"]						= "\$text = 'Imprimir la lista';";
+$trans["Labels"]							= "\$text = 'etiquetas';";
 $trans["reportsResultNotFound"]		= "\$text = 'No se encontraron resultados.';";
-$trans["reportsResultFound"]		= "\$text = '%results% resultados encontrados.';";
-$trans["Report Results:"]		= "\$text = 'informe de resultados:';";
-
-
+$trans["reportsResultFound"]			= "\$text = '%results% resultados encontrados.';";
+$trans["Report Results:"]				= "\$text = 'informe de resultados:';";
+$trans["No results found."]			= "\$text = 'No se encontraron resultados.';";
 $trans["&laquo;Prev"]              = "\$text = ' &laquo; Previo'; ";
 $trans["Next&raquo;"]              = "\$text = ' Siguiente &raquo; ';";
 $trans["&laquo;First"]             = "\$text = ' &laquo; Primero ';";
@@ -153,16 +152,16 @@ $trans["balanceDueList"]			= "\$text = 'Lista de artículos pendientes de devolu
 $trans["Circulation"]				= "\$text = 'circulación (préstamo)';";
 
 #* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-$trans["Cataloging"]				= "\$text = 'Catalogación';";
-$trans["Acquisition"]				= "\$text = 'Adquisición';";
-$trans["Statistics"]				= "\$text = 'Estadísticas';";
-$trans["Duplicate Titles"]			= "\$text = 'Títulos duplicados';";
-$trans["Member Search"]				= "\$text = 'Búsqueda de Miembros';";
-$trans["Copy Search"]				= "\$text = 'Búsqueda de copia';";
-$trans["Most Popular Authors"]			= "\$text = 'Los autores más populares';";
-$trans["Periodic Checkout Count"]		= "\$text = 'Período a mostrar';";
-$trans["Bulk summary"]				= "\$text = 'Resumen a granel [Bulk summary]';";
-$trans["Item Checkout History"]			= "\$text = 'Historial de Artículos Pedidos';";
+$trans["Cataloging"]						= "\$text = 'Catalogación';";
+$trans["Acquisition"]					= "\$text = 'Adquisición';";
+$trans["Statistics"]						= "\$text = 'Estadísticas';";
+$trans["Duplicate Titles"]				= "\$text = 'Títulos duplicados';";
+$trans["Member Search"]					= "\$text = 'Búsqueda de Miembros';";
+$trans["Copy Search"]					= "\$text = 'Búsqueda de copia';";
+$trans["Most Popular Authors"]		= "\$text = 'Los autores más populares';";
+$trans["Periodic Checkout Count"]	= "\$text = 'Período a mostrar';";
+$trans["Bulk summary"]					= "\$text = 'Resumen a granel [Bulk summary]';";
+$trans["Item Checkout History"]		= "\$text = 'Historial de Artículos Pedidos';";
 
 
 $trans["Group By"]				= "\$text = 'Agrupar por';";

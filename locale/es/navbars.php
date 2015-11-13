@@ -67,7 +67,7 @@ $trans["adminMaterialTypes"]	= "\$text = 'Tipos de material';";
 $trans["adminCollections"]	= "\$text = 'Colecciones';";
 $trans["adminThemes"]		= "\$text = 'Temas de diseño';";
 $trans["adminTranslation"]	= "\$text = 'Idiomas';";
-$trans["Yaz test"]	= "\$text = 'Probar YAZ';";
+$trans["Yaz test"]		= "\$text = 'Probar YAZ';";
 
 
 #* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
@@ -78,44 +78,44 @@ $trans["adminImportExport"]	= "\$text = 'Importar/Exportar';";
 $trans["adminMaterialStatus"]	= "\$text = 'Estado de Materiales';";
 $trans["Member Types"]		= "\$text = 'Grupos de usuarios';";
 $trans["Member Fields"]		= "\$text = 'asignación de Grados de usuario';";
-$trans["Member Fields dm"]		= "\$text = 'Grados de usuario';";
+$trans["Member Fields dm"]	= "\$text = 'Grados de usuario';";
 $trans["Copy Fields"]		= "\$text = 'Personalización de Campos de datos para las copias';";// es esta traduccion ?? jalg
 
 
 #****************************************************************************
 #*  Translation text for page cataloging.php
 #****************************************************************************
-$trans["catalogSummary"]				= "\$text = 'Resumen de Catalogación';";
-$trans["catalogSearch1"]				= "\$text = 'Búsqueda de material';";
-$trans["catalogSearch2"]				= "\$text = 'Búsqueda bibliográfica';";
-$trans["catalogResults"]				= "\$text = 'Resultados de la búsqueda';";
-$trans["catalogBibInfo"]				= "\$text = 'Información bibliográfica';";
-$trans["catalogBibEdit"]				= "\$text = 'Edición básica';";
-$trans["catalogBibEditMarc"]			= "\$text = 'Editar-MARC';";
+$trans["catalogSummary"]		= "\$text = 'Resumen de Catalogación';";
+$trans["catalogSearch1"]		= "\$text = 'Búsqueda de material';";
+$trans["catalogSearch2"]		= "\$text = 'Búsqueda bibliográfica';";
+$trans["catalogResults"]		= "\$text = 'Resultados de la búsqueda';";
+$trans["catalogBibInfo"]		= "\$text = 'Información bibliográfica';";
+$trans["catalogBibEdit"]		= "\$text = 'Edición básica';";
+$trans["catalogBibEditMarc"]		= "\$text = 'Editar-MARC';";
 $trans["catalogBibMarcNewFld"]		= "\$text = 'Nuevo campo MARC';";
 $trans["catalogBibMarcNewFldShrt"]	= "\$text = 'Nuevo MARC';";
 $trans["catalogBibMarcEditFld"]		= "\$text = 'Editar campo MARC';";
-$trans["catalogCopyNew"]				= "\$text = 'Nueva copia';";
-$trans["catalogCopyEdit"]				= "\$text = 'Editar Copia';";
-$trans["catalogHolds"]					= "\$text = 'Reservas';";
-$trans["catalogDelete"]					= "\$text = 'Borrar';";
-$trans["catalogBibNewLike"]			= "\$text = '¿Usar datos para un nuevo registro?';";
-$trans["catalogBibNew"]					= "\$text = 'Nuevo material';";
-$trans["Upload Marc Data"]				= "\$text = 'Subir datos Marc';";
+$trans["catalogCopyNew"]		= "\$text = 'Nueva copia';";
+$trans["catalogCopyEdit"]		= "\$text = 'Editar Copia';";
+$trans["catalogHolds"]			= "\$text = 'Reservas';";
+$trans["catalogDelete"]			= "\$text = 'Borrar';";
+$trans["catalogBibNewLike"]		= "\$text = '¿Usar datos para un nuevo registro?';";
+$trans["catalogBibNew"]			= "\$text = 'Nuevo material';";
+$trans["Upload Marc Data"]		= "\$text = 'Subir datos Marc';";
 #* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
 $trans["catalogBibBulkDelete"]		= "\$text = 'Eliminar Bibliografías por lotes';";
-$trans["CSVImport"]						= "\$text = 'Importar bibliografias desde un archivo CSV';";
-$trans["adminTranslate"]				= "\$text = 'Administrador de traducciones';";
-$trans["cdu"]								= "\$text = 'Tablas CDU';";
-$trans["cdd"]								= "\$text = 'Tablas CDD';";
-$trans["ibic"]								= "\$text = 'Tablas IBIC';";
-$trans["Upload CSV Data"]								= "\$text = 'Cargar copias desde archivo CSV';";
-$trans["marc_list"]								= "\$text = 'Listar campos MARC';";
+$trans["CSVImport"]			= "\$text = 'Importar bibliografias desde un archivo CSV';";
+$trans["adminTranslate"]		= "\$text = 'Administrador de traducciones';";
+$trans["cdu"]				= "\$text = 'Tablas CDU';";
+$trans["cdd"]				= "\$text = 'Tablas CDD';";
+$trans["ibic"]				= "\$text = 'Tablas IBIC';";
+$trans["Upload CSV Data"]		= "\$text = 'Cargar copias desde archivo CSV';";
+$trans["marc_list"]			= "\$text = 'Listar campos MARC';";
 
 #****************************************************************************
 #*  Translation text for page reports.php
 #****************************************************************************
-$trans["reportsSummary"]			= "\$text = 'Informes';";
+$trans["reportsSummary"]	= "\$text = 'Informes';";
 $trans["reportsReportListLink"]  = "\$text = 'Lista de informes';";
 $trans["reportsLabelsLink"]      = "\$text = 'Imprimir etiquetas';";
 $trans["reportsLettersLink"]     = "\$text = 'Imprimir cartas';";
@@ -123,7 +123,7 @@ $trans["reportsLettersLink"]     = "\$text = 'Imprimir cartas';";
 #* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
 $trans["reportsResult"]          = "\$text = 'Informe de resultados';";
 $trans["reportsCriteria"]        = "\$text = 'Criterios del informe';";
-$trans["reportsFailedImport"]		= "\$text = 'Importación fallida';";
+$trans["reportsFailedImport"]	= "\$text = 'Importación fallida';";
 $trans["reportsNoCover"]         = "\$text = 'Artículos sin portada';";
 
 #****************************************************************************
@@ -138,17 +138,17 @@ $trans["catalogBibInfo"]           = "\$text = 'Información bibliográfica';";
 #****************************************************************************
 #*  Translation text for page Added
 #****************************************************************************
-$trans["memberInfo"]				= "\$text = 'Información de socios';";
-$trans["memberSearch"]			= "\$text = 'Buscar socio';";
-$trans["editInfo"]				= "\$text = 'Editar datos';";
-$trans["checkoutHistory"]		= "\$text = 'Historial de préstamo';";
-$trans["account"]					= "\$text = 'Cuenta';";
-$trans["checkIn"]					= "\$text = 'Devolución';";
-$trans["memberSearch"]			= "\$text = 'Buscar socio';";
-$trans["newMember"]				= "\$text = 'Nuevo socio';";
+$trans["memberInfo"]		= "\$text = 'Información de socios';";
+$trans["memberSearch"]		= "\$text = 'Buscar socio';";
+$trans["editInfo"]		= "\$text = 'Editar datos';";
+$trans["checkoutHistory"]	= "\$text = 'Historial de préstamo';";
+$trans["account"]		= "\$text = 'Cuenta';";
+$trans["checkIn"]		= "\$text = 'Devolución';";
+$trans["memberSearch"]		= "\$text = 'Buscar socio';";
+$trans["newMember"]		= "\$text = 'Nuevo socio';";
 $trans["Offline Circulation"]	= "\$text = 'Prestamos fuera de linea';";
-$trans["account"]       	 	= "\$text = 'Cuenta';";
-$trans["MemberCSVImport"]       	 	= "\$text = 'Importar lectores desde archivo CSV';";
+$trans["account"]       	= "\$text = 'Cuenta';";
+$trans["MemberCSVImport"]       = "\$text = 'Importar lectores desde archivo CSV';";
 
 
 #* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
