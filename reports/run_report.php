@@ -180,4 +180,3 @@
   }
 
   include('../shared/footer.php');
-?>

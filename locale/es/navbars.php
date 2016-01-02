@@ -125,6 +125,8 @@ $trans["reportsResult"]          = "\$text = 'Informe de resultados';";
 $trans["reportsCriteria"]        = "\$text = 'Criterios del informe';";
 $trans["reportsFailedImport"]	= "\$text = 'Importación fallida';";
 $trans["reportsNoCover"]         = "\$text = 'Artículos sin portada';";
+$trans["Overdue Letters"]         = "\$text = 'Cartas Notificación vencimientos';";
+
 
 #****************************************************************************
 #*  Translation text for page opac.php

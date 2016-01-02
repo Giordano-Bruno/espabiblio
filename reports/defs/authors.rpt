@@ -1,0 +1,41 @@
+.title "Authors : Bibliography Count"
+.category "MARC Reports"
+.column author title="Author" sort=author
+.column biblioCount title="# Biblio" sort=multi
+.parameters
+.	select author1st title="1st Character Author Last Name"
+.		item ''
+.		sql
+# 0.6.0: SQL in RPT .select parameter should be one line, unwrapped
+SELECT DISTINCT substring(author,1,1) AS value, substring(upper(author),1,1) AS title FROM biblio ORDER BY title
+.		end sql
+.	end select
+.	select criteria default=start title="... or Author Last Name"
+.		item start title="Starts With"
+.		item trunc title="Contains"
+.	end select
+.	string author title="..."
+.	order_by default=author
+.		item author title="Author"
+.		item multi title="# Biblio, Author" type=multi expr="biblioCount,'author'!r"
+.		item biblioCount title="# Biblio" type=numeric
+.	end order_by
+.end parameters
+.sql
+	SELECT biblio.author, COUNT(biblio.bibid) biblioCount
+	FROM biblio
+.	if_set author
+.		if_equal criteria start
+			WHERE biblio.author LIKE '%"author%%%'
+.		end if_set
+.		if_equal criteria trunc
+			WHERE biblio.author LIKE '%%%"author%%%'		
+.		end if_set
+.	else
+.		if_not_equal author1st ''
+			WHERE biblio.author LIKE '%"author1st%%%'
+.		end if_set
+.	end if_set
+	GROUP BY author
+.	order_by_expr
+.end sql

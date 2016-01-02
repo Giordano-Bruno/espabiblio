@@ -1,0 +1,118 @@
+.title "Bibliographies by Subject"
+.column bibid hidden
+.column topic title="Subject" sort=topic
+.column callno title="Call Num." sort=callno
+.column author title="Author" sort=author
+.column title func=biblio_link title="Title"
+.column collection title="Collection"
+.parameters
+.	select topic1st default=any title="Subject 1st Character"
+.		item ''
+.		sql
+# 0.6.0: SQL in RPT .select parameter should be one line, unwrapped
+SELECT DISTINCT substring(topic1,1,1) AS value, substring(upper(topic1),1,1) AS title FROM biblio UNION SELECT DISTINCT substring(topic2,1,1) AS value, substring(upper(topic2),1,1) AS title FROM biblio UNION SELECT DISTINCT substring(topic3,1,1) AS value, substring(upper(topic3),1,1) AS title FROM biblio UNION SELECT DISTINCT substring(topic4,1,1) AS value, substring(upper(topic4),1,1) AS title FROM biblio UNION SELECT DISTINCT substring(topic5,1,1) AS value, substring(upper(topic5),1,1) AS title FROM biblio ORDER BY title
+.		end sql
+.	end select
+.	select criteria default=start title="... or Subject"
+.		item start title="Starts With"
+.		item trunc title="Contains"
+.	end select
+.	string topic title="..." 
+.	order_by default=topic
+.		item topic title="Subject" expr="concat(topic, author)"
+.		item author title="Author" expr="concat(author, topic)"
+.		item callno title="Call Number"
+.	end order_by
+.end parameters
+.sql
+	SELECT b.topic1 AS topic, b.bibid, concat_ws(' ', b.call_nmbr1, b.call_nmbr2, b.call_nmbr3) callno,
+		b.title, b.author, coll.description collection 
+	FROM biblio b, collection_dm coll
+	WHERE coll.code=b.collection_cd
+		AND b.topic1 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic1 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic1 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic1 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+	UNION
+	SELECT b.topic2 AS topic, b.bibid, concat_ws(' ', b.call_nmbr1, b.call_nmbr2, b.call_nmbr3) callno,
+		b.title, b.author, coll.description collection 
+	FROM biblio b, collection_dm coll
+	WHERE coll.code=b.collection_cd
+		AND b.topic2 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic2 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic2 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic2 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+	UNION
+	SELECT b.topic3 AS topic, b.bibid, concat_ws(' ', b.call_nmbr1, b.call_nmbr2, b.call_nmbr3) callno,
+		b.title, b.author, coll.description collection 
+	FROM biblio b, collection_dm coll
+	WHERE coll.code=b.collection_cd
+		AND b.topic3 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic3 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic3 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic3 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+	UNION
+	SELECT b.topic4 AS topic, b.bibid, concat_ws(' ', b.call_nmbr1, b.call_nmbr2, b.call_nmbr3) callno,
+		b.title, b.author, coll.description collection 
+	FROM biblio b, collection_dm coll
+	WHERE coll.code=b.collection_cd
+		AND b.topic4 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic4 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic4 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic4 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+	UNION
+	SELECT b.topic5 AS topic, b.bibid, concat_ws(' ', b.call_nmbr1, b.call_nmbr2, b.call_nmbr3) callno,
+		b.title, b.author, coll.description collection 
+	FROM biblio b, collection_dm coll
+	WHERE coll.code=b.collection_cd
+		AND b.topic5 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic5 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic5 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic5 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+.	order_by_expr
+.end sql

@@ -1,0 +1,148 @@
+.title "Most Popular Subjects"
+.category Statistics
+.column topic title="Subject" sort=topic
+.column checkoutCount title="# Checkouts" sort=multi
+.parameters
+.	select topic1st default=any title="Subject 1st Character"
+.		item ''
+.		sql
+# 0.6.0: SQL in RPT .select parameter should be one line, unwrapped
+SELECT DISTINCT substring(topic1,1,1) AS value, substring(upper(topic1),1,1) AS title FROM biblio UNION SELECT DISTINCT substring(topic2,1,1) AS value, substring(upper(topic2),1,1) AS title FROM biblio UNION SELECT DISTINCT substring(topic3,1,1) AS value, substring(upper(topic3),1,1) AS title FROM biblio UNION SELECT DISTINCT substring(topic4,1,1) AS value, substring(upper(topic4),1,1) AS title FROM biblio UNION SELECT DISTINCT substring(topic5,1,1) AS value, substring(upper(topic5),1,1) AS title FROM biblio ORDER BY title
+.		end sql
+.	end select
+.	select criteria default=start title="... or Subject"
+.		item start title="Starts With"
+.		item trunc title="Contains"
+.	end select
+.	string topic title="..." 
+.	date dt_start title="Checkouts Starting From Date"
+.	order_by default="multi!r"
+.		item topic title="Subject"
+.		item multi title="# Checkouts, Subject" type=multi expr="checkoutCount,'topic'!r"
+.		item checkoutCount type=numeric title="# Checkouts"
+.	end order_by
+.end parameters
+.sql
+# UNION would require less code, but could not figure out how to count topic
+# occurences correctly.
+# PRIMARY KEY for idtpc with INSERT IGNORE should ensure all topics for a record
+# are counted, but only once in case of duplicate topics for a record.
+	CREATE TEMPORARY TABLE temp_union (
+		bibid integer
+		,idtpc varchar(80) PRIMARY KEY
+		,topic varchar(320) NULL
+		)
+	ENGINE=HEAP
+	SELECT bibid AS bibid
+		,concat(bibid,substring(upper(topic1),1,60)) AS idtpc
+		,topic1 AS topic
+	FROM biblio b
+	WHERE b.topic1 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic1 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic1 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic1 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+.end sql
+.sql
+	INSERT IGNORE INTO temp_union
+	SELECT bibid AS bibid
+		,concat(bibid,substring(upper(topic2),1,60)) AS idtpc
+		,topic2 AS topic
+	FROM biblio b
+	WHERE b.topic2 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic2 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic2 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic2 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+.end sql
+.sql
+	INSERT IGNORE INTO temp_union
+	SELECT bibid AS bibid
+		,concat(bibid,substring(upper(topic3),1,60)) AS idtpc
+		,topic3 AS topic
+	FROM biblio b
+	WHERE b.topic3 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic3 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic3 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic3 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+.end sql
+.sql
+	INSERT IGNORE INTO temp_union
+	SELECT bibid AS bibid
+		,concat(bibid,substring(upper(topic4),1,60)) AS idtpc
+		,topic4 AS topic
+	FROM biblio b
+	WHERE b.topic4 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic4 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic4 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic4 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+.end sql
+.sql
+	INSERT IGNORE INTO temp_union
+	SELECT bibid AS bibid
+		,concat(bibid,substring(upper(topic5),1,60)) AS idtpc
+		,topic5 AS topic
+	FROM biblio b
+	WHERE b.topic5 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic5 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic5 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic5 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+.end sql
+.sql
+	SELECT topic, count(h.status_begin_dt) checkoutCount
+	FROM temp_union t
+	LEFT JOIN biblio_status_hist h
+		ON t.bibid = h.bibid
+		AND h.status_cd = 'out'
+.	if_set dt_start
+		WHERE h.status_begin_dt >= %dt_start%
+.	end if_set
+	GROUP BY t.topic
+.	order_by_expr
+.end sql
+.sql
+	DROP TABLE temp_union
+.end sql

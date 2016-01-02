@@ -52,16 +52,16 @@ $trans["indexDesc"]	= "\$text = 'Utilice el informe o lista de etiquetas situado
 #****************************************************************************
 #*  Translation text for page report_list.php
 #****************************************************************************
-$trans["reportListHdr"]				= "\$text = 'Lista de informes';";
-$trans["reportListDesc"]			= "\$text = 'Elija uno de los siguientes enlaces para realizar un informe.';";
-$trans["reportListXmlErr"]			= "\$text = 'Ocurrió un error al analizar un informe xml.';";
+$trans["reportListHdr"]		= "\$text = 'Lista de informes';";
+$trans["reportListDesc"]	= "\$text = 'Elija uno de los siguientes enlaces para realizar un informe.';";
+$trans["reportListXmlErr"]	= "\$text = 'Ocurrió un error al analizar un informe xml.';";
 $trans["reportListCannotRead"]	= "\$text = 'No se puede leer la etiqueta de archivo: %fileName%';";
 
 #****************************************************************************
 #*  Translation text for page label_list.php
 #****************************************************************************
-$trans["labelListHdr"]			= "\$text = 'Lista de etiquetas';";
-$trans["labelListDesc"]			= "\$text = 'Elija uno de los siguientes enlaces para crear etiquetas en formato pdf.';";
+$trans["labelListHdr"]		= "\$text = 'Lista de etiquetas';";
+$trans["labelListDesc"]		= "\$text = 'Elija uno de los siguientes enlaces para crear etiquetas en formato pdf.';";
 $trans["displayLabelsXmlErr"]	= "\$text = 'Ocurrió un error al analizar un informe xml. Error = ';";
 
 #****************************************************************************
@@ -74,37 +74,37 @@ $trans["displayLettersXmlErr"]	= "\$text = 'Ocurrió un error al analizar un inf
 #****************************************************************************
 #*  Translation text for page report_criteria.php
 #****************************************************************************
-$trans["reportCriteriaHead1"]				= "\$text = 'Criterios de búsqueda de informes (opcional)';";
-$trans["reportCriteriaHead2"]				= "\$text = 'Clasificación de informes (opcional)';";
-$trans["reportCriteriaHead3"]				= "\$text = 'Informe Tipo de Salidas';";
-$trans["reportCriteriaCrit1"]				= "\$text = 'Criterio 1:';";
-$trans["reportCriteriaCrit2"]				= "\$text = 'Criterio 2:';";
-$trans["reportCriteriaCrit3"]				= "\$text = 'Criterio 3:';";
-$trans["reportCriteriaCrit4"]				= "\$text = 'Criterio 4:';";
-$trans["reportCriteriaEQ"]					= "\$text = '=';";
-$trans["reportCriteriaNE"]					= "\$text = 'no =';";
-$trans["reportCriteriaLT"]					= "\$text = '&lt;';";
-$trans["reportCriteriaGT"]					= "\$text = '&gt;';";
-$trans["reportCriteriaLE"]					= "\$text = '&lt o =';";
-$trans["reportCriteriaGE"]					= "\$text = '&gt o =';";
-$trans["reportCriteriaBT"]					= "\$text = 'entre';";
-$trans["reportCriteriaAnd"]				= "\$text = 'y';";
+$trans["reportCriteriaHead1"]			= "\$text = 'Criterios de búsqueda de informes (opcional)';";
+$trans["reportCriteriaHead2"]			= "\$text = 'Clasificación de informes (opcional)';";
+$trans["reportCriteriaHead3"]			= "\$text = 'Informe Tipo de Salidas';";
+$trans["reportCriteriaCrit1"]			= "\$text = 'Criterio 1:';";
+$trans["reportCriteriaCrit2"]			= "\$text = 'Criterio 2:';";
+$trans["reportCriteriaCrit3"]			= "\$text = 'Criterio 3:';";
+$trans["reportCriteriaCrit4"]			= "\$text = 'Criterio 4:';";
+$trans["reportCriteriaEQ"]			= "\$text = '=';";
+$trans["reportCriteriaNE"]			= "\$text = 'no =';";
+$trans["reportCriteriaLT"]			= "\$text = '&lt;';";
+$trans["reportCriteriaGT"]			= "\$text = '&gt;';";
+$trans["reportCriteriaLE"]			= "\$text = '&lt o =';";
+$trans["reportCriteriaGE"]			= "\$text = '&gt o =';";
+$trans["reportCriteriaBT"]			= "\$text = 'entre';";
+$trans["reportCriteriaAnd"]			= "\$text = 'y';";
 $trans["reportCriteriaRunReport"]		= "\$text = 'realizar informe';";
 $trans["reportCriteriaSortCrit1"]		= "\$text = 'Clase 1:';";
 $trans["reportCriteriaSortCrit2"]		= "\$text = 'Clase 2:';";
 $trans["reportCriteriaSortCrit3"]		= "\$text = 'Clase 3:';";
 $trans["reportCriteriaAscending"]		= "\$text = 'ascendente';";
 $trans["reportCriteriaDescending"]		= "\$text = 'descendiente';";
-$trans["reportCriteriaStartOnLabel"]	= "\$text = 'Comenzar a imprimir en la etiqueta:';";
+$trans["reportCriteriaStartOnLabel"]		= "\$text = 'Comenzar a imprimir en la etiqueta:';";
 $trans["reportCriteriaOutput"]			= "\$text = 'Formato Tipo de Salida:';";
 $trans["reportCriteriaOutputHTML"]		= "\$text = 'HTML';";
 $trans["reportCriteriaOutputCSV"]		= "\$text = 'CSV';";
 
 #* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-$trans["HTML (page-by-page)"]				= "\$text = 'HTML (Página por página)';";
-$trans["HTML (one big page)"]				= "\$text = 'HTML (una gran página)';";
-$trans["CSV"]									= "\$text = 'CSV';";
-$trans["Microsoft Excel"]					= "\$text = 'OpenOfice, Libre Ofice,  Microsoft Excel';";
+$trans["HTML (page-by-page)"]			= "\$text = 'HTML (Página por página)';";
+$trans["HTML (one big page)"]			= "\$text = 'HTML (una gran página)';";
+$trans["CSV"]					= "\$text = 'CSV';";
+$trans["Microsoft Excel"]			= "\$text = 'OpenOfice, Libre Ofice,  Microsoft Excel';";
 
 #****************************************************************************
 #*  Translation text for page run_report.php
@@ -114,23 +114,23 @@ $trans["runReportReturnLink2"]		= "\$text = 'informe de lista';";
 $trans["runReportTotal"]				= "\$text = 'filas de totales:';";
 
 #* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-$trans["Print list"]					= "\$text = 'Imprimir la lista';";
-$trans["Labels"]						= "\$text = 'etiquetas';";
-$trans["reportsResultNotFound"]	= "\$text = 'No se encontraron resultados.';";
-$trans["reportsResultFound"]		= "\$text = '%results% resultados encontrados.';";
-$trans["Report Results:"]			= "\$text = 'informe de resultados:';";
-$trans["No results found."]		= "\$text = 'No se encontraron resultados.';";
-$trans["&laquo;Prev"]            = "\$text = ' &laquo; Previo'; ";
-$trans["Next&raquo;"]            = "\$text = ' Siguiente &raquo; ';";
-$trans["&laquo;First"]           = "\$text = ' &laquo; Primero ';";
-$trans["Last&raquo;"]            = "\$text = ' Ultimo &raquo; ';";
+$trans["Print list"]						= "\$text = 'Imprimir la lista';";
+$trans["Labels"]							= "\$text = 'etiquetas';";
+$trans["reportsResultNotFound"]		= "\$text = 'No se encontraron resultados.';";
+$trans["reportsResultFound"]			= "\$text = '%results% resultados encontrados.';";
+$trans["Report Results:"]				= "\$text = 'informe de resultados:';";
+$trans["No results found."]			= "\$text = 'No se encontraron resultados.';";
+$trans["&laquo;Prev"]              = "\$text = ' &laquo; Previo'; ";
+$trans["Next&raquo;"]              = "\$text = ' Siguiente &raquo; ';";
+$trans["&laquo;First"]             = "\$text = ' &laquo; Primero ';";
+$trans["Last&raquo;"]              = "\$text = ' Ultimo &raquo; ';";
 
 #****************************************************************************
 #* Translation text for page display_labels.php
 #****************************************************************************
 $trans["displayLabelsStartOnLblErr"]	= "\$text = 'El campo debe ser numérico.';";
-$trans["displayLabelsXmlErr"]				= "\$text = 'Se produjo un error de análisis de definición de informe XML. Error = ';";
-$trans["displayLabelsCannotRead"]		= "\$text = 'No se puede leer la etiqueta de archivo: %fileName%';";
+$trans["displayLabelsXmlErr"]		= "\$text = 'Se produjo un error de análisis de definición de informe XML. Error = ';";
+$trans["displayLabelsCannotRead"]	= "\$text = 'No se puede leer la etiqueta de archivo: %fileName%';";
 
 #****************************************************************************
 #*  Translation text for page noauth.php
@@ -160,12 +160,12 @@ $trans["Most Popular Authors"]		= "\$text = 'Los autores más populares';";
 $trans["Periodic Checkout Count"]	= "\$text = 'Período a mostrar';";
 $trans["Bulk summary"]					= "\$text = 'Resumen a granel [Bulk summary]';";
 $trans["Item Checkout History"]		= "\$text = 'Historial de Artículos Pedidos';";
-$trans["Group By"]						= "\$text = 'Agrupar por';";
-$trans["MARC Reports"]					= "\$text = 'Reportes MARC';";
-$trans["Misc."]								= "\$text = 'Misceláneo';";
-$trans["Authors : Bibliography Count"]	= "\$text = 'Contar Bibliografía por Autor';";
-$trans["Subjects : Bibliography Count"]= "\$text = 'Contar Bibliografía por Temas';";
-$trans["Authority Search"]					= "\$text = 'Buscar por Autoridad';";
+$trans["Group By"]				= "\$text = 'Agrupar por';";
+$trans["MARC Reports"]				= "\$text = 'Reportes MARC';";
+$trans["Misc."]				= "\$text = 'Misceláneo';";
+$trans["Authors : Bibliography Count"]				= "\$text = 'Contar Bibliografía por Autor';";
+$trans["Subjects : Bibliography Count"]				= "\$text = 'Contar Bibliografía por Temas';";
+$trans["Authority Search"]				= "\$text = 'Buscar por Autoridad';";
 $trans["Bibliographies by MARC Tag / Subfield"]				= "\$text = 'Bibliografías de MARC Tag / subcampo';";
 $trans["Bibliographies by Subject"]				= "\$text = 'Bibliografías por tema';";
 $trans["List"]				= "\$text = 'Listado de  Bibliografías';";
@@ -284,3 +284,7 @@ $trans['rptLetterDetails']			= "\$text = 'Nuestros registros indican que los ele
 $trans['rptLetterFooter']			= "\$text = 'Atentamente, <br />Bibliotecario ' . OBIB_LIBRARY_NAME;";
 $trans["Bibliography"]				= "\$text = 'Bibliografía';";
 $trans["Bibliography Copy"]				= "\$text = 'Bibliografía Copia';";
+
+$trans["Our records show that the following library items are checked out under your name and are past due.
+Please return them as soon as possible and pay any late fees due."]				= "\$text = 'Bibliografía Copia';";
+

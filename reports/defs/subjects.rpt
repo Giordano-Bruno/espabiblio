@@ -1,0 +1,130 @@
+.title "Subjects : Bibliography Count"
+.category "MARC Reports"
+.column topic title="Subject" sort=topic
+.column biblioCount title="# Biblio" sort=multi
+.parameters
+.	select topic1st default=any title="Subject 1st Character"
+.		item ''
+.		sql
+# 0.6.0: SQL in RPT .select parameter should be one line, unwrapped
+SELECT DISTINCT substring(topic1,1,1) AS value, substring(upper(topic1),1,1) AS title FROM biblio UNION SELECT DISTINCT substring(topic2,1,1) AS value, substring(upper(topic2),1,1) AS title FROM biblio UNION SELECT DISTINCT substring(topic3,1,1) AS value, substring(upper(topic3),1,1) AS title FROM biblio UNION SELECT DISTINCT substring(topic4,1,1) AS value, substring(upper(topic4),1,1) AS title FROM biblio UNION SELECT DISTINCT substring(topic5,1,1) AS value, substring(upper(topic5),1,1) AS title FROM biblio ORDER BY title
+.		end sql
+.	end select
+.	select criteria default=start title="... or Subject"
+.		item start title="Starts With"
+.		item trunc title="Contains"
+.	end select
+.	string topic title="..." 
+.	order_by default=topic
+.		item topic title="Subject"
+.		item multi title="# Biblio, Subject" type=multi expr="biblioCount,'topic'!r"
+.		item biblioCount type=numeric title="# Biblio"
+.	end order_by
+.end parameters
+.sql
+# UNION would require less code, but could not figure out how to count topic
+# occurences correctly.
+# PRIMARY KEY for idtpc with INSERT IGNORE should ensure all topics for a record
+# are counted, but only once in case of duplicate topics for a record.
+	CREATE TEMPORARY TABLE temp_union (
+		idtpc varchar(80) PRIMARY KEY
+		,topic varchar(320) NULL
+		)
+		ENGINE=HEAP
+	SELECT concat(bibid,substring(upper(topic1),1,60)) AS idtpc, topic1 AS topic
+	FROM biblio b
+	WHERE b.topic1 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic1 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic1 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic1 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+.end sql
+.sql
+	INSERT IGNORE INTO temp_union
+	SELECT concat(bibid,substring(upper(topic2),1,60)) AS idtpc, topic2 AS topic
+	FROM biblio b
+	WHERE b.topic2 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic2 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic2 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic2 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+.end sql
+.sql
+	INSERT IGNORE INTO temp_union
+	SELECT concat(bibid,substring(upper(topic3),1,60)) AS idtpc, topic3 AS topic
+	FROM biblio b
+	WHERE b.topic3 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic3 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic3 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic3 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+.end sql
+.sql
+	INSERT IGNORE INTO temp_union
+	SELECT concat(bibid,substring(upper(topic4),1,60)) AS idtpc, topic4 AS topic
+	FROM biblio b
+	WHERE b.topic4 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic4 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic4 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic4 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+.end sql
+.sql
+	INSERT IGNORE INTO temp_union
+	SELECT concat(bibid,substring(upper(topic5),1,60)) AS idtpc, topic5 AS topic
+	FROM biblio b
+	WHERE b.topic5 !=''
+.	if_set topic
+.		if_equal criteria start
+			AND b.topic5 LIKE '%"topic%%%'
+.		end if_set
+.		if_equal criteria trunc
+			AND b.topic5 LIKE '%%%"topic%%%'		
+.		end if_set
+.	else
+.		if_not_equal topic1st ''
+			AND b.topic5 LIKE '%"topic1st%%%'
+.		end if_set
+.	end if_set
+.end sql
+.sql
+	SELECT topic, count(topic) biblioCount
+	FROM temp_union
+	GROUP BY topic
+.	order_by_expr
+.end sql
+.sql
+	DROP TABLE temp_union
+.end sql

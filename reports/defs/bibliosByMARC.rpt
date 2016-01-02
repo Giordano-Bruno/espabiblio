@@ -1,0 +1,44 @@
+.title "Bibliographies by MARC Tag / Subfield"
+.column bibid hidden
+.column field_data title="Value" sort=multi
+.column callno title="Call Num." sort=callno
+.column author title="Author" sort=author
+.column title func=biblio_link title="Title" sort=title
+.column collection title="Collection"
+.parameters
+.	string tag title="MARC Tag"
+.	string subfield title="MARC Subfield"
+.	string contains title="Subfield Contains"
+.	string startswith title="Subfield Starts With"
+.	date newer title="Bibliography added after"
+.	order_by default=multi
+.		item multi title="Value, Author, Title" type=multi expr="field_data, author, title"
+.		item field_data title="Value"
+.		item author title="Author"
+.		item title title="Title"
+.		item callno title="Call Number"
+.	end order_by
+.end parameters
+
+.sql
+	select b.bibid, concat_ws(' ', b.call_nmbr1, b.call_nmbr2, b.call_nmbr3) callno,
+		b.title, b.author, coll.description collection, f.field_data
+	from biblio b, collection_dm coll, biblio_field f
+	where coll.code=b.collection_cd and b.bibid = f.bibid
+.	if_set tag
+	and f.tag=%tag%
+.	end if_set
+.	if_set subfield
+	and f.subfield_cd=%subfield%
+.	end if_set
+.	if_set contains
+		and f.field_data like '%%%"contains%%%'
+.	end if_set
+.	if_set startswith
+		and f.field_data like '%"startswith%%%'
+.	end if_set
+.	if_set newer
+		and b.create_dt >= %newer%
+.	end if_set
+.	order_by_expr
+.end sql
