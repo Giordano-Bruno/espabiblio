@@ -100,7 +100,9 @@ ksort($trans); //jalg el texto en ingles indice trans
 		
 ksort($lara); //jalg el texto en ingles indice trans
 $locale = array();
-$klang='es'; //jalg Lee el modulo selecionado en español
+
+//$klang='es'; //jalg Lee el modulo selecionado en español
+$klang=$lang;
 	include(OBI_DIR. $klang . '/' . $module);
 ob_start();
 		// read language files from module's locale directory preferrably
