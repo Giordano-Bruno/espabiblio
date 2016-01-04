@@ -1,15 +1,6 @@
 <?php
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
-
-
-* jalg 2012  se agregaron variables para corregir trauducion en la ficha de administracion de biblioteca. dias 
-* jalg 2012 se agrego $trans["admin_settingsViewlist"] permite activar o desactivar la funcion del listado general de libros. 
-#* MODIFICADO POR JOSE ANTONIO LARA joanlaga@hotmail.com PARA SOPORTE DE Z39.50 (2012)
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-
-
-
  */
  
 /**********************************************************************************
@@ -46,162 +37,129 @@
 #****************************************************************************
 #*  Common translation text shared among multiple pages
 #****************************************************************************
-$trans["sharedCancel"]			= "\$text = 'Cancelar';";
-$trans["sharedDelete"]			= "\$text = 'Borrar';";
-
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-$trans["sharedComfirmDelete"]		= "\$text = 'Si, eliminar todos los artículos seleccionados';";
-$trans["sharedDeleteWarning"]		= "\$text = 'Esta acción no se puede desacer. ¿Estás seguro?';";
-$trans["sharedRecordIsDelete"]		= "\$text = 'registro está borrado.';";
-$trans["sharedRecordsAreDeleted"]	= "\$text = 'registros están borrados.';";
-$trans["sharedListOfDeletedItems"]	= "\$text = 'La lista de artículos será eliminada';";
+$trans["sharedCancel"]             = "\$text = 'Cancel';";
+$trans["sharedDelete"]             = "\$text = 'Delete';";
 
 #****************************************************************************
 #*  Translation text for page biblio_view.php
 #****************************************************************************
-$trans["biblioViewTble1Hdr"]       = "\$text = 'Información bibliográfica';";
-$trans["biblioViewMaterialType"]   = "\$text = 'Tipo de material';";
-$trans["biblioViewCollection"]     = "\$text = 'Colección';";
-$trans["biblioViewCallNmbr"]       = "\$text = 'Número de entrada';";
-$trans["biblioViewTble2Hdr"]       = "\$text = 'Información de la copia bibliográfica';";
-$trans["biblioViewTble2Col1"]      = "\$text = 'Código de barras #';";
-$trans["biblioViewTble2Col2"]      = "\$text = 'Descripción';";
-$trans["biblioViewTble2Col3"]      = "\$text = 'Estado';";
-$trans["biblioViewTble2Col4"]      = "\$text = 'Estado Dt';";
-$trans["biblioViewTble2Col5"]      = "\$text = 'Fecha de devolución';";
-$trans["biblioViewTble2ColFunc"]   = "\$text = 'Función';";
-$trans["biblioViewTble2Coldel"]    = "\$text = 'Borrar';";
-$trans["biblioViewTble2Coledit"]   = "\$text = 'editar';";
-$trans["biblioViewTble3Hdr"]       = "\$text = 'Información bibliográfica adicional';";
-$trans["biblioViewNoAddInfo"]      = "\$text = 'No existe información bibliográfica adicional disponible.';";
-$trans["biblioViewNoCopies"]       = "\$text = 'No se han creado copias.';";
-$trans["biblioViewOpacFlg"]        = "\$text = 'Mostrar en OPAC';";
-$trans["biblioViewNewCopy"]        = "\$text = 'Añadir nueva copia';";
-$trans["biblioViewNeweCopy"]        = "\$text = 'Añadir nueva copia electrónica';";
-$trans["biblioViewYes"]            = "\$text = 'Si';";
-$trans["biblioViewNo"]             = "\$text = 'No';";
-
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-$trans["biblioViewPictureHeader"]		= "\$text = 'Imagen de la Portada';";
-$trans["biblioViewPictureContra"]		= "\$text = 'Imagen de la Contra Portada';";
-$trans["biblioViewDigitalHeader"]		= "\$text = 'Archivo digital';";
-$trans["biblioViewPictureAutor"]		= "\$text = 'Imagen del Autor';";
-$trans["biblioViewDigitalNote"]			= "\$text = 'Nota: Se guardan en la carpeta: /media/digitales.';";
-$trans["Are you sure to remove this picture?"]  = "\$text = '¿Desea eliminar esta imagen?';";
-$trans["Remove"]				= "\$text = 'Eliminar';";
+$trans["biblioViewTble1Hdr"]       = "\$text = 'Bibliography Information';";
+$trans["biblioViewMaterialType"]   = "\$text = 'Material Type';";
+$trans["biblioViewCollection"]     = "\$text = 'Collection';";
+$trans["biblioViewPictureHeader"]  = "\$text = 'Bibliograhy Picture';";
+$trans["biblioViewCallNmbr"]       = "\$text = 'Call Number';";
+$trans["biblioViewTble2Hdr"]       = "\$text = 'Bibliography Copy Information';";
+$trans["biblioViewTble2Col1"]      = "\$text = 'Barcode #';";
+$trans["biblioViewTble2Col2"]      = "\$text = 'Description';";
+$trans["biblioViewTble2Col3"]      = "\$text = 'Status';";
+$trans["biblioViewTble2Col4"]      = "\$text = 'Status Dt';";
+$trans["biblioViewTble2Col5"]      = "\$text = 'Due Back';";
+$trans["biblioViewTble2ColFunc"]   = "\$text = 'Function';";
+$trans["biblioViewTble2Coldel"]    = "\$text = 'del';";
+$trans["biblioViewTble2Coledit"]   = "\$text = 'edit';";
+$trans["biblioViewTble3Hdr"]       = "\$text = 'Additional Bibliographic Information';";
+$trans["biblioViewNoAddInfo"]      = "\$text = 'No additional bibliographic information available.';";
+$trans["biblioViewNoCopies"]       = "\$text = 'No copies have been created.';";
+$trans["biblioViewOpacFlg"]        = "\$text = 'Show in OPAC';";
+$trans["biblioViewNewCopy"]        = "\$text = 'Add New Copy';";
+$trans["biblioViewNeweCopy"]       = "\$text = 'Add New Electronic Copy';";
+$trans["biblioViewYes"]            = "\$text = 'yes';";
+$trans["biblioViewNo"]             = "\$text = 'no';";
 
 #****************************************************************************
 #*  Translation text for page biblio_search.php
 #****************************************************************************
-
-$trans["biblioSearchNoResults"]    = "\$text = 'No se han encontrado registros.';";
-$trans["biblioSearchResults"]      = "\$text = 'Resultados de la búsqueda';";
-$trans["biblioSearchResultPages"]  = "\$text = 'Páginas de resultados';";
-$trans["biblioSearchPrev"]         = "\$text = 'anterior';";
-$trans["biblioSearchNext"]         = "\$text = 'siguiente';";
+$trans["biblioSearchNoResults"]    = "\$text = 'No results found.';";
+$trans["biblioSearchResults"]      = "\$text = 'Search Results';";
+$trans["biblioSearchResultPages"]  = "\$text = 'Result Pages';";
+$trans["biblioSearchPrev"]         = "\$text = 'prev';";
+$trans["biblioSearchNext"]         = "\$text = 'next';";
+$trans["First"]                    = "\$text = 'First';";
+$trans["Last"]                     = "\$text = 'Last';";
 $trans["biblioSearchResultTxt"]    = "if (%items% == 1) {
-                                        \$text = '%items% resultado encontrado.';
+                                        \$text = '%items% result found.';
                                       } else {
-                                        \$text = '%items% resultados encontrados';
+                                        \$text = '%items% results found';
                                       }";
-
-$trans["biblioSearchauthor"]       = "\$text = ' ordenados por autor';";
-$trans["biblioSearchtitle"]        = "\$text = ' ordenados por título';";
-$trans["biblioSearchSortByAuthor"] = "\$text = 'ordenados por autor';";
-$trans["biblioSearchSortByTitle"]  = "\$text = 'ordenados por título';";
-$trans["biblioSearchTitle"]        = "\$text = 'Título';";
-$trans["biblioSearchAuthor"]       = "\$text = 'Autor';";
+$trans["biblioSearchauthor"]       = "\$text = ' sorted by author';";
+$trans["biblioSearchtitle"]        = "\$text = ' sorted by title';";
+$trans["biblioSearchSortByAuthor"] = "\$text = 'sort by author';";
+$trans["biblioSearchSortByTitle"]  = "\$text = 'sort by title';";
+$trans["biblioSearchTitle"]        = "\$text = 'Title';";
+$trans["biblioSearchAuthor"]       = "\$text = 'Author';";
 $trans["biblioSearchMaterial"]     = "\$text = 'Material';";
-$trans["biblioSearchCollection"]   = "\$text = 'Colección';";
-$trans["biblioSearchCall"]         = "\$text = 'Número de entrada';";
-$trans["biblioSearchCopyBCode"]    = "\$text = 'Código de copia';";
-$trans["biblioSearchCopyStatus"]   = "\$text = 'Estado';";
-$trans["biblioSearchNoCopies"]     = "\$text = 'Ninguna copia disponible.';";
-$trans["biblioSearchHold"]         = "\$text = 'mantener';";
-$trans["biblioSearchOutIn"]        = "\$text = 'Revisar salidas/entradas';";
-$trans["biblioSearchDetail"]       = "\$text = 'Mostrar información detallada de la Bibliografía';";
-$trans["biblioSearchBCode2Chk"]    = "\$text = 'Código de barras para comprobar o verificar en form';";
-$trans["biblioSearchBCode2Hold"]   = "\$text = 'Código de barras for hold form';";
-
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-$trans["PictDesc"]                 = "\$text = 'La imagen de la portada precisa estar localizada en la carpeta /openbiblio/fotos/portadas.';";
-$trans["biblioSearchFirst"]        = "\$text = 'primera';";
-$trans["biblioSearchLast"]         = "\$text = 'última';";
-$trans["biblioSearchDigitales"]       = "\$text = 'Descargar Archivo';";//jalg para descarga de matrials digitals
+$trans["biblioSearchCollection"]   = "\$text = 'Collection';";
+$trans["biblioSearchCall"]         = "\$text = 'Call Number';";
+$trans["biblioSearchCopyBCode"]    = "\$text = 'Copy Barcode';";
+$trans["biblioSearchCopyStatus"]   = "\$text = 'Status';";
+$trans["biblioSearchNoCopies"]     = "\$text = 'No copies are available.';";
+$trans["biblioSearchHold"]         = "\$text = 'hold';";
+$trans["biblioSearchOutIn"]        = "\$text = 'check out/in';";
+$trans["biblioSearchDetail"]       = "\$text = 'Show detailed Bibliography information';";
+$trans["biblioSearchBCode2Chk"]    = "\$text = 'Barcode to Check Out or Check In Form';";
+$trans["biblioSearchBCode2Hold"]   = "\$text = 'Barcode to Hold Form';";
 
 #****************************************************************************
 #*  Translation text for page loginform.php
 #****************************************************************************
-$trans["loginFormTbleHdr"]         = "\$text = 'Entrada para administradores';";
-$trans["loginFormUsername"]        = "\$text = 'Nombre del usuario';";
-$trans["loginFormPassword"]        = "\$text = 'Contraseña';";
-$trans["loginFormLogin"]           = "\$text = 'Entrar';";
+$trans["loginFormTbleHdr"]         = "\$text = 'Staff Login';";
+$trans["loginFormUsername"]        = "\$text = 'Username';";
+$trans["loginFormPassword"]        = "\$text = 'Password';";
+$trans["loginFormLogin"]           = "\$text = 'Login';";
+
+#****************************************************************************
+#*  Translation text for page login.php
+#****************************************************************************
+$trans["loginUserNameReqErr"]      = "\$text = 'Username is required.';";
+$trans["loginPwdReqErr"]           = "\$text = 'Password is required.';";
+$trans["loginPwdInvErr"]           = "\$text = 'Invalid signon.';";
 
 #****************************************************************************
 #*  Translation text for page hold_del_confirm.php
 #****************************************************************************
-$trans["holdDelConfirmMsg"]        = "\$text = 'Estás seguro de querer borrar esta solicitud de préstamo?';";
+$trans["holdDelConfirmMsg"]        = "\$text = 'Are you sure you want to delete this hold request?';";
 
 #****************************************************************************
 #*  Translation text for page hold_del.php
 #****************************************************************************
-$trans["holdDelSuccess"]           = "\$text='La solicitud de préstamo se eliminó correctamente.';";
+$trans["holdDelSuccess"]           = "\$text='Hold request was successfully deleted.';";
 
 #****************************************************************************
 #*  Translation text for page help_header.php
 #****************************************************************************
-$trans["helpHeaderTitle"]          = "\$text='Ayuda de Openbiblio';";
-$trans["helpHeaderCloseWin"]       = "\$text='Cerrar ventana';";
-$trans["helpHeaderContents"]       = "\$text='Contenidos';";
-$trans["helpHeaderPrint"]          = "\$text='Imprimir';";
-$trans["catalogResults"]           = "\$text='Resultados de búsqueda';";
+$trans["helpHeaderTitle"]          = "\$text='OpenBiblio Help';";
+$trans["helpHeaderCloseWin"]       = "\$text='Close Window';";
+$trans["helpHeaderContents"]       = "\$text='Contents';";
+$trans["helpHeaderPrint"]          = "\$text='Print';";
+
+$trans["catalogResults"]           = "\$text='Search Results';";
+$trans["Revise Page"]              = "\$text='Revise Page';";
+$trans["wiki updates to this page"] = "\$text='wiki updates to this page';";
+
 
 #****************************************************************************
 #*  Translation text for page header.php and header_opac.php
 #****************************************************************************
-$trans["headerTodaysDate"]         = "\$text='Fecha actual:';";
+$trans["headerTodaysDate"]         = "\$text='today\'s date:';";
 $trans["headerDateFormat"]         = "\$text='M d, Y';";
-$trans["headerLibraryHours"]       = "\$text='Horario de servicio:';";
-$trans["headerLibraryAders"]       = "\$text='Dirección de la Biblioteca:';";//add jalg
-$trans["headerLibraryPhone"]       = "\$text='Teléfono de la Biblioteca:';";
-$trans["headerHome"]               = "\$text='Inicio';";
-$trans["headerCirculation"]        = "\$text='Prestamos';";
-$trans["headerCataloging"]         = "\$text='Catalogación';";
-$trans["headerAdmin"]              = "\$text='Administración';";
-$trans["headerReports"]            = "\$text='Reportes y estadísticas';";
-$trans["headerOpac"]            = "\$text='Catálogo Público en Linea';";
-
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-//agregado jalg joanlaga@hotmail.com
-$trans["headerEstat"]              = "\$text=' Estadísticas ';";
-$trans["headerList"]              = "\$text=' Listado General ';";
+$trans["headerLibraryHours"]       = "\$text='library hours:';";
+$trans["headerLibraryPhone"]       = "\$text='library phone:';";
+$trans["headerHome"]               = "\$text='Home';";
+$trans["headerCirculation"]        = "\$text='Circulation';";
+$trans["headerCataloging"]         = "\$text='Cataloging';";
+$trans["headerAdmin"]              = "\$text='Admin';";
+$trans["headerReports"]            = "\$text='Reports';";
 
 #****************************************************************************
 #*  Translation text for page footer.php
 #****************************************************************************
-$trans["footerLibraryHome"]		= "\$text='Biblioteca Inicio';";
-$trans["footerOPAC"]			= "\$text='Catálogo Público en Linea (OPAC)';";
-$trans["footerHelp"]			= "\$text='Ayuda';";
-$trans["footerPoweredBy"]		= "\$text='Openbiblio 7.1 versión base de datos 7.2 y EspaBiblio v3.2';";
-$trans["footerDatabaseVersion"]		= "\$text='Versión de base de datos';";
-$trans["footerCopyright"]		= "\$text='Copyright';";
-$trans["footerUnderThe"]		= "\$text='bajo';";
-$trans["footerGPL"]			= "\$text='GNU General Public License';";
+$trans["footerLibraryHome"]        = "\$text='Library Home';";
+$trans["footerOPAC"]               = "\$text='OPAC';";
+$trans["footerHelp"]               = "\$text='Help';";
+$trans["footerPoweredBy"]          = "\$text='Powered by OpenBiblio version';";
+$trans["footerDatabaseVersion"]    = "\$text='database version';";
+$trans["footerCopyright"]          = "\$text='Copyright';";
+$trans["footerUnderThe"]           = "\$text='under the';";
+$trans["footerGPL"]                = "\$text='GNU General Public License';";
 
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-#****************************************************************************
-#*  Translation text for page advanced_search.php
-#****************************************************************************
-$trans["advsAdvancedSearch"]	= "\$text = 'Búsqueda avanzada';";
-$trans["advsMaterialType"]	= "\$text = 'Tipo de material';"; 
-$trans["advsCollectionType"]	= "\$text = 'Temática';";
-$trans["advsSearch"]		= "\$text = 'Buscar';";
-$trans["advsClear"]		= "\$text = 'Limpiar';";
-$trans["advsPublishedYear"]	= "\$text = 'Año de publicación';";
-$trans["advsLanguage"]		= "\$text = 'Idioma';";
-$trans["optThai"]		= "\$text = 'Thailandés';";
-$trans["optEnglish"]		= "\$text = 'Inglés';";
-$trans["optFrench"]		= "\$text = 'Francés';";
-$trans["cancel"]		= "\$text = 'Cancelar';";
-$trans["or"]			= "\$text = 'o';";
-$trans["any"]			= "\$text = 'Cualquiera';";
+?>

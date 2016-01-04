@@ -1,8 +1,4 @@
 <h1>Copy New and Edit Pages:</h1>
-<center><font class="error">Do not edit checked out copies 
-(<a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1162251&group_id=50071&atid=458474">
-Bug 1162251</a>).</font>
-</center>
 <br><br>
 
 Help Sub Sections:
@@ -22,7 +18,7 @@ The following table provides descriptions for the fields located on the Copy New
   <tr><th>Field</th><th>Description</th></tr>
   <tr>
     <td class="primary" valign="top">Barcode Number</td>
-    <td class="primary" valign="top">Unique code identifying a copy, must be all alphabetic and/or numeric, 
+    <td class="primary" valign="top">Unique code identifying a copy,
 maximum 20 characters. This field is required because it identifies the copy in Circulation forms 
 (Check Out, Check In, Hold).
 <br>See also: 

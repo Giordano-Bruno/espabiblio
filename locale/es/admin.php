@@ -532,7 +532,7 @@ Si el valor del mes de la historia de la purga es mayor que cero, los valores en
 Los datos de los informes de las estadísticas deben ser guardados fuera de Espabiblio para referencia futura.';";
 
 #****************************************************************************
-#* Translation text for page staff_list.php
+#* Translation text for page translate.php
 #****************************************************************************
 $trans["admin-Translate"]	= "\$text = 'Administrador de Traducciones';";
 $trans["admin-transAdver"]	= "\$text = 'Respalde sus archivos de la carpeta locale';";

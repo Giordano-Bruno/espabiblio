@@ -59,7 +59,7 @@ Bibliography status changes are allowed on the following pages with the followin
     <td class="primary" valign="top"></td>
   </tr>
   <tr>
-    <td class="primary" valign="top" rowspan="5">biblio info</td>
+    <td class="primary" valign="top" rowspan="3">biblio info</td>
     <td class="primary" valign="top">other<sup>*</sup></td>
     <td class="primary" valign="top">checked in</td>
     <td class="primary" valign="top"></td>
@@ -70,19 +70,9 @@ Bibliography status changes are allowed on the following pages with the followin
     <td class="primary" valign="top"></td>
   </tr>
   <tr>
-    <td class="primary" valign="top">checed in</td>
+    <td class="primary" valign="top">checked in</td>
     <td class="primary" valign="top">other<sup>*</sup></td>
     <td class="primary" valign="top"></td>
-  </tr>
-  <tr>
-    <td class="primary" valign="top">on hold</td>
-    <td class="primary" valign="top">checked in</td>
-    <td class="primary" valign="top">Only allowed if hold queue for given copy is empty.</td>
-  </tr>
-  <tr>
-    <td class="primary" valign="top">on hold</td>
-    <td class="primary" valign="top">other<sup>*</sup></td>
-    <td class="primary" valign="top">Only allowed if hold queue for given copy is empty.</td>
   </tr>
 </table>
 

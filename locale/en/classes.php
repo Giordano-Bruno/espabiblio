@@ -1,13 +1,6 @@
 <?php
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
-
-* jalg 2012  se agregaron variables para corregir traducirnos en la ficha de administración de biblioteca. días 
-* jalg 2012 se agrego $trans["admin_settingsViewlist"] permite activar o desactivar la función del listado general de libros. 
-#* MODIFICADO POR JOSE ANTONIO LARA joanlaga@hotmail.com PARA SOPORTE DE Z39.50 (2012)
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-
-
  */
  
 /**********************************************************************************
@@ -44,164 +37,184 @@
 #****************************************************************************
 #*  Translation text for class Biblio
 #****************************************************************************
-$trans["biblioError1"]            = "\$text = 'Número de llamada requerido.';";
+$trans["biblioError1"]            = "\$text = 'Call number is required.';";
 
 #****************************************************************************
 #*  Translation text for class BiblioField
 #****************************************************************************
-$trans["biblioFieldError1"]       = "\$text = 'Campo requerido.';";
-$trans["biblioFieldError2"]       = "\$text = 'La etiqueta debe ser numérica.';";
-
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-$trans["biblioFieldErrorPictureType"]             = "\$text = 'Este tipo de archivo no es la imagen (formatos si soportados jpeg, gif, png).';";
-$trans["biblioFieldErrorPictureLoadFailed"]   = "\$text = 'No se pudo cargar información de la imagen.';";
-$trans["biblioFieldErrorCoverLookupFailed"] = "\$text = 'Error al conectar con el servicio en linea de búsqueda de la cubierta.';";
-$trans["biblioFieldErrorDuplicatedISBN"]       = "\$text = 'Esta ISBN ya está en uso,';";
-$trans["biblioFieldViewExistingISBN"]            = "\$text = 'Ver elemento existente.';";
-$trans["biblioFieldErrorDuplicatedTitle"]       = "\$text = 'Este título ya está en uso,';";
-$trans["biblioFieldViewExistingTitle"]            = "\$text = 'Ver elemento existente o especificar ISBN.';";
+$trans["biblioFieldError1"]       = "\$text = 'Field is required.';";
+$trans["biblioFieldError2"]       = "\$text = 'Tag must be numeric.';";
 
 #****************************************************************************
 #*  Translation text for class BiblioQuery
 #****************************************************************************
-$trans["biblioQueryQueryErr1"]    = "\$text = 'Error al acceder a la información bibliográfica.';";
-$trans["biblioQueryQueryErr2"]    = "\$text = 'Error al acceder al campo de información bibliográfica.';";
-$trans["biblioQueryInsertErr1"]   = "\$text = 'Error al insertar nueva información bibliográfica.';";
-$trans["biblioQueryInsertErr2"]   = "\$text = 'Error al insertar nuevo campo de información bibliográfica.';";
-$trans["biblioQueryUpdateErr1"]   = "\$text = 'Error al actualizar la información bibliográfica.';";
-$trans["biblioQueryUpdateErr2"]   = "\$text = 'Error al limpiar el campo de información bibliográfica para actualizarlo.';";
-$trans["biblioQueryDeleteErr"]    = "\$text = 'Error al borrar la información bibliográfica.';";
+$trans["biblioQueryQueryErr1"]    = "\$text = 'Error accessing bibliography information.';";
+$trans["biblioQueryQueryErr2"]    = "\$text = 'Error accessing bibliography field information.';";
+$trans["biblioQueryInsertErr1"]   = "\$text = 'Error inserting new bibliography information.';";
+$trans["biblioQueryInsertErr2"]   = "\$text = 'Error inserting new bibliography field information.';";
+$trans["biblioQueryUpdateErr1"]   = "\$text = 'Error updating bibliography information.';";
+$trans["biblioQueryUpdateErr2"]   = "\$text = 'Error clearing bibliography field information for update.';";
+$trans["biblioQueryDeleteErr"]    = "\$text = 'Error deleting bibliography information.';";
 
 #****************************************************************************
 #*  Translation text for class BiblioSearchQuery
 #****************************************************************************
-$trans["biblioSearchQueryErr1"]   = "\$text = 'Error al contar los resultados de búsqueda bibliográfica.';";
-$trans["biblioSearchQueryErr2"]   = "\$text = 'Error al buscar información bibliográfica.';";
-$trans["biblioSearchQueryErr3"]   = "\$text = 'Error al leer la información bibliográfica.';";
+$trans["biblioSearchQueryErr1"]   = "\$text = 'Error counting bibliography search results.';";
+$trans["biblioSearchQueryErr2"]   = "\$text = 'Error searching bibliography information.';";
+$trans["biblioSearchQueryErr3"]   = "\$text = 'Error reading bibliography information.';";
 
 #****************************************************************************
 #*  Translation text for class BiblioCopy
 #****************************************************************************
-$trans["biblioCopyError1"]        = "\$text = 'Código  requerido.';";
-$trans["biblioCopyError2"]        = "\$text = 'El código debe ser totalmente alfabético y/o numérico.';";
+$trans["biblioCopyError1"]        = "\$text = 'Barcode number is required.';";
+$trans["biblioCopyError2"]        = "\$text = 'Invalid characters in barcode number.';";
 
 #****************************************************************************
 #*  Translation text for class BiblioCopyQuery
 #****************************************************************************
-$trans["biblioCopyQueryErr1"]     = "\$text = 'Error al comprobar el código de barras.';";
-$trans["biblioCopyQueryErr2"]     = "\$text = 'El código de barras %barcodeNmbr% ya está en uso.';";
-$trans["biblioCopyQueryErr3"]     = "\$text = 'Error al insertar nueva copia de la información bibliográfica.';";
-$trans["biblioCopyQueryErr4"]     = "\$text = 'Error al acceder a la copia de la información bibliográfica.';";
-$trans["biblioCopyQueryErr5"]     = "\$text = 'Error al actualizar la copia de información bibliográfica.';";
-$trans["biblioCopyQueryErr6"]     = "\$text = 'Error al borrar la información bibliográfica.';";
-$trans["biblioCopyQueryErr7"]     = "\$text = 'Error al acceder a la información bibliográfica para obtener el código de la colección.';";
-$trans["biblioCopyQueryErr8"]     = "\$text = 'Error al acceder a la información de la colección para comprobar la fecha de devolución.';";
-$trans["biblioCopyQueryErr9"]     = "\$text = 'Ocurrió un error al registrar las copias';";
-$trans["biblioCopyQueryErr10"]    = "\$text = 'Ocurrió un error al comprobar los límites de préstamo';";
-$trans["biblioCopyQueryErr11"]    = "\$text = 'Error de obtención en la identificación de la Copia.';";
+$trans["biblioCopyQueryErr1"]     = "\$text = 'Error checking for dup barcode.';";
+$trans["biblioCopyQueryErr2"]     = "\$text = 'Barcode number %barcodeNmbr% is already in use.';";
+$trans["biblioCopyQueryErr3"]     = "\$text = 'Error inserting new bibliography copy information.';";
+$trans["biblioCopyQueryErr4"]     = "\$text = 'Error accessing bibliography copy information.';";
+$trans["biblioCopyQueryErr5"]     = "\$text = 'Error updating bibliography copy information.';";
+$trans["biblioCopyQueryErr6"]     = "\$text = 'Error deleting bibliography information.';";
+$trans["biblioCopyQueryErr7"]     = "\$text = 'Error accessing bibliography information to get collection code.';";
+$trans["biblioCopyQueryErr8"]     = "\$text = 'Error accessing collection information to check days due back.';";
+$trans["biblioCopyQueryErr9"]     = "\$text = 'Error occurred checking copies in';";
+$trans["biblioCopyQueryErr10"]    = "\$text = 'Error occurred checking checkout limits';";
+$trans["biblioCopyQueryErr11"]    = "\$text = 'Error fetching highest copyid.';";
 
 #****************************************************************************
 #*  Translation text for class BiblioFieldQuery
 #****************************************************************************
-$trans["biblioFieldQueryErr1"]    = "\$text = 'Error al leer de un campo de la bibliografía.';";
-$trans["biblioFieldQueryErr2"]    = "\$text = 'Error de lectura de los campos de bibliografía.';";
-$trans["biblioFieldQueryInsertErr"] = "\$text = 'Error al insertar campo de nueva bibliografía.';";
-$trans["biblioFieldQueryUpdateErr"] = "\$text = 'Error al actualizar el campo de la bibliografía.';";
-$trans["biblioFieldQueryDeleteErr"] = "\$text = 'Error eliminar la bibliografía de campo.';";
+$trans["biblioFieldQueryErr1"]    = "\$text = 'Error reading for a bibliography field.';";
+$trans["biblioFieldQueryErr2"]    = "\$text = 'Error reading bibliography fields.';";
+$trans["biblioFieldQueryInsertErr"] = "\$text = 'Error inserting new bibliography field.';";
+$trans["biblioFieldQueryUpdateErr"] = "\$text = 'Error updating bibliography field.';";
+$trans["biblioFieldQueryDeleteErr"] = "\$text = 'Error deleting bibliography field.';";
 
 #****************************************************************************
 #*  Translation text for class UsmarcBlockDmQuery
 #****************************************************************************
-$trans["usmarcBlockDmQueryErr1"]  = "\$text = 'Error al acceder a los datos del bloque marc.';";
+$trans["usmarcBlockDmQueryErr1"]  = "\$text = 'Error accessing the marc block data.';";
 
 #****************************************************************************
 #*  Translation text for class UsmarcTagDmQuery
 #****************************************************************************
-$trans["usmarcTagDmQueryErr1"]    = "\$text = 'Error al acceder a la etiqueta de datos marc.';";
+$trans["usmarcTagDmQueryErr1"]    = "\$text = 'Error accessing the marc tag data.';";
 
 #****************************************************************************
 #*  Translation text for class UsmarcSubfieldDmQuery
 #****************************************************************************
-$trans["usmarcSubfldDmQueryErr1"] = "\$text = 'Error al acceder al subcampo de datos marc.';";
+$trans["usmarcSubfldDmQueryErr1"] = "\$text = 'Error accessing the marc subfield data.';";
 
 #****************************************************************************
 #*  Translation text for class BiblioHoldQuery
 #****************************************************************************
-$trans["biblioHoldQueryErr1"]     = "\$text = 'Error al acceder a los datos de préstamo por parte de la identificación bibliográfica.';";
-$trans["biblioHoldQueryErr2"]     = "\$text = 'Error al acceder a los datos de préstamo por parte de el socio.';";
-$trans["biblioHoldQueryErr3"]     = "\$text = 'Error al obtener identificación bibliográfica e identificación de copia para realizar una solicitud de préstamo.';";
-$trans["biblioHoldQueryErr4"]     = "\$text = 'Error al insertar los datos de préstamo.';";
-$trans["biblioHoldQueryErr5"]     = "\$text = 'Error al borrar los datos de préstamo.';";
-$trans["biblioHoldQueryErr6"]     = "\$text = 'Error al obtener el socio que ha realizado la reserva para hacer una copia.';";
+$trans["biblioHoldQueryErr1"]     = "\$text = 'Error accessing hold data by bibliography id.';";
+$trans["biblioHoldQueryErr2"]     = "\$text = 'Error accessing hold data by member id.';";
+$trans["biblioHoldQueryErr3"]     = "\$text = 'Error getting bibid and copyid for placing hold.';";
+$trans["biblioHoldQueryErr4"]     = "\$text = 'Error inserting hold data.';";
+$trans["biblioHoldQueryErr5"]     = "\$text = 'Error deleting hold data.';";
+$trans["biblioHoldQueryErr6"]     = "\$text = 'Error getting first hold member for a copy.';";
 
 #****************************************************************************
 #*  Translation text for class ReportQuery
 #****************************************************************************
-$trans["reportQueryErr1"]         = "\$text = 'Error al llevar a cabo el informe.';";
+$trans["reportQueryErr1"]         = "\$text = 'Error running report.';";
 
 #****************************************************************************
 #*  Translation text for class ReportCriteria
 #****************************************************************************
-$trans["reportCriteriaErr1"]      = "\$text = 'Un valor no numérico no es válido en una columna numérica.';";
-$trans["reportCriteriaDateTimeErr"] = "\$text = 'Formato de fecha y hora no válido.';";
-$trans["reportCriteriaDateErr"]   = "\$text = 'Formato de fecha no válido.';";
+$trans["reportCriteriaErr1"]      = "\$text = 'Non numeric value is not valid with numeric column.';";
+$trans["reportCriteriaDateTimeErr"] = "\$text = 'Invalid datetime format.';";
+$trans["reportCriteriaDateErr"]   = "\$text = 'Invalid date format.';";
+
+#****************************************************************************
+#*  Translation text for class Staff
+#****************************************************************************
+$trans["staffLastNameReqErr"]     = "\$text = 'Last name is required.';";
+$trans["staffUserNameLenErr"]     = "\$text = 'Username must be at least 4 characters.';";
+$trans["staffUserNameCharErr"]    = "\$text = 'Username must not contain any spaces.';";
+$trans["staffPwdLenErr"]          = "\$text = 'Password must be at least 4 characters.';";
+$trans["staffPwdCharErr"]         = "\$text = 'Password must not contain any spaces.';";
+$trans["staffPwdMatchErr"]        = "\$text = 'Passwords do not match.';";
+
+#****************************************************************************
+#*  Translation text for class Member
+#****************************************************************************
+$trans["memberBarcodeReqErr"]     = "\$text = 'Card number is required.';";
+$trans["memberBarcodeCharErr"]    = "\$text = 'Invalid characters in card number.';";
+$trans["memberLastNameReqErr"]    = "\$text = 'Last name is required.';";
+$trans["memberFirstNameReqErr"]   = "\$text = 'First name is required.';";
 
 #****************************************************************************
 #*  Translation text for class LabelFormat and LetterFormat
 #****************************************************************************
-$trans["labelFormatFontErr"]      = "\$text = 'Tipo de fuente no válido  xml.  Los tipos de fuente válidos son Courier, Helvetica, y Times-Roman.';";
-$trans["labelFormatFontSizeErr"]  = "\$text = 'Tamaño de fuente no válido  xml.  El tamaño de la fuente debe ser numérico.';";
-$trans["labelFormatFontSizeErr2"] = "\$text = 'Tamaño de fuente no válido  xml.  El tamaño de la fuente debe ser mayor de cero.';";
-$trans["labelFormatLMarginErr"]   = "\$text = 'Margen izquierdo no válido  xml.  El margen izquierdo debe ser numérico.';";
-$trans["labelFormatLMarginErr2"]  = "\$text = 'Margen izquierdo no válido  xml.  El margen izquierdo debe ser mayor de cero.';";
-$trans["labelFormatRMarginErr"]   = "\$text = 'Margen derecho no válido  xml.  El margen derecho debe ser numérico.';";
-$trans["labelFormatRMarginErr2"]  = "\$text = 'Margen derecho no válido  xml.  El margen derecho debe ser mayor de cero.';";
-$trans["labelFormatTMarginErr"]   = "\$text = 'Margen superior no válido  xml.  El margen superior debe ser numérico.';";
-$trans["labelFormatTMarginErr2"]  = "\$text = 'Margen superior no válido  xml.  El margen superior debe ser mayor de cero.';";
-$trans["labelFormatBMarginErr"]   = "\$text = 'Margen inferior no válido  xml.  El margen inferior debe ser numérico.';";
-$trans["labelFormatBMarginErr2"]  = "\$text = 'Margen inferior no válido  xml.  El margen inferior debe ser mayor de cero.';";
-$trans["labelFormatColErr"]       = "\$text = 'Columnas no válidas xml.  Las columnas deben ser numéricas.';";
-$trans["labelFormatColErr2"]      = "\$text = 'Columnas no válidas xml.  Las columnas deben ser mayores de cero.';";
-$trans["labelFormatWidthErr"]     = "\$text = 'Ancho de página no válido xml.  El ancho de página debe ser numérico.';";
-$trans["labelFormatWidthErr2"]    = "\$text = 'Ancho de página no válido xml.  El ancho de página debe ser mayor de cero.';";
-$trans["labelFormatHeightErr"]    = "\$text = 'Altura de página no válida xml.  La altura de página debe ser numérica.';";
-$trans["labelFormatHeightErr2"]   = "\$text = 'Altura de página no válida xml.  La altura de página debe ser mayor de cero.';";
-$trans["labelFormatNoLabelsErr"]  = "\$text = 'Líneas no válidas xml.';";
+$trans["labelFormatFontErr"]      = "\$text = 'Invalid font type specified in label definition xml.  Valid font types are Courier, Helvetica, and Times-Roman.';";
+$trans["labelFormatFontSizeErr"]  = "\$text = 'Invalid font size specified in label definition xml.  Font size must be numeric.';";
+$trans["labelFormatFontSizeErr2"] = "\$text = 'Invalid font size specified in label definition xml.  Font size must be greater than zero.';";
+$trans["labelFormatLMarginErr"]   = "\$text = 'Invalid left margin specified in label definition xml.  Left margin must be numeric.';";
+$trans["labelFormatLMarginErr2"]  = "\$text = 'Invalid left margin specified in label definition xml.  Left margin must be greater than zero.';";
+$trans["labelFormatRMarginErr"]   = "\$text = 'Invalid right margin specified in label definition xml.  Right margin must be numeric.';";
+$trans["labelFormatRMarginErr2"]  = "\$text = 'Invalid right margin specified in label definition xml.  Right margin must be greater than zero.';";
+$trans["labelFormatTMarginErr"]   = "\$text = 'Invalid top margin specified in label definition xml.  Top margin must be numeric.';";
+$trans["labelFormatTMarginErr2"]  = "\$text = 'Invalid top margin specified in label definition xml.  Top margin must be greater than zero.';";
+$trans["labelFormatBMarginErr"]   = "\$text = 'Invalid bottom margin specified in label definition xml.  Bottom margin must be numeric.';";
+$trans["labelFormatBMarginErr2"]  = "\$text = 'Invalid bottom margin specified in label definition xml.  Bottom margin must be greater than zero.';";
+$trans["labelFormatColErr"]       = "\$text = 'Invalid columns specified in label definition xml.  Columns must be numeric.';";
+$trans["labelFormatColErr2"]      = "\$text = 'Invalid columns specified in label definition xml.  Columns must be greater than zero.';";
+$trans["labelFormatWidthErr"]     = "\$text = 'Invalid width specified in label definition xml.  Width must be numeric.';";
+$trans["labelFormatWidthErr2"]    = "\$text = 'Invalid width specified in label definition xml.  Width must be greater than zero.';";
+$trans["labelFormatHeightErr"]    = "\$text = 'Invalid height specified in label definition xml.  Height must be numeric.';";
+$trans["labelFormatHeightErr2"]   = "\$text = 'Invalid height specified in label definition xml.  Height must be greater than zero.';";
+$trans["labelFormatNoLabelsErr"]  = "\$text = 'Invalid label lines specified in label definition xml.';";
 
 #****************************************************************************
 #*  Translation text for class BiblioStatusHistQuery
 #****************************************************************************
-$trans["biblioStatusHistQueryErr1"] = "\$text = 'Error al obtener el estado del historial bibliográfico.';";
-$trans["biblioStatusHistQueryErr2"] = "\$text = 'Error al obtener el estado del historial bibliográfico por parte del socio';";
-$trans["biblioStatusHistQueryErr3"] = "\$text = 'Error al insertar el estado del historial bibliográfico';";
-$trans["biblioStatusHistQueryErr4"] = "\$text = 'Error al borrar el estado del historial';";
-$trans["biblioStatusHistQueryErr5"] = "\$text = 'Error al borrar el estado del historial bibliográfico por parte de un socio';";
+$trans["biblioStatusHistQueryErr1"] = "\$text = 'Error getting bibliography status history by bibliography id.';";
+$trans["biblioStatusHistQueryErr2"] = "\$text = 'Error getting bibliography status history by member id';";
+$trans["biblioStatusHistQueryErr3"] = "\$text = 'Error inserting bibliography status history';";
+$trans["biblioStatusHistQueryErr4"] = "\$text = 'Error deleting bibliography status history by copy id';";
+$trans["biblioStatusHistQueryErr5"] = "\$text = 'Error deleting bibliography status history by member id';";
 
 #****************************************************************************
 #*  Translation text for class MemberAccountTransaction
 #****************************************************************************
-$trans["memberAccountTransError1"]  = "\$text = 'Cantidad requerida.';";
-$trans["memberAccountTransError2"]  = "\$text = 'La cantidad debe ser numérica.';";
-$trans["memberAccountTransError3"]  = "\$text = 'La descripción es requerida.';";
+$trans["memberAccountTransError1"]  = "\$text = 'Amount is required.';";
+$trans["memberAccountTransError2"]  = "\$text = 'Amount must be numeric.';";
+$trans["memberAccountTransError3"]  = "\$text = 'Description is required.';";
+$trans["Amount must be greater than zero."]  = "\$text = 'Amount must be greater than zero.';";
 
 #****************************************************************************
 #*  Translation text for class MemberAccountQuery
 #****************************************************************************
-$trans["memberAccountQueryErr1"]    = "\$text = 'Error al acceder a la información de la cuenta del socio.';";
-$trans["memberAccountQueryErr2"]    = "\$text = 'Error al insertar la información de la cuenta del socio.';";
-$trans["memberAccountQueryErr3"]    = "\$text = 'Error al borrar la información de la cuenta del socio.';";
+$trans["memberAccountQueryErr1"]    = "\$text = 'Error accessing member account information.';";
+$trans["memberAccountQueryErr2"]    = "\$text = 'Error inserting member account information.';";
+$trans["memberAccountQueryErr3"]    = "\$text = 'Error deleting member account information.';";
 
-
-
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
 #****************************************************************************
-#*  Translation text for class CSV error
+#*  Translation text for class CircQuery
 #****************************************************************************
-$trans["CSVErrorInvalidFile"]                   = "\$text = 'inválido para subir archivos.';";
-$trans["CSVErrorInvalidFileFormat"]       = "\$text = 'formato de archivo no válido.';";
-$trans["CSVErrorOversized"]                   = "\$text = 'límite de tamaño máximo.';";
-$trans["CSVErrorReadFile"]                      = "\$text = 'no puede abrir los archivos subidos.';";
-$trans["CSVErrorMissingHeader"]           = "\$text = 'Falta de encabezados (primer fila)';";
-$trans["CSVErrorIncorrectHeader"]           = "\$text = 'encabezado incorrecto';";
-$trans["CSVErrorInvalidData"]           = "\$text = 'No válido iniciar el formato CSV con la línea %line%';";
-$trans["CSVErrorMissingRequireField"] = "\$text = 'Se omitieron los campos requeridos (ISBN, Autor, título.) En la linea %line%';";
+$trans["Can't understand date: %err%"]                            = "\$text = 'Can't understand date: %err%';";
+$trans["Won't do checkouts for future dates."]                    = "\$text = 'Won't do checkouts for future dates.';";
+$trans["Bad member barcode: %bcode%"]                             = "\$text = 'Bad member barcode: %bcode%';";
+$trans["Member owes fines: checkout not allowed"]                 = "\$text = 'Member owes fines: checkout not allowed';";
+$trans["Member must renew membership before checking out."]       = "\$text = 'Member must renew membership before checking out.';";
+$trans["Bad copy barcode: %bcode%"]                               = "\$text = 'Bad copy barcode: %bcode%';";
+$trans["Item %bcode% has reached its renewal limit."]             = "\$text = 'Item %bcode% has reached its renewal limit.';";
+$trans["Item %bcode% is late and cannot be renewed."]             = "\$text = 'Item %bcode% is late and cannot be renewed.';";
+$trans["Item %bcode% is already checked out to another member."]  = "\$text = 'Item %bcode% is already checked out to another member.';";
+$trans["Member has reached checkout limit for this collection."]  = "\$text = 'Member has reached checkout limit for this collection.';";
+$trans["Checkouts are disallowed for this collection."]           = "\$text = 'Checkouts are disallowed for this collection.';";
+$trans["Item is on hold for another member."]                     = "\$text = 'Item is on hold for another member.';";
+$trans["Can't change status to an earlier date on item %bcode%."] = "\$text = 'Can't change status to an earlier date on item %bcode%.';";
+$trans["Can't change status more than once per second on item %bcode%."]  = "\$text = 'Can't change status more than once per second on item %bcode%.';";
+$trans["Won't do checkins for future dates."]                     = "\$text = 'Won't do checkins for future dates.';";
+$trans["Late fee (barcode=%barcode%)"]                            = "\$text = 'Late fee (barcode=%barcode%)';";
+
+
+$trans[""]  = "\$text = '';";
+
+?>

@@ -1,13 +1,7 @@
 <?php
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
-
-* jalg 2012  se agregaron variables para corregir trauducion en la ficha de administracion de biblioteca. dias 
-* jalg 2012 se agrego $trans["admin_settingsViewlist"] permite activar o desactivar la funcion del listado general de libros. 
-#* MODIFICADO POR JOSE ANTONIO LARA joanlaga@hotmail.com PARA SOPORTE DE Z39.50 (2012)
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-
-*/
+ */
  
 /**********************************************************************************
  *   Instructions for translators:
@@ -43,127 +37,82 @@
 #****************************************************************************
 #*  Translation text shared by various php files under the navbars dir
 #****************************************************************************
-$trans["login"]                    = "\$text = 'Entrar';";
-$trans["logout"]                   = "\$text = 'Salir';";
-$trans["help"]                     = "\$text = 'Ayuda';";
+$trans["login"]                    = "\$text = 'Login';";
+$trans["logout"]                   = "\$text = 'Logout';";
+$trans["help"]                     = "\$text = 'Help';";
 
 #****************************************************************************
 #*  Translation text for page home.php
 #****************************************************************************
-$trans["homeHomeLink"]		= "\$text = 'Inicio';";
-$trans["homeLicenseLink"]	= "\$text = 'Licencia-Esp';";
-
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-$trans["homeLicenseLink1"]	= "\$text = 'Licencia-Original';";
-$trans['homeRadmeLink']		= "\$text = 'Léame antes de instalar';";
+$trans["homeHomeLink"]             = "\$text = 'Home';";
+$trans["homeLicenseLink"]          = "\$text = 'License';";
 
 #****************************************************************************
 #*  Translation text for page admin.php
 #****************************************************************************
-$trans["adminSummary"]		= "\$text = 'Administración';";
-$trans["adminStaff"]		= "\$text = 'Administración de bibliotecarios';";
-$trans["adminSettings"]		= "\$text = 'Configuración de la biblioteca';";
-$trans["adminMaterialTypes"]	= "\$text = 'Tipos de material';";
-$trans["adminCollections"]	= "\$text = 'Colecciones';";
-$trans["adminThemes"]		= "\$text = 'Temas de diseño';";
-$trans["adminTranslation"]	= "\$text = 'Idiomas';";
-
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-$trans["Checkout Privs"]	= "\$text = 'Gestionar privilegios';";
-$trans["adminCheckoutPriv"]	= "\$text = 'Gestionar privilegios';";
-$trans["Cover Lookup Options"]	= "\$text = 'Búsqueda de portadas';";
-$trans["adminImportExport"]	= "\$text = 'Importar/Exportar';";
-$trans["adminMaterialStatus"]	= "\$text = 'Estado de Materiales';";
-$trans["Member Types"]		= "\$text = 'Grupos de usuarios';";
-$trans["Member Fields"]		= "\$text = 'Grados de usuario';";
-$trans["Copy Fields"]		= "\$text = 'Personalización de Campos de datos para las copias';";// es esta traduccion ?? jalg
+$trans["adminSummary"]             = "\$text = 'Admin Summary';";
+$trans["adminStaff"]               = "\$text = 'Staff Admin';";
+$trans["adminSettings"]            = "\$text = 'Library Settings';";
+$trans["adminMaterialTypes"]       = "\$text = 'Material Types';";
+$trans["adminCollections"]         = "\$text = 'Collections';";
+$trans["adminThemes"]              = "\$text = 'Themes';";
+$trans["adminTranslation"]         = "\$text = 'Translation';";
+$trans["Member Types"]             = "\$text = 'Member Types';";
+$trans["Member Fields"]            = "\$text = 'Member Fields';";
+$trans["Copy Fields"]              = "\$text = 'Copy Fields';";
+$trans["Checkout Privs"]           = "\$text = 'Checkout Privs';";
 
 #****************************************************************************
 #*  Translation text for page cataloging.php
 #****************************************************************************
-$trans["catalogSummary"]				= "\$text = 'Resumen de Catalogación';";
-$trans["catalogSearch1"]				= "\$text = 'Búsqueda de material';";
-$trans["catalogSearch2"]				= "\$text = 'Búsqueda bibliográfica';";
-$trans["catalogResults"]				= "\$text = 'Resultados de la búsqueda';";
-$trans["catalogBibInfo"]				= "\$text = 'Información bibliográfica';";
-$trans["catalogBibEdit"]				= "\$text = 'Edición básica';";
-$trans["catalogBibEditMarc"]			= "\$text = 'Editar-MARC';";
-$trans["catalogBibMarcNewFld"]		= "\$text = 'Nuevo campo MARC';";
-$trans["catalogBibMarcNewFldShrt"]	= "\$text = 'Nuevo MARC';";
-$trans["catalogBibMarcEditFld"]		= "\$text = 'Editar campo MARC';";
-$trans["catalogCopyNew"]				= "\$text = 'Nueva copia';";
-$trans["catalogCopyEdit"]				= "\$text = 'Editar Copia';";
-$trans["catalogHolds"]					= "\$text = 'Reservas';";
-$trans["catalogDelete"]					= "\$text = 'Borrar';";
-$trans["catalogBibNewLike"]			= "\$text = '¿Usar datos para un nuevo registro?';";
-$trans["catalogBibNew"]					= "\$text = 'Nuevo material';";
-$trans["Upload Marc Data"]				= "\$text = 'Subir datos Marc';";
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-$trans["catalogBibBulkDelete"]		= "\$text = 'Eliminar Bibliografías por lotes';";
-$trans["CSVImport"]						= "\$text = 'Importar desde un archivo CSV';";
-$trans["adminTranslate"]				= "\$text = 'Administrador de traducciones';";
-$trans["cdu"]								= "\$text = 'Tablas CDU';";
-$trans["cdd"]								= "\$text = 'Tablas CDD';";
-$trans["ibic"]								= "\$text = 'Tablas IBIC';";
+$trans["catalogSummary"]           = "\$text = 'Catalog Summary';";
+$trans["catalogSearch1"]           = "\$text = 'Biblio Search';";
+$trans["catalogSearch2"]           = "\$text = 'Bibliography Search';";
+$trans["catalogResults"]           = "\$text = 'Search Results';";
+$trans["catalogBibInfo"]           = "\$text = 'Biblio Info';";
+$trans["catalogBibEdit"]           = "\$text = 'Edit-Basic';";
+$trans["catalogBibEditMarc"]       = "\$text = 'Edit-MARC';";
+$trans["catalogBibMarcNewFld"]     = "\$text = 'New MARC Field';";
+$trans["catalogBibMarcNewFldShrt"] = "\$text = 'New MARC';";
+$trans["catalogBibMarcEditFld"]    = "\$text = 'Edit MARC Fld';";
+$trans["catalogCopyNew"]           = "\$text = 'New Copy';";
+$trans["catalogCopyEdit"]          = "\$text = 'Edit Copy';";
+$trans["catalogHolds"]             = "\$text = 'Hold Requests';";
+$trans["catalogDelete"]            = "\$text = 'Delete';";
+$trans["catalogBibNewLike"]        = "\$text = 'New Like';";
+$trans["catalogBibNew"]            = "\$text = 'New Bibliography';";
+$trans["Upload Marc Data"]         = "\$text = 'Upload Marc Data';";
+$trans["History"]                  = "\$text = 'History';";
 
 #****************************************************************************
 #*  Translation text for page reports.php
 #****************************************************************************
-$trans["reportsSummary"]			= "\$text = 'Informes';";
-$trans["reportsReportListLink"]  = "\$text = 'Lista de informes';";
-$trans["reportsLabelsLink"]      = "\$text = 'Imprimir etiquetas';";
-$trans["reportsLettersLink"]     = "\$text = 'Imprimir cartas';";
-
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-$trans["reportsResult"]          = "\$text = 'Informe de resultados';";
-$trans["reportsCriteria"]        = "\$text = 'Criterios del informe';";
-$trans["reportsFailedImport"]		= "\$text = 'Importación fallida';";
-$trans["reportsNoCover"]         = "\$text = 'Artículos sin portada';";
+$trans["reportsSummary"]           = "\$text = 'Reports Summary';";
+$trans["reportsReportListLink"]    = "\$text = 'Report List';";
+$trans["reportsLabelsLink"]        = "\$text = 'Print Labels';";
+$trans["reportsLettersLink"]        = "\$text = 'Print Letters';";
+$trans["Report Results"]           = "\$text = 'Report Results';";
+$trans["Report List"]              = "\$text = 'Report List';";
+$trans["Report Criteria"]          = "\$text = 'Report Criteria';";
 
 #****************************************************************************
 #*  Translation text for page opac.php
 #****************************************************************************
-$trans["catalogSearch1"]           = "\$text = 'Buscar';";
-$trans["catalogSearch2"]           = "\$text = 'Buscar material';";
-$trans["catalogResults"]           = "\$text = 'Resultados de la búsqueda';";
-$trans["catalogBibInfo"]           = "\$text = 'Información bibliográfica';";
+$trans["catalogSearch1"]           = "\$text = 'Search';";
+$trans["catalogSearch2"]           = "\$text = 'Bibliography Search';";
+$trans["catalogResults"]           = "\$text = 'Search Results';";
+$trans["catalogBibInfo"]           = "\$text = 'Biblio Info';";
 
 #Added
-#****************************************************************************
-#*  Translation text for page Added
-#****************************************************************************
-$trans["memberInfo"]				= "\$text = 'Información de socios';";
-$trans["memberSearch"]			= "\$text = 'Buscar socio';";
-$trans["editInfo"]				= "\$text = 'Editar datos';";
-$trans["checkoutHistory"]		= "\$text = 'Historial de préstamo';";
-$trans["account"]					= "\$text = 'Cuenta';";
-$trans["checkIn"]					= "\$text = 'Devolución';";
-$trans["memberSearch"]			= "\$text = 'Buscar socio';";
-$trans["newMember"]				= "\$text = 'Nuevo socio';";
-$trans["Offline Circulation"]	= "\$text = 'Prestamos fuera de linea';";
-$trans["account"]       	 	= "\$text = 'Cuenta';";
 
-#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
-#****************************************************************************
-#* Translation text for Library of Congress SRU module
-#****************************************************************************
-$trans["LOCsearch"]                 = "\$text = 'Consultar Biblioteca del Congreso USA';";
-
-#****************************************************************************
-#*  Translation text for page lookup.php for lookup2
-#****************************************************************************
-$trans["lookup"]        = "\$text = 'Búsqueda en línea Z39.50';";
-$trans["lookup_opts"]	= "\$text = 'Opciones Z39.50';";
-$trans["lookup_hosts"]  = "\$text = 'Servidores Z39.50';";
-$trans["lookup_bulk"]   = "\$text = 'Búsqueda masiva de datos vía ISBN';";
-
-#****************************************************************************
-#*  Translation text for page home.php
-#****************************************************************************
-$trans["homeHomeLink"]          = "\$text = 'Principal';";
-$trans["homeLicenseLink"]       = "\$text = 'Licencia';";
-$trans["homeCreditsLink"]       = "\$text = 'Créditos';";
-$trans["homeReadmeLink"]        = "\$text = 'Leeme';";
-$trans["homeChangLogLink"]      = "\$text = 'Historial de Cambios (ChangeLog)';";
-$trans["homeUserStatusLink"]    = "\$text = 'Estado del Usario y apartado de materiales';";
-$trans["homeUserOpac"]          = "\$text = 'Catálogo Público en Linea';";
+$trans["memberInfo"]="\$text = 'Member Info';";
+$trans["memberSearch"]="\$text = 'Member Search';";
+$trans["editInfo"]="\$text = 'Edit Info';";
+$trans["checkoutHistory"]= "\$text = 'Checkout History';";
+$trans["account"]="\$text = 'Account';";
+$trans["checkIn"]="\$text = 'Check In';";
+$trans["memberSearch"]= "\$text = 'Member Search';";
+$trans["newMember"]= "\$text = 'New Member';";
+$trans["Offline Circulation"]= "\$text = 'Offline Circulation';";
+//$trans["account"]        	= "\$text = 'Account';";
+?>
