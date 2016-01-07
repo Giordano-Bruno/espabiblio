@@ -94,7 +94,8 @@ class BiblioSearchQuery extends Query {
             $join .= "LEFT JOIN biblio_field ON biblio_field.bibid=biblio.bibid "
                  . "AND biblio_field.tag='700' "
                  . "AND (biblio_field.subfield_cd='a' OR biblio_field.subfield_cd='b') ";
-            $criteria = $this->_getCriteria(array("biblio.author", "biblio.responsibility_stmt",
+            $criteria = $this->_getCriteria(array("biblio.author",
+                                              "biblio.responsibility_stmt",
                                               "biblio_field.field_data"), $words);
       } elseif ($type == OBIB_SEARCH_SUBJECT) {
                 $criteria = $this->_getCriteria(array("biblio.topic1",
@@ -174,13 +175,6 @@ class BiblioSearchQuery extends Query {
       } elseif ($type == OBIB_ADVANCED_SEARCH) {
         $sql = $this->_getAdvancedSearchSQLStatement($words);
         $join .= $sql["join"];
-/*
-echo "<br/>";
-print_r($join);
-echo "<br/>";
-echo $sql;
-echo "<br/>";
-*/
         $criteria = $sql["criteria"];
       } else {
         $criteria = $this->_getCriteria(array("biblio.title"), $words);
@@ -211,13 +205,7 @@ echo "<br/>";
     $offset = ($page - 1) * $this->_itemsPerPage;
     $limit = $this->_itemsPerPage;
     $sql .= $this->mkSQL("LIMIT %N, %N", $offset, $limit);
-/*
-echo "<br/>";
-print_r($join);
-echo "<br/>";
-echo $sql;
-echo "<br/>";
-*/
+
     # Running row count SQL statement
     if (!$this->_query($sqlcount, $this->_loc->getText("biblioSearchQueryErr1"))) {
       return false;
@@ -256,7 +244,7 @@ echo "<br/>";
     # Setting SQL where clause
     $criteria = "";
     
-    $join .= $this->mkSQL(" biblio_field.bibid=biblio.bibid 
+    $join .= $this->mkSQL("LEFT JOIN biblio_field ON biblio_field.bibid=biblio.bibid 
     AND biblio_field.tag=%Q", $field);
 
     if ($field == '650') {
