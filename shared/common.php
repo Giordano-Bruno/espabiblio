@@ -52,16 +52,30 @@
   /* Work around PHP's braindead include_path stuff. */
   function REL($sf, $if) {
     return dirname($sf)."/".$if;
-
-
  }
 
-
-
   # Escaping shorthands
+function H($s)
+{
+    if (defined('OBIB_CHARSET')) {
+        $charset = OBIB_CHARSET;
+    } else {
+        $charset = "";
+    }
+    $phpver = explode('.', PHP_VERSION);
+    if ($phpver[0] == 4 || ($phpver[0] == 5 && $phpver[1] < 3)) {
+        return htmlspecialchars($s, ENT_QUOTES);
+    } elseif ($phpver[0] == 5 && $phpver[1] == 3) {
+        return htmlspecialchars($s, ENT_QUOTES | ENT_IGNORE);
+    } else {
+        return htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, $charset);
+    }
+}
+/*//mod ene-2016
   function H($s) {
     return htmlspecialchars($s, ENT_QUOTES);
   }
+*/
   function HURL($s) {
     return H(urlencode($s));
   }
@@ -104,6 +118,19 @@
       setlocale($a[0], $a[1]);
     }
   }
+
+# login allows redirects for:
+
+//mod ene-2016
+$pages = array(
+    'opac' => '../opac/index.php',
+    'home' => '../home/index.php',
+    'circulation' => '../circ/index.php',
+    'cataloging' => '../catalog/index.php',
+    'admin' => '../admin/index.php',
+    'reports' => '../reports/index.php',
+    'inventory' => '../inventory/index.php'
+    );
   
   require_once('../database_constants.php');
   require_once('../shared/global_constants.php');

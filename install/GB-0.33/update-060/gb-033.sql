@@ -1,5 +1,5 @@
 ALTER TABLE %prfx%biblio ADD COLUMN has_cover char(1) DEFAULT 'N';
-
+ALTER TABLE %prfx%biblio_copy ADD COLUMN price decimal(10,2) DEFAULT '0.00';
 ALTER TABLE %prfx%member ADD COLUMN cel varchar(15) DEFAULT NULL;
 ALTER TABLE %prfx%member ADD COLUMN pass_user char(32) DEFAULT NULL;
 ALTER TABLE %prfx%member ADD COLUMN born_dt date  NOT NULL;

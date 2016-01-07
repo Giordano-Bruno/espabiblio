@@ -2,7 +2,6 @@
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
  */
- 
   require_once("../classes/Localize.php");
   $headerLoc = new Localize(OBIB_LOCALE,"shared");
 
@@ -13,8 +12,11 @@ if (OBIB_HTML_LANG_ATTR != "") {
 }
 echo ">\n";
 echo "<head>\n";
-
-// JALG, sE AGREGA LINEA PARA QUE APARESCA LA IMAGEN EN LA PESTAÑA DEL EXPLORADOR, CAMBIAR FAVICON.ICO EN LA rAIZ
+/*
+<!-- **************************************************************************************
+     * Favicon, icono para la pestaña
+     **************************************************************************************-->
+*/
 echo "<link href='../favicon.ico' rel='icon' type='image/x-icon'/>";
 
 // code character set if specified
@@ -23,12 +25,20 @@ if (OBIB_CHARSET != "") { ?>
   <meta charset=<?php echo H(OBIB_CHARSET); ?>">
 
 <?php } ?>
-  <meta name="description" content="Sistema informático para la gestión de bibliotecas y biblioteca digital, basado en Openbiblio">
+  <meta name="description" content="Sistema informático para la gestión de bibliotecas y biblioteca digital GIORDANO BRUNO, basado en Openbiblio">
 
+<!-- **************************************************************************************
+     * ajusta estilos
+     **************************************************************************************-->
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
 <style type="text/css">
   <?php include("../css/style.php");?>
 </style>
+  <?php echo (isset($bootstrap)?'<link href="../css/bootstrap.min.css" rel="stylesheet">':''); ?>
+
+<!-- **************************************************************************************
+     * Control de ssessiones
+     **************************************************************************************-->
 <?php    
   if (!isset($_SESSION["active_theme"])) {
     require_once("../shared/theme.php");
@@ -148,6 +158,7 @@ if ($nav=="lookupOpts" || $nav=="lookupHosts" || $nav=="lookup" ){
     </td>
   </tr>
 </table>
+
 <!-- **************************************************************************************
      * Tabs
      **************************************************************************************-->
@@ -168,7 +179,11 @@ if ($nav=="lookupOpts" || $nav=="lookupHosts" || $nav=="lookup" ){
 
     <td bgcolor="<?php echo H(OBIB_BORDER_COLOR);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
     <td bgcolor="<?php echo H(OBIB_TITLE_BG);?>" colspan="3"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
-    
+<?php //invent    ?>
+    <td bgcolor="<?php echo H(OBIB_BORDER_COLOR);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+    <td bgcolor="<?php echo H(OBIB_TITLE_BG);?>" colspan="3"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+    <td bgcolor="<?php echo H(OBIB_BORDER_COLOR);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+<?php //invent    ?>
     <td bgcolor="<?php echo H(OBIB_TITLE_BG);?>" colspan="3"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
 
   </tr>
@@ -223,7 +238,18 @@ if ($nav=="lookupOpts" || $nav=="lookupHosts" || $nav=="lookup" ){
 
     <td bgcolor="<?php echo H(OBIB_BORDER_COLOR);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
     <td bgcolor="<?php echo H(OBIB_TITLE_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
- 
+     <td bgcolor="<?php echo H(OBIB_BORDER_COLOR);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+
+<?php //inventory ?>
+    <?php if ($tab == "inventory") { ?>
+      <td  bgcolor="<?php echo H(OBIB_ALT1_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+    <?php } else { ?>
+      <td  bgcolor="<?php echo H(OBIB_ALT2_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+    <?php } ?>
+    <td bgcolor="<?php echo H(OBIB_BORDER_COLOR);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+    <td bgcolor="<?php echo H(OBIB_TITLE_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+    <td  bgcolor="<?php echo H(OBIB_TITLE_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+<?php //inventory ?>
     <?php if ($tab == "opac") { ?>
       <td  bgcolor="<?php echo H(OBIB_ALT1_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
     <?php } else { ?>
@@ -232,8 +258,7 @@ if ($nav=="lookupOpts" || $nav=="lookupHosts" || $nav=="lookup" ){
 
     <td bgcolor="<?php echo H(OBIB_BORDER_COLOR);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
     <td bgcolor="<?php echo H(OBIB_TITLE_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
-
-    <td width="2000" bgcolor="<?php echo H(OBIB_TITLE_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+    <td  bgcolor="<?php echo H(OBIB_TITLE_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
   </tr>
 
   <tr bgcolor="<?php echo H(OBIB_TITLE_BG);?>">
@@ -294,9 +319,17 @@ if ($nav=="lookupOpts" || $nav=="lookupHosts" || $nav=="lookup" ){
       <td class="tab2" nowrap="yes"> <a href="../reports/index.php" class="tab"><?php echo $headerLoc->getText("headerReports"); ?></a> </td>
       <td  bgcolor="<?php echo H(OBIB_ALT2_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
     <?php } ?>
-
-    <td bgcolor="<?php echo H(OBIB_BORDER_COLOR);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
-
+<?php // inventory ?>
+    <?php if ($tab == "inventory") { ?>
+      <td  bgcolor="<?php echo H(OBIB_ALT1_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+      <td class="tab1" nowrap="yes"> <?php echo $headerLoc->getText("headerInventory"); ?></td>
+      <td  bgcolor="<?php echo H(OBIB_ALT1_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+    <?php } else { ?>
+      <td  bgcolor="<?php echo H(OBIB_ALT2_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+      <td class="tab2" nowrap="yes"> <a href="../inventory/index.php" class="tab"><?php echo $headerLoc->getText("headerInventory"); ?></a> </td>
+      <td  bgcolor="<?php echo H(OBIB_ALT2_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+    <?php } ?>
+<?php // inventory ?>
     <?php if ($tab == "opac") { ?>
       <td  bgcolor="<?php echo H(OBIB_ALT1_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
       <td class="tab1" nowrap="yes"> <?php echo $headerLoc->getText("headerOpac"); ?></td>
@@ -306,9 +339,10 @@ if ($nav=="lookupOpts" || $nav=="lookupHosts" || $nav=="lookup" ){
       <td class="tab2" nowrap="yes"> <a href="../opac/index.php" class="tab"><?php echo $headerLoc->getText("headerOpac"); ?></a> </td>
       <td  bgcolor="<?php echo H(OBIB_ALT2_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
     <?php } ?>
-
-    <td width="5000" bgcolor="<?php echo H(OBIB_TITLE_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
-
+    <td bgcolor="<?php echo H(OBIB_BORDER_COLOR);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+<?php // inventory ?>
+    <td width="2000" bgcolor="<?php echo H(OBIB_TITLE_BG);?>"><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+<?php // inventory ?>
   </tr>
   <tr bgcolor="<?php echo H(OBIB_BORDER_COLOR);?>">
     <td colspan="3" <?php if ($tab == "home") { echo " bgcolor='".H(OBIB_ALT1_BG)."'"; } ?>><img src="../images/shim.gif" width="1" height="1" border="0"></td>
@@ -321,8 +355,12 @@ if ($nav=="lookupOpts" || $nav=="lookupHosts" || $nav=="lookup" ){
     <td><img src="../images/shim.gif" width="1" height="1" border="0"></td>
     <td colspan="3" <?php if ($tab == "reports") { echo " bgcolor='".H(OBIB_ALT1_BG)."'"; } ?>><img src="../images/shim.gif" width="1" height="1" border="0"></td>
     <td><img src="../images/shim.gif" width="1" height="1" border="0"></td>
-    <td colspan="3" <?php if ($tab == "reports") { echo " bgcolor='".H(OBIB_ALT1_BG)."'"; } ?>><img src="../images/shim.gif" width="1" height="1" border="0"></td>
-     <td><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+<?php // inventory ?>
+    <td colspan="3" <?php if ($tab == "inventory") { echo " bgcolor='".H(OBIB_ALT1_BG)."'"; } ?>><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+    <td><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+<?php // inventory ?>
    <td colspan="3" <?php if ($tab == "opac") { echo " bgcolor='".H(OBIB_ALT1_BG)."'"; } ?>><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+    <td><img src="../images/shim.gif" width="1" height="1" border="0"></td>
+    <td><img src="../images/shim.gif" width="1" height="1" border="0"></td>
   </tr>
 </table>

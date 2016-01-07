@@ -1,9 +1,9 @@
-#Probado el 11/oct/2014
 ALTER TABLE %prfx%member ADD COLUMN cel varchar(15) DEFAULT NULL;
 ALTER TABLE %prfx%member ADD COLUMN pass_user char(32) DEFAULT NULL;
 ALTER TABLE %prfx%member ADD COLUMN born_dt date NOT NULL;
 ALTER TABLE %prfx%member ADD COLUMN other text DEFAULT NULL;
 UPDATE %prfx%member SET last_activity_dt=NOW();
+ALTER TABLE %prfx%biblio_copy ADD COLUMN price decimal(10,2) DEFAULT '0.00';
 ALTER TABLE %prfx%lookup_hosts CHANGE pw context VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL ;
 ALTER TABLE %prfx%lookup_hosts ADD pw VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER user ;
 ALTER TABLE %prfx%lookup_hosts CHANGE `charset` `schema` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';

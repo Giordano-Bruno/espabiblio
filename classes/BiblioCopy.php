@@ -29,6 +29,8 @@ class BiblioCopy {
   var $_mbrid = "";
   var $_loc;
   var $_renewalCount = "";
+  var $_price = 0.00;
+  var $_custom = array();
 
   function BiblioCopy () {
     $this->_loc = new Localize(OBIB_LOCALE,"classes");
@@ -51,6 +53,16 @@ class BiblioCopy {
       }
     }
     return $valid;
+  }
+
+  function getCustom($field) {
+    if (isset($this->_custom[$field])) {
+      return $this->_custom[$field];
+    }
+    return "";
+  }
+  function setCustom($field, $value) {
+    $this->_custom[$field] = $value;
   }
 
   /****************************************************************************
@@ -95,6 +107,9 @@ class BiblioCopy {
   function getRenewalCount() {
     return $this->_renewalCount;
   }
+  function getPrice() {
+      return $this->_price;
+  }
 
   /****************************************************************************
    * Setter methods for all fields
@@ -135,5 +150,8 @@ class BiblioCopy {
   }
   function setRenewalCount($value) {
     $this->_renewalCount = trim($value);
+  }
+  function setPrice($value)  {
+      $this->_price = trim($value);
   }
 }

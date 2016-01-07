@@ -1,5 +1,5 @@
 ALTER TABLE %prfx%biblio ADD COLUMN has_cover char(1) DEFAULT 'N';
-
+ALTER TABLE %prfx%biblio_copy ADD COLUMN price decimal(10,2) DEFAULT '0.00';
 ALTER TABLE %prfx%member ADD COLUMN cel varchar(15) DEFAULT NULL;
 ALTER TABLE %prfx%member ADD COLUMN pass_user char(32) DEFAULT NULL;
 ALTER TABLE %prfx%member ADD COLUMN born_dt date  NOT NULL;
@@ -8,12 +8,10 @@ ALTER TABLE %prfx%member ADD COLUMN foto varchar(128) DEFAULT NULL AFTER email;
 ALTER TABLE %prfx%member ADD COLUMN is_active char(1) DEFAULT 'Y';
 ALTER TABLE %prfx%member ADD COLUMN last_activity_dt datetime NOT NULL;
 UPDATE %prfx%member SET last_activity_dt=NOW();
-
 ALTER TABLE %prfx%settings ADD COLUMN font_normal varchar(20) DEFAULT 'th-sarabun';
 ALTER TABLE %prfx%settings ADD COLUMN font_size tinyint(3) DEFAULT 14;
 ALTER TABLE %prfx%settings ADD COLUMN inactive_member_after_days smallint(6) DEFAULT 90;
 ALTER TABLE %prfx%settings ADD COLUMN library_aders varchar(70) DEFAULT 'Calle norte no 97, col casadas' AFTER library_hours;
-
 ALTER TABLE %prfx%biblio CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;
 ALTER TABLE %prfx%biblio_copy CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;
 ALTER TABLE %prfx%biblio_copy_fields CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;
@@ -47,5 +45,4 @@ ALTER TABLE %prfx%usmarc_block_dm CHARACTER SET utf8, COLLATE utf8_general_ci, E
 ALTER TABLE %prfx%usmarc_indicator_dm CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;		
 ALTER TABLE %prfx%usmarc_subfield_dm CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;		
 ALTER TABLE %prfx%usmarc_tag_dm CHARACTER SET utf8, COLLATE utf8_general_ci, ENGINE = MYISAM;
-
 ALTER DATABASE %prfx% DEFAULT CHARACTER SET utf8  COLLATE utf8_general_ci;

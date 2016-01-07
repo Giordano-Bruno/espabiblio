@@ -41,7 +41,9 @@ class BiblioSearch {
   var $_renewalCount = "";
   var $_opacFlg = "";
   var $_hasCover = "";
-
+//invent
+  var $_amount = 0;
+//invent
   /****************************************************************************
    * Getter methods for all fields
    * @return string
@@ -135,6 +137,11 @@ class BiblioSearch {
   function getHasCover() {
     return $this->_hasCover ;
   }
+//invent
+  function getAmount() {
+    return $this->_amount;
+  }
+//invent
 
   /****************************************************************************
    * Setter methods for all fields
@@ -230,4 +237,9 @@ class BiblioSearch {
   function setHasCover($value) {
     $this->_hasCover = trim($value);
   }
+//invent
+  function setAmount($value) {
+    $this->_amount = trim($value);
+  }
+//invent
 }

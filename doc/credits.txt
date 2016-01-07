@@ -10,6 +10,8 @@ Correcion de las ayudas y traducion de gran parte de ellas.
 <p>año 2005</p>
 <p>Traducción de la versión 6.0 de openbiblio&nbsp; y adecuación para Latino 
 América, Jorge Lara C. ( espabiblio Ver. 2.0 ). ---</p>
+<p>año 2016</p>
+<p>Codigos de inventarios Adam Jurkiewicz
 <p>&nbsp;</p>
 
 Ó©ïÓ©¡Ó©ƒÓ©òÓ╣îÓ╣üÓ©ºÓ©úÓ╣îÓ©ÖÓ©ÁÓ╣ëÓ©×Ó©▒Ó©ÆÓ©ÖÓ©▓Ó©òÓ╣êÓ©¡Ó©êÓ©▓Ó©üÓ╣éÓ©øÓ©úÓ╣üÓ©üÓ©úÓ©í OpenBiblio version 0.6.1 database version 0.6.0 Ó╣éÓ©öÓ©ó Dave Stevens┬á (Ó©¬Ó©çÓ©ºÓ©ÖÓ©ÑÓ©┤Ó©éÓ©¬Ó©┤Ó©ùÓ©ÿÓ©┤Ó╣î ┬® 2002-2005 ) Ó©ïÓ©ÂÓ╣êÓ©çÓ©¡Ó©óÓ©╣Ó╣êÓ©áÓ©▓Ó©óÓ╣âÓ©òÓ╣ëÓ©ÑÓ©┤Ó©éÓ©¬Ó©┤Ó©ùÓ©ÿÓ©┤Ó╣î GNU General Public License┬á

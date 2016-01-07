@@ -15,9 +15,17 @@
   require_once("../shared/logincheck.php");
   require_once("../classes/BiblioCopy.php");
   require_once("../classes/BiblioCopyQuery.php");
+  require_once('../classes/DmQuery.php');
   require_once("../functions/errorFuncs.php");
   require_once("../classes/Localize.php");
-  $loc = new Localize(OBIB_LOCALE,$tab);
+  require_once("../classes/BiblioQuery.php");
+
+  $loc = new Localize(OBIB_LOCALE, $tab);
+
+$dmQ = new DmQuery();
+$dmQ->connect();
+$customFields = $dmQ->getAssoc('biblio_copy_fields_dm');
+$dmQ->close();
 
   #****************************************************************************
   #*  Retrieving get var
@@ -49,7 +57,10 @@
     $postVars["barcodeNmbr"] = $copy->getBarcodeNmbr();
     $postVars["copyDesc"] = $copy->getCopyDesc();
     $postVars["statusCd"] = $copy->getStatusCd();
-
+    $postVars["copyPrice"] =  number_format($copy->getPrice(), 2, '.', ' ');
+    foreach ($customFields as $name => $title) {
+        $postVars["custom_" . $name] = $copy->getCustom($name);
+    }
   } else {
     #**************************************************************************
     #*  load up post vars
@@ -59,6 +70,13 @@
     $copyid = $postVars["copyid"];
   }
 
+# Transitions to and from these status codes aren't allowed on this form.
+$disallowed = array(
+    OBIB_STATUS_SHELVING_CART,
+    OBIB_STATUS_OUT,
+    OBIB_STATUS_ON_HOLD,
+);
+/*
   #**************************************************************************
   #*  disable status code drop down for shelving cart and out status codes
   #**************************************************************************
@@ -66,7 +84,7 @@
   if (($postVars["statusCd"] == OBIB_STATUS_SHELVING_CART) or ($postVars["statusCd"] == OBIB_STATUS_OUT)) {
     $statusDisabled = TRUE;
   }
-
+*/
   require_once("../shared/header.php");
 ?>
 
@@ -87,6 +105,10 @@
     </td>
     <td valign="top" class="primary">
       <?php printInputText("barcodeNmbr",20,20,$postVars,$pageErrors); ?>
+                <input type="checkbox" name="autobarco"/>
+                <?php echo $loc->getText("biblioCopyNewAuto"); ?>
+                <input type="checkbox" name="validBarco" value="CHECKED" checked="checked"/>
+                <?php echo $loc->getText("biblioCopyNewValidBarco"); ?>
     </td>
   </tr>
   <tr>
@@ -99,6 +121,22 @@
   </tr>
   <tr>
     <td nowrap="true" class="primary" valign="top">
+                <?php echo $loc->getText("biblioCopyNewPrice"); ?>:
+            </td>
+            <td valign="top" class="primary">
+                <?php printInputText("copyPrice", 40, 40, $postVars, $pageErrors); ?>
+            </td>
+        </tr>
+        <?php
+        foreach ($customFields as $name => $title) {
+            echo '<tr><td nowrap="true" class="primary" valign="top">' . H($title) . ':</td>';
+            echo '<td valign="top" class="primary">';
+            printInputText('custom_' . $name, 40, 40, $postVars, $pageErrors);
+            echo '</td></tr>';
+        }
+        ?>
+        <tr>
+            <td nowrap="true" class="primary" valign="top">
       <?php echo $loc->getText("biblioCopyEditFormStatus"); ?>:
     </td>
     <td valign="top" class="primary">
@@ -112,7 +150,8 @@
   $dms = $dmQ->get("biblio_status_dm");
   $dmQ->close();
   echo "<select name=\"statusCd\"";
-  if ($disabled) {
+                if (in_array($postVars["statusCd"], $disallowed)) {
+//  if ($disabled) {
     echo " disabled";
   }
   echo ">\n";
@@ -141,7 +180,9 @@
   <tr>
     <td align="center" colspan="2" class="primary">
       <input type="submit" value="<?php echo $loc->getText("catalogSubmit"); ?>" class="button">
-      <input type="button" onClick="self.location='../shared/biblio_view.php?bibid=<?php echo HURL($bibid); ?>'" value="<?php echo $loc->getText("catalogCancel"); ?>" class="button" >
+                <input type="button"
+                       onClick="self.location='../shared/biblio_view.php?bibid=<?php echo HURL($bibid); ?>'"
+                       value="<?php echo $loc->getText("catalogCancel"); ?>" class="button">
     </td>
   </tr>
 

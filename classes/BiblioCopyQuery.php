@@ -122,23 +122,9 @@ class BiblioCopyQuery extends Query {
     if ($array == false) {
       return false;
     }
-
-    $copy = new BiblioCopy();
-    $copy->setBibid($array["bibid"]);
-    $copy->setCopyid($array["copyid"]);
-    $copy->setCreateDt($array["create_dt"]);
-    $copy->setCopyDesc($array["copy_desc"]);
-    $copy->setBarcodeNmbr($array["barcode_nmbr"]);
-    $copy->setStatusCd($array["status_cd"]);
-    $copy->setStatusBeginDt($array["status_begin_dt"]);
-    $copy->setDueBackDt($array["due_back_dt"]);
-    $copy->setDaysLate($array["days_late"]);
-    $copy->setMbrid($array["mbrid"]);
-    $copy->setRenewalCount($array["renewal_count"]);
-    return $copy;
+        return $this->_mkObj($array);
   }
 
-//add jalg
   function _mkObj($array) {
     $copy = new BiblioCopy();
     $copy->setBibid($array["bibid"]);
@@ -151,10 +137,31 @@ class BiblioCopyQuery extends Query {
     $copy->setDueBackDt($array["due_back_dt"]);
     $copy->setDaysLate($array["days_late"]);
     $copy->setMbrid($array["mbrid"]);
+        $copy->setPrice($array["price"]);
     $copy->setRenewalCount($array["renewal_count"]);
     $copy->_custom = $this->getCustomFields($array['bibid'], $array['copyid']);
     return $copy;
   }
+
+/*
+print_r($array);
+
+    $copy = new BiblioCopy();
+    $copy->setBibid($array["bibid"]);
+    $copy->setCopyid($array["copyid"]);
+    $copy->setCreateDt($array["create_dt"]);
+    $copy->setCopyDesc($array["copy_desc"]);
+    $copy->setBarcodeNmbr($array["barcode_nmbr"]);
+    $copy->setStatusCd($array["status_cd"]);
+    $copy->setStatusBeginDt($array["status_begin_dt"]);
+    $copy->setDueBackDt($array["due_back_dt"]);
+    $copy->setDaysLate($array["days_late"]);
+    $copy->setMbrid($array["mbrid"]);
+    $copy->setRenewalCount($array["renewal_count"]);
+    return $copy;
+  }
+*/
+
 
   function getCustomFields($bibid, $copyid) {
     $sql = $this->mkSQL('select * from biblio_copy_fields '
@@ -191,7 +198,7 @@ class BiblioCopyQuery extends Query {
    * @access private
    ****************************************************************************
    */
-  function _dupBarcode($barcode, $bibid=0, $copyid=0) {
+  function _dupBarcode($barcode, $bibid = 0, $copyid = 0) {
     $sql = $this->mkSQL("select count(*) from biblio_copy "
                         . "where barcode_nmbr = %Q "
                         . " and not (bibid = %N and copyid = %N) ",
@@ -256,11 +263,23 @@ class BiblioCopyQuery extends Query {
     } else {
       $sql .= $this->mkSQL("%Q,", $copy->getMbrid());
     }
-    $sql .= " 0)"; //Default renewal count to zero
+        $sql .= " 0,"; //Default renewal count to zero
+
+        $sql .= $this->mkSQL("%Q )", $copy->getPrice());
+        $ret = $this->_query($sql, $this->_loc->getText("biblioCopyQueryErr3"));
+        if (!$ret) {
+            return $ret;
+        }
+        $copyid = $this->getInsertID();
+        $this->setCustomFields($copy->getBibid(), $copyid, $copy->_custom);
+        return $ret;
+    }
+
+/*    $sql .= " 0)"; //Default renewal count to zero
     return $this->_query($sql, $this->_loc->getText("biblioCopyQueryErr3"));
   }
 //add jalg
-
+*/
   /****************************************************************************
    * Updates a bibliography in the biblio table.
    * @param Biblio $biblio bibliography to update
@@ -300,12 +319,20 @@ class BiblioCopyQuery extends Query {
         $sql .= "mbrid=null, ";
       }
     }
-    $sql .= $this->mkSQL("copy_desc=%Q, barcode_nmbr=%Q "
+    $sql .= $this->mkSQL("copy_desc=%Q, barcode_nmbr=%Q , price=%Q  "
                          . "where bibid=%N and copyid=%N",
-                         $copy->getCopyDesc(), $copy->getBarcodeNmbr(),
+                         $copy->getCopyDesc(), $copy->getBarcodeNmbr(), $copy->getPrice(),
                          $copy->getBibid(), $copy->getCopyid());
-    return $this->_query($sql, $this->_loc->getText("biblioCopyQueryErr5"));
-  }
+       $ret = $this->_query($sql, $this->_loc->getText("biblioCopyQueryErr5"));
+        if (!$ret) {
+            return $ret;
+        }
+        $this->setCustomFields($copy->getBibid(), $copy->getCopyid(), $copy->_custom);
+        return $ret;
+    }
+
+//    return $this->_query($sql, $this->_loc->getText("biblioCopyQueryErr5"));
+//  }
 
   // Update a copy's status information, e.g. for check in and check out.
   function updateStatus($copy) {
@@ -346,6 +373,25 @@ class BiblioCopyQuery extends Query {
    * @access public
    ****************************************************************************
    */
+
+    function delete($bibid, $copyid = 0) {
+        $sql = $this->mkSQL("delete from biblio_copy_fields where bibid=%N ", $bibid);
+        if ($copyid > 0) {
+            $sql .= $this->mkSQL("and copyid=%N ", $copyid);
+        }
+        $this->act($sql);
+        $sql = $this->mkSQL("delete from biblio_copy where bibid = %N", $bibid);
+        if ($copyid > 0) {
+            $sql .= $this->mkSQL(" and copyid = %N", $copyid);
+        }
+        return $this->_query($sql, $this->_loc->getText("biblioCopyQueryErr6"));
+    }
+
+    function deleteCustomField($code) {
+        $sql = $this->mkSQL("delete from biblio_copy_fields where code = %Q ", $code);
+        $this->act($sql);
+    }
+/*
   function delete($bibid,$copyid=0) {
     $sql = $this->mkSQL("delete from biblio_copy where bibid = %N", $bibid);
     if ($copyid > 0) {
@@ -353,7 +399,7 @@ class BiblioCopyQuery extends Query {
     }
     return $this->_query($sql, $this->_loc->getText("biblioCopyQueryErr6"));
   }
-
+*/
   /****************************************************************************
    * Retrieves collection info
    * @param int $bibid

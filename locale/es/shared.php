@@ -164,6 +164,7 @@ $trans["headerCataloging"]         = "\$text='Catalogación';";
 $trans["headerAdmin"]              = "\$text='Administración';";
 $trans["headerReports"]            = "\$text='Reportes y estadísticas';";
 $trans["headerOpac"]            = "\$text='Catálogo Público en Linea';";
+$trans["headerInventory"]            = "\$text='Inventario';";
 
 #* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
 //agregado jalg joanlaga@hotmail.com

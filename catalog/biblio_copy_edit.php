@@ -41,6 +41,21 @@
     displayErrorPage($copyQ);
   }
 
+  # Transitions to and from these status codes aren't allowed on this form.
+  $disallowed = array(
+    OBIB_STATUS_SHELVING_CART,
+    OBIB_STATUS_OUT,
+    OBIB_STATUS_ON_HOLD,
+  );
+  #****************************************************************************
+  #*  Autobarco
+  #****************************************************************************
+  if (isset($_POST["autobarco"]) and $_POST["autobarco"]) {
+    $nzeros = "5";
+    $bibid=$_POST["bibid"];
+    $_POST["barcodeNmbr"] = sprintf("%0".$nzeros."s",$bibid).$copyid;
+  }
+
   #****************************************************************************
   #*  Validate data
   #****************************************************************************
@@ -48,9 +63,31 @@
   $_POST["copyDesc"] = $copy->getCopyDesc();
   $copy->setBarcodeNmbr($_POST["barcodeNmbr"]);
   $_POST["barcodeNmbr"] = $copy->getBarcodeNmbr();
+  $copy->setPrice($_POST["copyPrice"]);
+  $_POST["copyPrice"] = $copy->getPrice();
+  $updateStatus = FALSE;
+  # Just ignore invalid status settings.
+  if (!in_array($_POST["statusCd"], $disallowed)
+      && !in_array($copy->getStatusCd(), $disallowed)) {
   $copy->setStatusCd($_POST["statusCd"]);
   $_POST["statusCd"] = $copy->getStatusCd();
   $validData = $copy->validateData();
+    $copy->setStatusBeginDt("");
+    $updateStatus = TRUE;
+  }
+/*  
+  $dmQ = new DmQuery();
+  $dmQ->connect();
+  $customFields = $dmQ->getAssoc('biblio_copy_fields_dm');
+  $dmQ->close();
+  foreach ($customFields as $name => $title) {
+    if (isset($_REQUEST['custom_'.$name])) {
+      $copy->setCustom($name, $_REQUEST['custom_'.$name]);
+    }
+  }
+*/
+  $validBarco = $_POST["validBarco"];
+//  $validData = $copy->validateData($validBarco);
   if (!$validData) {
     $copyQ->close();
     $pageErrors["barcodeNmbr"] = $copy->getBarcodeNmbrError();
@@ -74,6 +111,9 @@
     } else {
       displayErrorPage($copyQ);
     }
+  }
+  if ($updateStatus) {
+    $copyQ->updateStatus($copy);
   }
   $copyQ->close();
 
