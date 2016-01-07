@@ -118,6 +118,10 @@ a.tab:hover {text-decoration: underline}
 /*********************************************************
  *  Table Styles
  *********************************************************/
+table.primary {
+  border-collapse: collapse
+}
+
 table.border {
   border-style: solid;
   border-color: <?php echo H(OBIB_BORDER_COLOR);?>;
@@ -254,6 +258,25 @@ td.noborder {
   font-family: <?php echo H(OBIB_PRIMARY_FONT_FACE);?>;
   padding: <?php echo H(OBIB_PADDING);?>;
 }
+table.form { margin-bottom: 1em }
+table.form th.title {
+  background-color: <?php echo H(OBIB_PRIMARY_BG);?>;
+  color: <?php echo H(OBIB_PRIMARY_FONT_COLOR);?>;
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-bottom: solid <?php echo H(OBIB_ALT2_BG);?> 2px;
+}
+table.form th {
+  text-align: right;
+  vertical-align: top;
+  background-color: <?php echo H(OBIB_PRIMARY_BG);?>;
+  color: <?php echo H(OBIB_PRIMARY_FONT_COLOR);?>;
+  border: none;
+}
+table.form .error { font-weight: bold; color: red }
+table.form .error { font-weight: bold; color: red }
 /*********************************************************
  *  Form Styles
  *********************************************************/
@@ -361,3 +384,53 @@ table.resultshead td {
 table.results td.primary { border-top: none; }
 td.picture { width: 120px; }
 .Z3988 { display: none; }
+
+table.buttons {
+  margin: 0 0 0 auto;
+  padding: 0;
+  border-collapse: separate;
+  background: white;
+}
+table.buttons td {
+  background-color: <?php echo OBIB_ALT2_BG;?>;
+  /* Hide from IE5/Mac \*/
+  border-color: <?php echo OBIB_ALT2_BG;?>;
+  border-style: outset;
+  border-width: 1px;
+  /* End hiding */
+  padding: 4px;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+table.buttons input {
+  border: none;
+  color: <?php echo OBIB_ALT2_FONT_COLOR;?>;
+  background: <?php echo OBIB_ALT2_BG;?>;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  white-space: normal;
+}
+table.buttons input:hover { text-decoration: underline; }
+table.buttons a {
+  color: <?php echo OBIB_ALT2_FONT_COLOR;?>;
+  text-decoration: none;
+}
+table.buttons a:hover { text-decoration: underline; }
+table.buttons a:visited { color: <?php echo OBIB_ALT2_FONT_COLOR;?>; }
+
+div.errorbox {
+  border-style: solid;
+  border-color: <?php echo H(OBIB_BORDER_COLOR);?>;
+  border-width: <?php echo H(OBIB_BORDER_WIDTH);?>;
+  max-width: 500px;
+  margin: 10px;
+  padding: 5px;
+  background-color: <?php echo H(OBIB_ALT1_BG);?>;
+}
+div.errorbox .errorhdr { font-size: large; font-weight: bold }
+div.errorbox ul { margin-left: 0; padding-left: 1.5em }
+div.errorbox li { margin-left: 0 }
+
