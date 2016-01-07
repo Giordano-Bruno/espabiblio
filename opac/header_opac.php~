@@ -32,10 +32,10 @@ if (OBIB_CHARSET != "UTF-8") { ?>
 #FIX falta generar plantillas con uso de BOOTSTRAP
 //true if bootstrap should be enabled
   require_once("../shared/global_constants.php");//para activar o no el BOOTSTRAP
+echo '<style type="text/css">';
     if(OBIB_BOOTSTRAP){
         echo '<link href="../css/bootstrap.min.css" rel="stylesheet">';
     }
-echo '<style type="text/css">';
 echo '<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />';
    include("../css/style.php");
 echo '</style>';

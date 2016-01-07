@@ -12,8 +12,6 @@
   $focus_form_name = "barcodesearch";
   $focus_form_field = "searchText";
 
-$bootstrap = true;
-
   require_once("../shared/logincheck.php");
   require_once("../shared/header.php");
   require_once("../classes/Localize.php");

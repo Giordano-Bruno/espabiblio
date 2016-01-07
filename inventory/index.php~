@@ -8,6 +8,9 @@ require_once("../shared/common.php");
 $tab = "inventory";
 $nav = "searchform";
 
+//true if bootstrap should be enabled
+$bootstrap = true;
+
 include("../shared/logincheck.php");
 include("../shared/header.php");
 require_once("../classes/Localize.php");

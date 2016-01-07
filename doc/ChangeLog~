@@ -1,3 +1,19 @@
+Ene-2016
+Se simplifica bootstrap (CSS), se controla en todas las paginas desde glbales_php
+Se cambian rutas en los CSS bootstrap para usar solo undirectio de /fonts/. de /fonts/ a font en los archivos.
+
+Se intengra funcion de inventarios.
+Se integra bootstrap (CSS).
+Se modifica base de datos para almacenar precio en biblio_copy_new_form.
+Se modifican relacionados con biblio_copy. (form, clases e isntall (falta probar)
+Se corrigen errore menores en header_TOP
+Se encuentra un bug en searhc (añ select por author)
+Se comienza a integrar traduccion Italiano, Polaco, ingles. (Falta revisar todo)
+
+nov-2015
+Se integra busqueda por palabras claves
+Se mejora la generacion de etiquetaS reportes
+
 jun-2015
 Se compune el yaz
 se compreyba qe hay que hay que instalar las funcones en el servidor.

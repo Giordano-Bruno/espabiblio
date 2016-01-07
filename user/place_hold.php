@@ -8,7 +8,6 @@
   $nav = "view";
   $restrictInDemo = true;
   require_once("./logincheck.php");
-
   require_once("../classes/BiblioHold.php");
   require_once("../classes/BiblioHoldQuery.php");
   require_once("../classes/BiblioCopyQuery.php");

@@ -28,16 +28,25 @@ if (OBIB_CHARSET != "") { ?>
   <meta name="description" content="Sistema informático para la gestión de bibliotecas y biblioteca digital GIORDANO BRUNO, basado en Openbiblio">
 
 <!-- **************************************************************************************
-     * ajusta estilos
+     * ajusta estilos con o sin boostrap
      **************************************************************************************-->
-<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
-<style type="text/css">
-  <?php include("../css/style.php");?>
-</style>
-  <?php echo (isset($bootstrap)?'<link href="../css/bootstrap.min.css" rel="stylesheet">':''); ?>
+  <?php 
+#FIX falta generar plantillas con uso de BOOTSTRAP
+//true if bootstrap should be enabled
+  require_once("../shared/global_constants.php");//para activar o no el BOOTSTRAP
+    if(OBIB_BOOTSTRAP){
+        echo '<link href="../css/bootstrap.min.css" rel="stylesheet">';
+//        echo 'activa el boostrap';
+    }
+echo '<style type="text/css">';
+echo '<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />';
+   include("../css/style.php");
+echo '</style>';
+ //       echo 'NO activa el boostrap';
+?>
 
 <!-- **************************************************************************************
-     * Control de ssessiones
+     * Control de ssessiones y temas
      **************************************************************************************-->
 <?php    
   if (!isset($_SESSION["active_theme"])) {

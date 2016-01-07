@@ -93,7 +93,6 @@
 <?php echo $balMsg ?>
 <?php echo $msg ?>
 
-
 <script language="JavaScript">
 <!--
 function popSecondary(url) {
