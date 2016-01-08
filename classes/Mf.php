@@ -11,7 +11,7 @@
  * @access public
  ******************************************************************************
  */
-class Mf {	
+class Mf {
   var $_mbrid = "";
   var $_code = "";
   var $_codeError = "";
@@ -73,7 +73,6 @@ class Mf {
    * @access public
    ***************************************************************************
  */   
-   
   function getMbrid() {
     return $this->_mbrid;
   }

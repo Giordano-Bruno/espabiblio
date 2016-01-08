@@ -39,15 +39,12 @@ define("OBIB_ADVANCED_SEARCH", "20");
 define("OBIB_SEARCH_CDU_CLV", "31");
 define("OBIB_SEARCH_CDU_NUM", "32");
 define("OBIB_SEARCH_CDU_DES", "33");
-
 define("OBIB_SEARCH_CDD_CLV", "35");
 define("OBIB_SEARCH_CDD_NUM", "36");
 define("OBIB_SEARCH_CDD_DES", "37");
-
 define("OBIB_SEARCH_IBIC_CLV", "40");
 define("OBIB_SEARCH_IBIC_NUM", "41");
 define("OBIB_SEARCH_IBIC_DES", "42");
-
 define("OBIB_SEARCH_CUTTER_CLV", "46");
 define("OBIB_SEARCH_CUTTER_NUM", "47");
 define("OBIB_SEARCH_CUTTER_DES", "48");
@@ -58,7 +55,6 @@ define("OBIB_SEARCH_CUTTER_DES", "48");
 date_default_timezone_set('America/Mexico_City');//jalg
 define("OBIB_CODE_VERSION",		"GB BETA 34.1");
 define("OBIB_LATEST_DB_VERSION",	"GB-0.33");
-
 define("OBIB_DEFAULT_STATUS",		"in");
 define("OBIB_STATUS_IN",		"in");//Por revisar
 define("OBIB_STATUS_OUT",		"out");//Revisado
@@ -66,10 +62,9 @@ define("OBIB_STATUS_ON_LOAN",		"ln");//En calidad de préstamo
 define("OBIB_STATUS_ON_ORDER",		"ord");//Reservado
 define("OBIB_STATUS_SHELVING_CART",	"crt");//Para Reponer
 define("OBIB_STATUS_ON_HOLD",		"hld");//En Espera
-
 define("OBIB_MBR_CLASSIFICATION_JUVENILE","j");
-define("OBIB_DEMO_FLG",			false);# fix revisar e integrar desde admin jalg 2-2015
-define("OBIB_HIGHLIGHT_I18N_FLG",	false);
+define("OBIB_DEMO_FLG",			FALSE);# fix revisar e integrar desde admin jalg 2-2015
+define("OBIB_HIGHLIGHT_I18N_FLG",	TRUE);
 define("OBIB_SEARCH_MAXPAGES",		20);
 define("OBIB_MAX_FILE_SIZE",		500000000);
 define("OBIB_MYSQL_DATETIME_TYPE",	"datetime");
@@ -77,8 +72,7 @@ define("OBIB_MYSQL_DATETIME_FORMAT",	"Y-m-d H:i:s");
 define("OBIB_MYSQL_DATE_TYPE",		"date");
 define("OBIB_MYSQL_DATE_FORMAT",	"Y-m-d");
 define("OBIB_LOCALE_ROOT","../locale/");
-# Not fully implemented yet.
-define("DB_TABLENAME_PREFIX", 		"");//revisar
+define("DB_TABLENAME_PREFIX", 		"");// # Not fully implemented yet.
 
 /****************************************************************************
  *  Path Directories

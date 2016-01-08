@@ -53,8 +53,10 @@ echo "<pre>";
 print_r($postVars);
 echo "</pre>";
 
-//    $postVars["code"] = $mf->getCode();
-//    $postVars["data"] = $mf->getData();
+
+
+    $postVars["code"] = $mf->getCode();
+    $postVars["data"] = $mf->getData();
 
     $mfQ->close();
 

@@ -87,7 +87,7 @@ $trans["mbrFldsEmail"]            = "\$text='Email:';";
 $trans["mbrFldsPassUser"]         = "\$text='Clave acceso:';";
 $trans["mbrFldsBornDt"]           = "\$text='Fecha de nacimiento </br> (año-mes-dia):';";
 $trans["mbrFldsOther"]            = "\$text='Observaciones:';";
-$trans["mbrFldsClassify"]         = "\$text='Clasificación:';";
+$trans["mbrFldsClassify"]         = "\$text='Clasificación: (Grupos de usuarios)';";
 $trans["mbrFldsGrade"]            = "\$text='Curso:';";
 $trans["mbrFldsTeacher"]          = "\$text='Tutor:';";
 $trans["mbrFldsSubmit"]           = "\$text='Enviar';";

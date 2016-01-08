@@ -547,7 +547,7 @@ $trans["admin-transSubmit"]	= "\$text = 'Enviar';";
 #****************************************************************************
 #* Translation text for page copy_fields_list.php Custom Copy Fields
 #****************************************************************************
-$trans["Custom Copy Fields"]	= "\$text = 'Personalizacion de campos de copias';";
+$trans["Custom Copy Fields"]	= "\$text = 'Campos de copias personalizados';";
 $trans["Copy field, %desc%, has been added."]	= "\$text = 'El campo de para copia, %desc%, fue agregado.';";
 $trans["return to copy fields list"]	= "\$text = 'Regresar a Personalización de Campos de datos para las copias.';";
 $trans["Add new custom field list"]	= "\$text = 'Agregar nueva Personalización de Campos de datos para las copias.';";

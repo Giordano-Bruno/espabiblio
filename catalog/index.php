@@ -16,7 +16,6 @@
   require_once("../shared/header.php");
   require_once("../classes/Localize.php");
   $loc = new Localize(OBIB_LOCALE,$tab);
-
 ?>
 
 <h1><img src="../images/catalog.png" border="0" width="30" height="30" align="top"> <?php echo $loc->getText("indexHdr");?></h1>
@@ -56,7 +55,6 @@
         <option value="subject"><?php echo $loc->getText("indexSubject");?>
         <option value="isbn"><?php echo $loc->getText("indexISBN");?>
         <!-- 
-
         <option value="callno"><?php echo $loc->getText("indexCallNmbr"); ?></option>
         <option value="collection"><?php echo $loc->getText("indexCollection"); ?></option>
         <option value="series"><?php echo $loc->getText("indexSeries"); ?></option>	

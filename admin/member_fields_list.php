@@ -20,6 +20,7 @@
   $mfQ->connect();
   $mfs = $mfQ->get("member_fields");
   $mfQ->close();
+
 ?>
 <a href="../admin/member_fields_new_form.php?reset=Y"><?php echo $loc->getText("Add new custom field"); ?></a><br>
 <h1> <?php echo $loc->getText("Custom Member Fields"); ?></h1>
@@ -40,13 +41,22 @@
 
   </tr>
   <?php
+
+//print_r($mfs);
+
     $row_class = "primary";
     foreach ($mfs as $mf) {
   ?>
 
   <tr>
     <td valign="top" class="<?php echo H($row_class);?>">
-      <a href="../admin/member_fields_edit_form.php?code=<?php echo HURL($mf->getCode());?>" class="<?php echo H($row_class);?>"><?php echo $loc->getText("edit"); ?></a>
+      <a href="../admin/member_fields_edit_form.php?
+code=<?php echo HURL($mf->getCode());?>&amp;
+mbrid=<?php echo HURL($mf->getmbrid());?>
+" 
+
+class="<?php echo H($row_class);?>"><?php echo $loc->getText("edit"); ?>
+
     </td>
     <td valign="top" class="<?php echo H($row_class);?>">
       <a href="../admin/member_fields_del_confirm.php?code=<?php echo HURL($mf->getCode());?>&amp;data=<?php echo HURL($mf->getData());?>" class="<?php echo H($row_class);?>"><?php echo $loc->getText("del"); ?></a>

@@ -41,7 +41,7 @@ class MfQuery extends Query {
     }
     return $assoc;
   }
-  
+/*  
   function get1($table, $code) {
     $rows = $this->_get($table, $code);
     if (count($rows) != 1) {
@@ -49,6 +49,27 @@ class MfQuery extends Query {
     }
     return $this->_mkObj($rows[0]);
   }
+*/
+
+  function get1($table, $mbrid = "") {
+    $this->_tableNm = $table;
+    $sql = $this->mkSQL("select * from %I ", $table);
+    if ($mbrid != "") {
+      $sql .= $this->mkSQL("where mbrid = %Q ", $mbrid);
+    }
+    $sql .= "order by mbrid ";
+    return $this->exec($sql);
+  }
+/*
+  function get1($table, $code) {
+    $rows = $this->_get($table, $code);
+    if (count($rows) != 1) {
+     Fatal::internalError("Invalid domain table code");
+    }
+    return $this->_mkObj($rows[0]);
+  }
+*/
+
 
   function getWithStats($table) {
  /*   $this->_tableNm = $table;
@@ -135,29 +156,7 @@ data
     $mf->setMbrid($array["mbrid"]);
     $mf->setCode($array["code"]);
     $mf->setData($array["data"]);
-    
-    /*
-    if ($this->_tableNm == "collection_dm") {
-      $mf->setDaysDueBack($array["days_due_back"]);
-      $mf->setDailyLateFee($array["daily_late_fee"]);
-    }
-    
-    if (isset($array['checkout_limit'])) {
-      $mf->setCheckoutLimit($array["checkout_limit"]);
-    }
-    if (isset($array['renewal_limit'])) {
-      $mf->setRenewalLimit($array["renewal_limit"]);
-    }
-    if (isset($array["image_file"])) {
-      $mf->setImageFile($array["image_file"]);
-    }
-    if (isset($array["max_fines"])) {
-      $mf->setMaxFines($array["max_fines"]);
-    }
-    if (isset($array["row_count"])) {
-      $mf->setCount($array["row_count"]);
-    }
-    */
+
     return $mf;
   }
 
