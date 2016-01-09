@@ -9,14 +9,16 @@ require_once("../classes/Query.php");
 
 class MfQuery extends Query {
   var $_tableNm = "";
+/*
   function _get($table, $code = "") {
     $this->_tableNm = $table;
     $sql = $this->mkSQL("select * from %I ", $table);
     if ($code != "") {
       $sql .= $this->mkSQL("where code = %Q ", $code);
     }
-    $sql .= "order by mbrid ";
+    $sql .= "order by code ";
     return $this->exec($sql);
+*/
   }
 
 /*

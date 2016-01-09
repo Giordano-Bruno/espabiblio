@@ -91,7 +91,7 @@ function inputField($type, $name, $value="", $attrs=NULL, $data=NULL, $help_text
     
     $s .= '<select id="' . str_replace(array('[',']'),array(''), $dateInputName).'_year" name="'.$dateInputName.'_year">' . "\n";
     
-    for ($i = -20; $i <= 20; $i++) {
+    for ($i = -99; $i <= 0; $i++) {//se ajusta el rango, i= años antes de la fecha actual y <= años despues del año en curso. 
       $y = $thisDate[2] + $i;
       $s .= '  <option value="' . $y . '" '. ($i == 0 ? 'selected="select"' : '') . '>' . $y . "</option>\n";
     }

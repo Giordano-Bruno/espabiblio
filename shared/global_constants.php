@@ -64,7 +64,7 @@ define("OBIB_STATUS_SHELVING_CART",	"crt");//Para Reponer
 define("OBIB_STATUS_ON_HOLD",		"hld");//En Espera
 define("OBIB_MBR_CLASSIFICATION_JUVENILE","j");
 define("OBIB_DEMO_FLG",			FALSE);# fix revisar e integrar desde admin jalg 2-2015
-define("OBIB_HIGHLIGHT_I18N_FLG",	TRUE);
+define("OBIB_HIGHLIGHT_I18N_FLG",	FALSE);
 define("OBIB_SEARCH_MAXPAGES",		20);
 define("OBIB_MAX_FILE_SIZE",		500000000);
 define("OBIB_MYSQL_DATETIME_TYPE",	"datetime");
