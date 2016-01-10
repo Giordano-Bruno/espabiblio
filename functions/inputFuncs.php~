@@ -105,6 +105,7 @@ function inputField($type, $name, $value="", $attrs=NULL, $data=NULL, $help_text
             document.getElementById("' . $dateInputName . '_year").value + "-" +
             document.getElementById("' . $dateInputName . '_month").value + "-" +
             document.getElementById("' . $dateInputName . '_day").value;
+            
             console.log(day.value);
         };
         

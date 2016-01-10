@@ -15,6 +15,7 @@
 //error_reporting(0);
 define("OBIB_HOST",     "localhost");//el servidor Normalmente localhost
 define("OBIB_DATABASE", "ulicori");// La base de datos donde guardan sus datos las tablas.
+define("OBIB_DATABASE", "ulicori-gen");// La base de datos donde guardan sus datos las tablas.
 define("OBIB_USERNAME", "root");// El usuario para mysql
 define("OBIB_PWD",      "aldico");//el password sin ecriptar
 

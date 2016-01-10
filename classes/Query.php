@@ -4,7 +4,8 @@
  */
 $_Query_lock_depth = 0;
 
-class Query {
+//class Query {
+class Query extends mysqli{
   var $_link;
 
   /* This constructor will never do more than call connect_e() and throw a
@@ -141,6 +142,40 @@ class Query {
                              OBIB_LOCK_NAME));
     }
   }
+
+   //called immediately after Connect() method of this class on success
+   function GetHome(){
+        $homesel = $this->select01('select @@basedir as home');
+		if ($homesel == NULL)
+			return '';
+
+		$result = NULL;
+		$path = $homesel['home'];
+		if($path =='/')
+			return '';// command(s) directly available
+		if($path == '')
+			return '';// command(s) directly available
+		if (substr($path, -1) != DIRECTORY_SEPARATOR)
+			$path .= DIRECTORY_SEPARATOR;
+		
+		$path .= 'bin/';
+		$path = str_replace(array('/', '\\'), DIRECTORY_SEPARATOR, $path);
+		return $path;
+   }
+
+   function GetExecPath($app){
+    //Ensure that function is called after Connect() method executed
+		$home = $this->GetHome();
+
+		$IsWindows = strncasecmp(PHP_OS, 'WIN', 3) == 0;
+          if($IsWindows)
+			$path = "$home$app.exe";
+          else
+			$path = $home.$app;
+		$path = str_replace(array('/', '\\'), DIRECTORY_SEPARATOR, $path);
+		return $path;
+    }
+
 
   /****************************************************************************
    * Makes SQL by interpolating values into a format string.

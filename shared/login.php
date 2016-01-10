@@ -8,6 +8,8 @@
   require_once("../classes/StaffQuery.php");
   require_once("../classes/SessionQuery.php");
   require_once("../functions/errorFuncs.php");
+  require_once("../classes/Localize.php");
+  $loc = new Localize(OBIB_LOCALE,"shared");
 
   #****************************************************************************
   #*  Checking for post vars.  Go back to form if none found.
@@ -24,7 +26,8 @@
   $username = $_POST["username"];
   if ($username == "") {
     $error_found = true;
-    $pageErrors["username"] = "Username is required.";
+    $pageErrors["username"] = $loc->getText("loginUserNameReqErr");
+//    $pageErrors["username"] = "Username is required.";
   }
 
   #****************************************************************************
@@ -34,10 +37,9 @@
   $pwd = $_POST["pwd"];
   if ($pwd == "") {
     $error_found = true;
-    $pageErrors["pwd"] = "Password is required.";
+    $pageErrors["username"] = $loc->getText("loginUserNameReqErr");
+//    $pageErrors["pwd"] = "Password is required.";
   } else {
-
-
     $staffQ = new StaffQuery();
     $staffQ->connect();
     if ($staffQ->errorOccurred()) {
@@ -51,7 +53,8 @@
     if ($staff == false) {
       # invalid password.  Add one to login attempts.
       $error_found = true;
-      $pageErrors["pwd"] = "Invalid signon.";
+      $pageErrors["pwd"] = $loc->getText("loginPwdInvErr");
+//      $pageErrors["pwd"] = "Invalid signon.";
       if (!isset($_SESSION["loginAttempts"]) || ($_SESSION["loginAttempts"] == "")) {
         $sess_login_attempts = 1;
       } else {
@@ -108,7 +111,7 @@
   #**************************************************************************
   unset($_SESSION["postVars"]);
   unset($_SESSION["pageErrors"]);
-
+  Staff::$session_user = $staff;//mantine la sseccion??
   $_SESSION["username"] = $staff->getUsername();
   $_SESSION["userid"] = $staff->getUserid();
   $_SESSION["token"] = $token;
@@ -118,6 +121,10 @@
   $_SESSION["hasCircMbrAuth"] = $staff->hasCircMbrAuth();
   $_SESSION["hasCatalogAuth"] = $staff->hasCatalogAuth();
   $_SESSION["hasReportsAuth"] = $staff->hasReportsAuth();
+
+  require_once('../shared/login_tools.php');
+  on_login_ok();
+
 
   #**************************************************************************
   #*  Redirect to return page

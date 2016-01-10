@@ -44,6 +44,7 @@
     "mbrFldsPassUser"  => inputField('text',     "passUser",       $mbr->getPassUser()),
     "mbrFldsBornDt"    => inputField('date',     "bornDt",         $mbr->getBornDt()), //problemas con el calendario solo da años despues de 1995
 //    "mbrFldsBornDt"    => inputField('text',     "bornDt",         $mbr->getBornDt()),
+//       "custom_"  => inputField('select',   "custom", $mbr->getCustom(NULL), NULL, $customFields),// #fix para elegir el campo personalizado por desplegable
     "mbrFldsOther"     => inputField('textarea', "other",          $mbr->getOther()),
   );
   foreach ($customFields as $name => $title) {

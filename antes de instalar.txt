@@ -6,7 +6,7 @@ Si no instala correctamente solo genera las tablas pero sin contenido en todas.
 1.-Borre las tablas del mysql
 2.- aumente en el php.ini - el tiempo de ejecucionde scrip. normarlment e esta en 30 se reuqiere por lo menos 300
 
-En servidores d produccion borrar la carttepa install.
+En servidores de produccion borrar la carpeta install.
 
 cualquier duda o fallo reporter a joanlaga@hotmail.com
 o en la pagina de la comunidad de usauarios espabiblio

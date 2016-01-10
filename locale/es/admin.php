@@ -1,12 +1,9 @@
 <?php
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
-
 * jalg 2012  se agregaron variables para corregir trauducion en la ficha de administración de biblioteca. días 
 * jalg 2012 se agrego $trans["admin_settingsViewlist"] permite activar o desactivar la función del listado general de libros. 
 #* MODIFICADO POR JOSE ANTONIO LARA joanlaga@hotmail.com PARA SOPORTE DE Z39.50 (2012)
-
-
  */
  
 /**********************************************************************************
@@ -467,7 +464,7 @@ $trans["Function"]			= "\$text = 'Función';";
 $trans["edit"]				= "\$text = 'Editar';";
 $trans["del"]				= "\$text = 'eliminar';";
 $trans["Description"]			= "\$text = 'Descripción';";
-$trans["Member Classifications List"]	= "\$text = 'Grupos de usuarios:';";
+$trans["Member Classifications List"]	= "\$text = 'Grupos de usuarios (Clasificación):';";
 $trans["Members"]			= "\$text = 'Usuarios';";
 $trans["Max. Fines"]			= "\$text = 'Máximo de multas';";
 $trans["Custom Member Fields"]		= "\$text = 'Grados de usuario:';";

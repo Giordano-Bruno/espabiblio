@@ -59,6 +59,7 @@
    <a href="../admin/member_fields_dm_list.php" class="alt1"><?php echo $navLoc->getText("Member Fields dm");?></a>
  </li>
 <?php } ?>
+<!----------
 <?php if ($nav == "member_fields") { ?>
  <li class="active">
    <?php echo $navLoc->getText("Member Fields");?>
@@ -68,6 +69,7 @@
    <a href="../admin/member_fields_list.php" class="alt1"><?php echo $navLoc->getText("Member Fields");?></a>
  </li>
 <?php } ?>
+------->
 
 <?php if ($nav == "copy fields") { ?>
  <li class="active">
@@ -172,6 +174,17 @@
    <a href="../admin/import_export.php" class="alt1"><?php echo $navLoc->getText("adminImportExport");?></a>
  </li>
 <?php } ?>
+
+<?php if ($nav == 'backup') { ?>
+ <li class="active">
+ &raquo; <?php echo $navLoc->getText('Backup control');?><br>
+</li>
+<?php } else { ?>
+<li>
+ <a href="../admin/backup_control.php" class="alt1"><?php echo $navLoc->getText('Backup control');?></a><br>
+</li>
+<?php } ?>
+
 <?php if ($nav == "adminTranslate") { ?>
  <li class="active">
    <?php echo $navLoc->getText("adminTranslate");?>

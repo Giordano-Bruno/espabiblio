@@ -2,7 +2,6 @@
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
  */
- 
 /******************************************************************************
  * Staff represents a library staff member.  Contains business rules for
  * staff member data validation.
@@ -12,6 +11,7 @@
  * @access public
  ******************************************************************************
  */
+   require_once("../classes/Localize.php");
 class Staff {
   var $_userid = "";
   var $_lastChangeDt = "";
@@ -31,11 +31,38 @@ class Staff {
   var $_adminAuth = false;
   var $_reportsAuth = FALSE;
   var $_suspended = false;
+
+  var $_loc;
+
+  public static $session_user = NULL;
+  
+  function Staff () {
+    $this->_loc = new Localize(OBIB_LOCALE,"classes");
+  }
+
+
   /****************************************************************************
    * @return boolean true if data is valid, otherwise false.
    * @access public
    ****************************************************************************
    */
+  function validateData() {
+    $valid = true;
+    if ($this->_lastName == "") {
+      $valid = false;
+      $this->_lastNameError = $this->_loc->getText("staffLastNameReqErr");
+    }
+    if (strlen($this->_username) < 4) {
+      $valid = false;
+      $this->_usernameError = $this->_loc->getText("staffUserNameLenErr");
+    } elseif (substr_count($this->_username, " ") > 0) {
+      $valid = false;
+      $this->_usernameError = $this->_loc->getText("staffUserNameCharErr");
+    }
+    return $valid;
+  }
+
+/*
   function validateData() {
     $valid = true;
     if ($this->_lastName == "") {
@@ -51,12 +78,35 @@ class Staff {
     }
     return $valid;
   }
+*/
+  /****************************************************************************
+   * @return boolean true if data is valid, otherwise false.
+   * @access public
+   ****************************************************************************
+   */
+
 
   /****************************************************************************
    * @return boolean true if data is valid, otherwise false.
    * @access public
    ****************************************************************************
    */
+  function validatePwd() {
+    $valid = true;
+    if (strlen($this->_pwd) < 4) {
+      $valid = false;
+      $this->_pwdError = $this->_loc->getText("staffPwdLenErr");
+    } elseif (substr_count($this->_pwd, " ") > 0) {
+      $valid = false;
+      $this->_pwdError = $this->_loc->getText("staffPwdCharErr");
+    } elseif ($this->_pwd != $this->_pwd2) {
+      $valid = false;
+      $this->_pwdError = $this->_loc->getText("staffPwdMatchErr");
+    }
+    return $valid;
+  }
+
+/*
   function validatePwd() {
     $valid = true;
     if (strlen($this->_pwd) < 4) {
@@ -71,7 +121,7 @@ class Staff {
     }
     return $valid;
   }
-
+*/
   /****************************************************************************
    * @return string Staff userid
    * @access public

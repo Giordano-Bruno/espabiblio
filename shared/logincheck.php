@@ -104,3 +104,12 @@
   if (isset($restrictInDemo) && $restrictInDemo && OBIB_DEMO_FLG) {
     include("../shared/demo_msg.php");
   }
+
+
+
+  function is_have_admin_rights() {
+		if (isset($_SESSION["hasAdminAuth"]))
+			return ($_SESSION["hasAdminAuth"] == true);
+		return false;
+  }
+
