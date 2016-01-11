@@ -1,12 +1,9 @@
 <?php
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
-
 * jalg 2012  se agregaron variables para corregir trauducion en la ficha de administración de biblioteca. días 
 * jalg 2012 se agrego $trans["admin_settingsViewlist"] permite activar o desactivar la función del listado general de libros. 
 #* MODIFICADO POR JOSE ANTONIO LARA joanlaga@hotmail.com PARA SOPORTE DE Z39.50 (2012)
-
-
  */
  
 /**********************************************************************************
@@ -467,7 +464,7 @@ $trans["Function"]			= "\$text = 'Función';";
 $trans["edit"]				= "\$text = 'Editar';";
 $trans["del"]				= "\$text = 'eliminar';";
 $trans["Description"]			= "\$text = 'Descripción';";
-$trans["Member Classifications List"]	= "\$text = 'Grupos de usuarios:';";
+$trans["Member Classifications List"]	= "\$text = 'Grupos de usuarios (Clasificación):';";
 $trans["Members"]			= "\$text = 'Usuarios';";
 $trans["Max. Fines"]			= "\$text = 'Máximo de multas';";
 $trans["Custom Member Fields"]		= "\$text = 'Grados de usuario:';";
@@ -532,7 +529,7 @@ Si el valor del mes de la historia de la purga es mayor que cero, los valores en
 Los datos de los informes de las estadísticas deben ser guardados fuera de Espabiblio para referencia futura.';";
 
 #****************************************************************************
-#* Translation text for page staff_list.php
+#* Translation text for page translate.php
 #****************************************************************************
 $trans["admin-Translate"]	= "\$text = 'Administrador de Traducciones';";
 $trans["admin-transAdver"]	= "\$text = 'Respalde sus archivos de la carpeta locale';";
@@ -547,9 +544,24 @@ $trans["admin-transSubmit"]	= "\$text = 'Enviar';";
 #****************************************************************************
 #* Translation text for page copy_fields_list.php Custom Copy Fields
 #****************************************************************************
-$trans["Custom Copy Fields"]	= "\$text = 'Personalizacion de campos de copias';";
+$trans["Custom Copy Fields"]	= "\$text = 'Campos de copias personalizados';";
 $trans["Copy field, %desc%, has been added."]	= "\$text = 'El campo de para copia, %desc%, fue agregado.';";
 $trans["return to copy fields list"]	= "\$text = 'Regresar a Personalización de Campos de datos para las copias.';";
 $trans["Add new custom field list"]	= "\$text = 'Agregar nueva Personalización de Campos de datos para las copias.';";
 $trans["Add custom copy field"]	= "\$text = 'Agregar nueva Personalización de Campos de datos para las copias.';";
 $trans["Are you sure you want to delete field %desc% ?"]	= "\$text = 'Borrar Personalización de Campos de datos para las copias  %desc% ?.';";
+
+#****************************************************************************
+#*  Translation text for Control-Backup
+#****************************************************************************
+//backup_upload_warn_aughtung
+//ALERT!!! AUGHTUNG!!! uploading of aside dump drops all current biblio contents !!!</br>
+//You must pass again administrator autentifycation.</br>
+$trans['backup_upload_warn_aughtung']		= "\$text = '
+¡¡¡ALERTA!!! Cargar el archivo puede alterar todos los contenidos actuales de su biblioteca !!! </br>
+Usted debe pasar de nuevo la autenticación como administrador.';";
+
+//Download database backup dump
+$trans["Download database backup dump"]	= "\$text = 'Descargar volcado copia de seguridad';";
+//Upload database from backup dump
+$trans["Upload database from backup dump"]	= "\$text = 'Sube la base de datos de volcado de copia de seguridad';";

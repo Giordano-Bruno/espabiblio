@@ -216,7 +216,7 @@ $trans["admin_settingsInactiveDays"]	= "\$text = 'Auto-actualizar usuarios inact
 $trans["admin_settingsFontNormal"]	= "\$text = 'Tipo de fuente:';";
 $trans["admin_settingsFontSize"]	= "\$text = 'Tamaño de la fuente:';";
 $trans["Max. hold length:"]		= "\$text = 'Máxima longitud a mantener:';";
-$trans["Add new member classificaiton"]	= "\$text = 'Añadir nuevo grupo de usuarios';";
+$trans["Add new member classification"]	= "\$text = 'Añadir nuevo grupo de usuarios';";
 $trans["admin_settingsHoldMaxDays"]	= "\$text = 'Máximo de días de antigüedad:';"; //dudas en la traduccion jalg
 $trans["admin_settingsViewlist"]	= "\$text = 'Mostrar listado general (ralentiza el servidor):';";
 
@@ -550,3 +550,18 @@ $trans["return to copy fields list"]	= "\$text = 'Regresar a Personalización de
 $trans["Add new custom field list"]	= "\$text = 'Agregar nueva Personalización de Campos de datos para las copias.';";
 $trans["Add custom copy field"]	= "\$text = 'Agregar nueva Personalización de Campos de datos para las copias.';";
 $trans["Are you sure you want to delete field %desc% ?"]	= "\$text = 'Borrar Personalización de Campos de datos para las copias  %desc% ?.';";
+
+#****************************************************************************
+#*  Translation text for Control-Backup
+#****************************************************************************
+//backup_upload_warn_aughtung
+//ALERT!!! AUGHTUNG!!! uploading of aside dump drops all current biblio contents !!!</br>
+//You must pass again administrator autentifycation.</br>
+$trans['backup_upload_warn_aughtung']		= "\$text = '
+¡¡¡ALERTA!!! Cargar el archivo puede alterar todos los contenidos actuales de su biblioteca !!! </br>
+Usted debe pasar de nuevo la autenticación como administrador.';";
+
+//Download database backup dump
+$trans["Download database backup dump"]	= "\$text = 'Descargar volcado copia de seguridad';";
+//Upload database from backup dump
+$trans["Upload database from backup dump"]	= "\$text = 'Sube la base de datos de volcado de copia de seguridad';";

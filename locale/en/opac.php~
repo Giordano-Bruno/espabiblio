@@ -6,10 +6,8 @@
 ##
 ## DO NOT MODIFY THIS FILE BY HAND!
 
-## Use /admin/control-translate!
-
 ##
-# MODIFICADO POR JOSE ANTONIO LARA joanlaga@hotmail.com (2016)
+#* MODIFICADO POR JOSE ANTONIO LARA joanlaga@hotmail.com (2013)
 */
 $trans["Agregar nueva entrada "]			= "\$text='';";
 $trans["Agregar nueva entrada "]			= "\$text='';";
@@ -23,7 +21,8 @@ $trans["opac_Search"]			= "\$text='Search';";
 $trans["opac_SearchTitle"]			= "\$text='Search Bibliography by Search Phrase:';";
 $trans["opac_Subject"]			= "\$text='Subject';";
 $trans["opac_Title"]			= "\$text='Title';";
-$trans["opac_WelcomeMsg"]			= "\$text='Welcome to our library\'s online public access catalog. Search our catalog to view bibliography information on holdings we have in our library.';";
+$trans["opac_WelcomeMsg"]			= "\$text='Welcome to our library\'s online public access catalog. Search our catalog
+ to view bibliography information on holdings we have in our library.';";
 ##
 ## end
 ##

@@ -1,9 +1,11 @@
 <?php
 /**
+/**
  * Author: Szymon Goralczyk <sg@apgsoft.pl>
  * https://bitbucket.org/abix-pl/openbiblio/branches/compare/Cena_egzemplarza%0dmaster#chg-inventory/copy_del.php
  * Lang file for inventory module.
  */
+
 
 #****************************************************************************
 #*  Translation text for class Biblio
