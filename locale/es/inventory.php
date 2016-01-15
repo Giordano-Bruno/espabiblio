@@ -18,3 +18,5 @@ $trans["invDataTableActions"]            = "\$text = 'Acciones';";// Actions
 $trans["invDataTableActions_Show"]            = "\$text = 'Revisar';";// Show
 $trans["biblioCopyDelConfirmErr1"] = "\$text = 'No se pudo eliminar la copia. Debe revisar la copia antes de que se elimine.';";// Could not delete copy.  A copy must be checked in before it can be deleted.
 $trans["biblioCopyDelConfirmMsg"]  = "\$text = '¿Seguro que quieres eliminar la copia con código de barras %barcodeNmbr%?  Esto también eliminará toda la historia de cambio de estado para esta copia.';";// Are you sure you want to delete the copy with barcode %barcodeNmbr%?  This will also delete all status change history for this copy.
+$trans["test-1"]            = "\$text = 'Inventario';";// Inventory
+$trans["test-2"]            = "\$text = 'Inventario';";// Inventory

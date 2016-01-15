@@ -1,9 +1,12 @@
 <?php
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
+
 * jalg 2012  se agregaron variables para corregir trauducion en la ficha de administración de biblioteca. días 
 * jalg 2012 se agrego $trans["admin_settingsViewlist"] permite activar o desactivar la función del listado general de libros. 
 #* MODIFICADO POR JOSE ANTONIO LARA joanlaga@hotmail.com PARA SOPORTE DE Z39.50 (2012)
+
+
  */
  
 /**********************************************************************************
@@ -21,13 +24,13 @@
  *     (such as $, ", etc.) within the php translation code.
  *
  *   Simple Example:
- *     $trans["homeWelcome"]  = "\$text='Welcome to OpenBiblio';";
+ *     $trans["homeWelcome"]       = "\$text='Welcome to OpenBiblio';";
  *
  *   Example Containing Argument Substitution:
- *     $trans["searchResult"] = "\$text='page %page% of %pages%';";
+ *     $trans["searchResult"]      = "\$text='page %page% of %pages%';";
  *
  *   Example Containing a PHP If Statment and Argument Substitution:
- *     $trans["searchResult"] = 
+ *     $trans["searchResult"]      = 
  *       "if (%items% == 1) {
  *         \$text = '%items% result';
  *       } else {
@@ -49,29 +52,29 @@ $trans["adminFootnote"]		= "\$text = 'Los campos marcados con %symbol% son reque
 #****************************************************************************
 #*  Translation text for page index.php
 #****************************************************************************
-$trans["indexHdr"]		= "\$text = 'Administración';";
-$trans["indexDesc"]		= "\$text = 'Utiliza las funciones de la zona de la izquierda para administrar los bibliotecarios y los datos administrativos.';";
+$trans["indexHdr"]                 = "\$text = 'Administración';";
+$trans["indexDesc"]                = "\$text = 'Utiliza las funciones de la zona de la izquierda para administrar los bibliotecarios y los datos administrativos.';";
 
 #****************************************************************************
 #*  Translation text for page collections*.php
 #****************************************************************************
-$trans["adminCollections_delReturn"]	= "\$text = 'Volver a la lista de colecciones';";
-$trans["adminCollections_delStart"]	= "\$text = 'Colecciones, ';";
+$trans["adminCollections_delReturn"]                 = "\$text = 'Volver a la lista de colecciones';";
+$trans["adminCollections_delStart"]                 = "\$text = 'Colecciones, ';";
 
 #****************************************************************************
 #*  Translation text for page collections_del.php
 #****************************************************************************
-$trans["adminCollections_delEnd"]	= "\$text = ', ha sido borrado.';";
+$trans["adminCollections_delEnd"]                 = "\$text = ', ha sido borrado.';";
 
 #****************************************************************************
 #*  Translation text for page collections_del_confirm.php
 #****************************************************************************
-$trans["adminCollections_del_confirmText"]	= "\$text = '¿Estás seguro de que quieres eliminar la colección de?: ';";
+$trans["adminCollections_del_confirmText"]                 = "\$text = '¿Estás seguro de que quieres borrar esta colección?, ';";
 
 #****************************************************************************
 #*  Translation text for page collections_edit.php
 #****************************************************************************
-$trans["adminCollections_editEnd"]	= "\$text = ', ha sido actualizada.';";
+$trans["adminCollections_editEnd"]                 = "\$text = ', ha sido actualizada.';";
 
 #****************************************************************************
 #*  Translation text for page collections_edit_form.php
@@ -101,7 +104,7 @@ $trans["adminCollections_ListNoteText"]			= "\$text = 'La función de borrado s�
 #****************************************************************************
 #*  Translation text for page collections_new.php
 #****************************************************************************
-$trans["adminCollections_newAdded"]		= "\$text = ', ha sido añadida.';";
+$trans["adminCollections_newAdded"]                 = "\$text = ', ha sido añadida.';";
 
 #****************************************************************************
 #*  Translation text for page collections_new_form.php
@@ -138,7 +141,7 @@ $trans["admin_materials_delNoteText"]	= "\$text = 'Los archivos de imagen deben 
 #****************************************************************************
 #*  Translation text for page materials_edit.php
 #****************************************************************************
-$trans["admin_materials_editEnd"]	= "\$text = ', ha sido actualizado.';";
+$trans["admin_materials_editEnd"]                 = "\$text = ', ha sido actualizado.';";
 
 #****************************************************************************
 #*  Translation text for page materials_list.php
@@ -160,7 +163,7 @@ $trans["admin_materials_listNoteText"]		= "\$text = 'La función de borrado sól
 #****************************************************************************
 #*  Translation text for page materials_new.php
 #****************************************************************************
-$trans["admin_materials_listNewadded"]		= "\$text = ', ha sido añadido.';";
+$trans["admin_materials_listNewadded"]                 = "\$text = ', ha sido añadido.';";
 
 #****************************************************************************
 #*  Translation text for page materials_new_form.php
@@ -210,13 +213,19 @@ $trans["admin_settingsLocale"]			= "\$text = 'Idioma:';";
 $trans["admin_settingsHTMLChar"]		= "\$text = 'Juego de caracteres HTML:';";
 $trans["admin_settingsHTMLTagLangAttr"]		= "\$text = 'Atributos de etiquetas de lenguaje HTML:';";
 
+//$trans["adminCollections_edit_formNote"]		= "\$text = 'Notas:';";//cambiar nombre jalg 
+$trans["If the month value for purging history is higher than zero, values in statistics reports shift over time.<br>Data from statistics reports should be saved outside OpenBiblio for future reference."]		= "\$text = 'Si el valor de mes para purgar la historia es mayor que cero,<br> los valores en los informes de estadísticas cambian con el tiempo.';";
+
+
+
+
 #* No estan en Openbiblio 7.1 adecuacion por jalg
 $trans["days"]				= "\$text = 'días';";
 $trans["admin_settingsInactiveDays"]	= "\$text = 'Auto-actualizar usuarios inactivos en:';";
 $trans["admin_settingsFontNormal"]	= "\$text = 'Tipo de fuente:';";
 $trans["admin_settingsFontSize"]	= "\$text = 'Tamaño de la fuente:';";
 $trans["Max. hold length:"]		= "\$text = 'Máxima longitud a mantener:';";
-$trans["Add new member classification"]	= "\$text = 'Añadir nuevo grupo de usuarios';";
+$trans["Add new member classificaiton"]	= "\$text = 'Añadir nuevo grupo de usuarios';";
 $trans["admin_settingsHoldMaxDays"]	= "\$text = 'Máximo de días de antigüedad:';"; //dudas en la traduccion jalg
 $trans["admin_settingsViewlist"]	= "\$text = 'Mostrar listado general (ralentiza el servidor):';";
 
@@ -231,17 +240,17 @@ $trans["adminStaff_No"]			= "\$text = 'No';";
 #****************************************************************************
 #*  Translation text for page staff_del.php
 #****************************************************************************
-$trans["adminStaff_delDeleted"]		= "\$text = ', ha sido borrado.';";
+$trans["adminStaff_delDeleted"]                 = "\$text = ', ha sido borrado.';";
 
 #****************************************************************************
 #*  Translation text for page staff_delete_confirm.php
 #****************************************************************************
-$trans["adminStaff_del_confirmConfirmText"]	= "\$text = 'estás seguro de querer eliminar a un miembro del personal, ';";
+$trans["adminStaff_del_confirmConfirmText"]                 = "\$text = 'estás seguro de querer borrar a un miembro del personal, ';";
 
 #****************************************************************************
 #*  Translation text for page staff_edit.php
 #****************************************************************************
-$trans["adminStaff_editUpdated"]	= "\$text = ', ha sido actualizado';";
+$trans["adminStaff_editUpdated"]                 = "\$text = ', ha sido actualizado';";
 
 #****************************************************************************
 #*  Translation text for page staff_edit_form.php
@@ -271,7 +280,7 @@ $trans["adminStaff_list_Del"]		= "\$text = 'eliminar';";
 #****************************************************************************
 #*  Translation text for page staff_new.php
 #****************************************************************************
-$trans["adminStaff_new_Added"]		= "\$text = ', ha sido añadido.';";
+$trans["adminStaff_new_Added"]                 = "\$text = ', ha sido añadido.';";
 
 #****************************************************************************
 #*  Translation text for page staff_new_form.php
@@ -293,14 +302,13 @@ $trans["adminStaff_pwd_reset_form_Resetheader"]	= "\$text = 'Cambiar contraseña
 #****************************************************************************
 #*  Translation text for theme pages
 #****************************************************************************
-$trans["adminTheme_Return"]		= "\$text = 'volver a la lista de temas';";
-$trans["adminTheme_Theme"]		= "\$text = 'Tema, ';";
+$trans["adminTheme_Return"]                 = "\$text = 'volver a la lista de temas';";
+$trans["adminTheme_Theme"]                 = "\$text = 'Tema, ';";
 
 #****************************************************************************
 #*  Translation text for page theme_del.php
 #****************************************************************************
-$trans["adminTheme_Deleted"]		= "\$text = ', ha sido borrado.';";
-
+$trans["adminTheme_Deleted"]                 = "\$text = ', ha sido borrado.';";
 #****************************************************************************
 #*  Translation text for page theme_del_confirm.php
 #****************************************************************************
@@ -309,7 +317,7 @@ $trans["adminTheme_Deleteconfirm"]	= "\$text = '¿Estás seguro de que quieres e
 #****************************************************************************
 #*  Translation text for page theme_edit.php
 #****************************************************************************
-$trans["adminTheme_Updated"]		= "\$text = ', ha sido actualizado.';";
+$trans["adminTheme_Updated"]                 = "\$text = ', ha sido actualizado.';";
 
 #****************************************************************************
 #*  Translation text for page theme_edit_form.php
@@ -360,7 +368,7 @@ $trans["adminTheme_HeaderWording"]	= "\$text = 'Editar';";
 #****************************************************************************
 #*  Translation text for page theme_new.php
 #****************************************************************************
-$trans["adminTheme_new_Added"]		= "\$text = ', ha sido actualizada.';";
+$trans["adminTheme_new_Added"]                 = "\$text = ', ha sido actualizada.';";
 
 #****************************************************************************
 #*  Translation text for page theme_new_form.php
@@ -464,7 +472,7 @@ $trans["Function"]			= "\$text = 'Función';";
 $trans["edit"]				= "\$text = 'Editar';";
 $trans["del"]				= "\$text = 'eliminar';";
 $trans["Description"]			= "\$text = 'Descripción';";
-$trans["Member Classifications List"]	= "\$text = 'Grupos de usuarios (Clasificación):';";
+$trans["Member Classifications List"]	= "\$text = 'Grupos de usuarios:';";
 $trans["Members"]			= "\$text = 'Usuarios';";
 $trans["Max. Fines"]			= "\$text = 'Máximo de multas';";
 $trans["Custom Member Fields"]		= "\$text = 'Grados de usuario:';";
@@ -529,7 +537,7 @@ Si el valor del mes de la historia de la purga es mayor que cero, los valores en
 Los datos de los informes de las estadísticas deben ser guardados fuera de Espabiblio para referencia futura.';";
 
 #****************************************************************************
-#* Translation text for page translate.php
+#* Translation text for page staff_list.php
 #****************************************************************************
 $trans["admin-Translate"]	= "\$text = 'Administrador de Traducciones';";
 $trans["admin-transAdver"]	= "\$text = 'Respalde sus archivos de la carpeta locale';";
@@ -541,27 +549,13 @@ $trans["admin-transDel"]	= "\$text = 'Eliminar';";
 $trans["admin-transNewEntry"]	= "\$text = 'Agregar nueva entrada';";
 $trans["admin-transSubmit"]	= "\$text = 'Enviar';";
 
+
 #****************************************************************************
 #* Translation text for page copy_fields_list.php Custom Copy Fields
 #****************************************************************************
-$trans["Custom Copy Fields"]	= "\$text = 'Campos de copias personalizados';";
+$trans["Custom Copy Fields"]	= "\$text = 'Personalizacion de campos de copias';";
 $trans["Copy field, %desc%, has been added."]	= "\$text = 'El campo de para copia, %desc%, fue agregado.';";
 $trans["return to copy fields list"]	= "\$text = 'Regresar a Personalización de Campos de datos para las copias.';";
 $trans["Add new custom field list"]	= "\$text = 'Agregar nueva Personalización de Campos de datos para las copias.';";
 $trans["Add custom copy field"]	= "\$text = 'Agregar nueva Personalización de Campos de datos para las copias.';";
 $trans["Are you sure you want to delete field %desc% ?"]	= "\$text = 'Borrar Personalización de Campos de datos para las copias  %desc% ?.';";
-
-#****************************************************************************
-#*  Translation text for Control-Backup
-#****************************************************************************
-//backup_upload_warn_aughtung
-//ALERT!!! AUGHTUNG!!! uploading of aside dump drops all current biblio contents !!!</br>
-//You must pass again administrator autentifycation.</br>
-$trans['backup_upload_warn_aughtung']		= "\$text = '
-¡¡¡ALERTA!!! Cargar el archivo puede alterar todos los contenidos actuales de su biblioteca !!! </br>
-Usted debe pasar de nuevo la autenticación como administrador.';";
-
-//Download database backup dump
-$trans["Download database backup dump"]	= "\$text = 'Descargar volcado copia de seguridad';";
-//Upload database from backup dump
-$trans["Upload database from backup dump"]	= "\$text = 'Sube la base de datos de volcado de copia de seguridad';";

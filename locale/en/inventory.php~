@@ -1,15 +1,14 @@
 <?php
 /**
-/**
  * Author: Szymon Goralczyk <sg@apgsoft.pl>
  * https://bitbucket.org/abix-pl/openbiblio/branches/compare/Cena_egzemplarza%0dmaster#chg-inventory/copy_del.php
  * Lang file for inventory module.
  */
 
-
 #****************************************************************************
 #*  Translation text for class Biblio
 #****************************************************************************
+$trans["test-1"]			= "\$text='lorem trsd';";
 $trans["invName"]            = "\$text = 'Inventory';";
 $trans["invDesc"]            = "\$text = 'Module used for inventory.';";
 $trans["invDataTableNr"]            = "\$text = 'Nr.';";

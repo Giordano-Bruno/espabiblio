@@ -1,0 +1,20 @@
+<?php
+/**
+ * Author: Szymon Goralczyk <sg@apgsoft.pl>
+ * https://bitbucket.org/abix-pl/openbiblio/branches/compare/Cena_egzemplarza%0dmaster#chg-inventory/copy_del.php
+ * Lang file for inventory module.
+ */
+
+#****************************************************************************
+#*  Translation text for class Biblio
+#****************************************************************************
+$trans["invName"]            = "\$text = 'Inventory';";
+$trans["invDesc"]            = "\$text = 'Module used for inventory.';";
+$trans["invDataTableNr"]            = "\$text = 'Nr.';";
+$trans["invDataTableAuthor"]            = "\$text = 'Author';";
+$trans["invDataTableTitle"]            = "\$text = 'Title';";
+$trans["invDataTableAmount"]            = "\$text = 'Amount';";
+$trans["invDataTableActions"]            = "\$text = 'Actions';";
+$trans["invDataTableActions_Show"]            = "\$text = 'Show';";
+$trans["biblioCopyDelConfirmErr1"] = "\$text = 'Could not delete copy.  A copy must be checked in before it can be deleted.';";
+$trans["biblioCopyDelConfirmMsg"]  = "\$text = 'Are you sure you want to delete the copy with barcode %barcodeNmbr%?  This will also delete all status change history for this copy.';";

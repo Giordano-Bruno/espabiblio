@@ -13,17 +13,15 @@ class Localize {
    * @access public
    ****************************************************************************
    */
-  function Localize ($locale, $section) {//modificar segun este definido en base de datos, como esta en installqyery
-if (is_null($_POST['locale'])){
+  function Localize ($locale, $section) {//ene-2016 modificado para usar en scrip admin
+	if ($locale == '' ){
+		$locale = OBI_LANG;
+	}else{
+		if (is_null($_REQUEST['locale'] || $locale == '' )){
+			$locale = "es";
+		}
+	}
 
-#FIXME Falla al cambiar de idioma en el modulo admin, es requeredido predefinirlo para el momento de instalar, pero posteriormente debe trabajar con el selector de admin, tambien cambiar en class/istall class/upgrade
-
-	
-//  $locale = $this->getCurrentLocale($fromTablePrfx);
-  $locale = "es";
-}else{
-$locale=$_POST['locale'];
-}
     $localePath = OBIB_LOCALE_ROOT . $locale ."/".$section.".php";//modificado jalg 11/2013 para trabajo en win y linux
 
     include($localePath);

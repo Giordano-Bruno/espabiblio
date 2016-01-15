@@ -5,30 +5,42 @@
 * @param string The path to read.
 * @return array A named array of the directories (the key and value are identical).
 */
-
 	function readDirs($path) {
 		$dirs = array();
-		$d = dir(OBI_DIR . $path);
+		$d = dir(OBIB_LOCALE_ROOT . $path);
 		while (false !== ($name = $d->read())) {
-			if ( $name !='.' && $name !='..' && $name !='sql' && $name !='help' && $name !='index.html' && $name !='*.php~' && $name !='*.bak' && $name !='template.php'  && $name !='metadata.php') {
+			if ( $name !='.' && $name !='..' && $name !='sql' && $name !='help' && $name !='index.html' && $name != "?.php~" && $name != "?.bak" && $name !='template.php'  && $name !='metadata.php') {
 				$dirs[$name] = $name;
 			}
 		}
 		$d->close();
-		ksort($dirs);
+//		ksort($dirs);
 		return $dirs;
 	}
 
+	function readFiles($klang1, $module1) {
+	$core_filename = OBIB_LOCALE_ROOT.$klang1.'/'.$module1;
+		if (!file_exists($core_filename)) {
+			copy(OBIB_LOCALE_ROOT.OBI_LANG.'/'.$module1, OBIB_LOCALE_ROOT.$klang1.'/'.$module1);
+		}
 /*
-function arrayMerge($a1, $a2) {
-	foreach ($a2 as $k => $v) {
-		$a1[$k] = $v;
-	}
-	return $a1;
-}
+					$filename = $core_filename;
+					copy($core_filename, $core_filename . '.bak');
+			} else {
+					$mod_locale = OBIB_LOCALE_ROOT.$lang;
+					if (is_dir($mod_locale)) {
+						$filename = OBIB_LOCALE_ROOT.$lang.'/'.$module;
+				}
+		}
 */
-	
-function limpia_textos($texto){
+		$module1 =  str_replace('.php', '', $module1);
+		$LocKlang = new Localize($klang1,$module1);//Leemos el modulo 
+		$thearray = get_object_vars( $LocKlang );//traemos los valores del objeto
+		$Base1 =$thearray['_trans'];//leemos los valores que interesan
+		return $Base1;
+	}
+
+	function limpia_textos($texto){
 		$texto = trim ($texto);
 		$texto = str_replace("=", " = ", $texto);
 		$texto = str_replace("   ", " ", $texto);
@@ -37,9 +49,8 @@ function limpia_textos($texto){
 		$texto = substr($texto, 8);
 		$texto = substr($texto, 0, -2);
 		$texto = trim ($texto);
-
 		$pos = strpos($texto, '\'');
-		if ($pos == 0){ 
+		if ($pos == 0){
 			$texto = substr($texto, 1);
 		}
 /*
@@ -50,5 +61,5 @@ function limpia_textos($texto){
 		$texto = strtr($texto,'_','-');
 		$texto = str_replace(" = ", "=", $texto);
 */
-return($texto);
-		}  //     function limpia_textos
+	return($texto);
+	}  //     function limpia_textos

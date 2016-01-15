@@ -8,6 +8,7 @@
 #****************************************************************************
 #*  Translation text for class Biblio
 #****************************************************************************
+$trans["test-1"]			= "\$text='Inventario lorem';";
 $trans["invName"]            = "\$text = 'Inventory';";
 $trans["invDesc"]            = "\$text = 'Module used for inventory.';";
 $trans["invDataTableNr"]            = "\$text = 'Nr.';";

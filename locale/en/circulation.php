@@ -2,7 +2,7 @@
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
  */
- 
+  
 /**********************************************************************************
  *   Instructions for translators:
  *
@@ -302,5 +302,3 @@ $trans["Command Sheet"]     = "\$text='Command Sheet';";
 $trans["Actions which did not produce an error have completed. Think carefully before uploading the same file again, or some circulations may be recorded twice."]     = "\$text='Actions which did not produce an error have completed. Think carefully before uploading the same file again, or some circulations may be recorded twice.';";
 $trans["Errors"]     = "\$text='Errors';";
 $trans["Offline Upload Successful."]     = "\$text='Offline Upload Successful.';";
-
-?>

@@ -1,8 +1,6 @@
-﻿<?php
-/* Este archivo es parte de un trabajo protegido por derechos de autor, Se distribuye SIN GARANTIA.
- * Vea el archivo COPYRIGHT.html para más detalles.
- * EspaBiblio Versión 2.0 Basado en OpenBiblio 0.6.0<br />
- * Jorge Lara Cravero, Chile
+<?php
+/* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
+ * See the file COPYRIGHT.html for more details.
  */
  
 /**********************************************************************************
@@ -39,151 +37,189 @@
 #****************************************************************************
 #*  Common translation text shared among multiple pages
 #****************************************************************************
-$trans["circCancel"]              = "\$text = 'Cancelar';";
-$trans["circDelete"]              = "\$text = 'Borrar';";
-$trans["circLogout"]              = "\$text = 'Salir';";
-$trans["circAdd"]                 = "\$text = 'Añadir';";
-$trans["mbrDupBarcode"]           = "\$text = 'Código de inventario, %barcode%, ya está en uso.';";
+$trans["circCancel"]              = "\$text = 'Cancel';";
+$trans["circDelete"]              = "\$text = 'Delete';";
+$trans["circLogout"]              = "\$text = 'Logout';";
+$trans["circAdd"]                 = "\$text = 'Add';";
+$trans["circPermanentlyDelete"]			= "\$text='Permanently Delete';";
+$trans["circSuspend"]			= "\$text='Suspend';";
+$trans["mbrDupBarcode"]           = "\$text = 'Barcode number, %barcode%, is currently in use.';";
+
 #****************************************************************************
 #*  Translation text for page index.php
 #****************************************************************************
-$trans["indexHeading"]            = "\$text='Circulación';";
-$trans["indexCardHdr"]            = "\$text='Buscar usuario por número de identificación:';";
-$trans["indexCard"]               = "\$text='Número de Tarjeta:';";
-$trans["indexSearch"]             = "\$text='Buscar';";
-$trans["indexNameHdr"]            = "\$text='Buscar usuario por apellido:';";
-$trans["indexName"]               = "\$text='Apellido comienza por:';";
+$trans["indexHeading"]            = "\$text='Circulation';";
+$trans["indexCardHdr"]            = "\$text='Search Member by Card Number:';";
+$trans["indexCard"]               = "\$text='Card Number:';";
+$trans["indexSearch"]             = "\$text='Search';";
+$trans["indexNameHdr"]            = "\$text='Search Member by Last Name:';";
+$trans["MailingAddress:"]			= "\$text='Mailing Address:  ';";
+$trans["indexName"]               = "\$text='Last name start with:';";
+
 #****************************************************************************
 #*  Translation text for page mbr_new_form.php, mbr_edit_form.php and mbr_fields.php
 #****************************************************************************
-$trans["Mailing Address:"] = "\$text='Dirección postal:';";
-$trans["mbrNewForm"]              = "\$text='Adicionar nuevo';";
-$trans["mbrEditForm"]             = "\$text='Editar';";
-$trans["mbrFldsHeader"]           = "\$text='usuario:';";
-$trans["mbrFldsCardNmbr"]         = "\$text='Número de identificación:';";
-$trans["mbrFldsLastName"]         = "\$text='Apellido:';";
-$trans["mbrFldsFirstName"]        = "\$text='Nombre:';";
-$trans["mbrFldsAddr1"]            = "\$text='Dirección:';";
-$trans["mbrFldsAddr2"]            = "\$text='Dirección2:';";
-$trans["mbrFldsCity"]             = "\$text='Ciudad:';";
-$trans["mbrFldsStateZip"]         = "\$text='Provincia, Código postal:';";
-$trans["mbrFldsHomePhone"]        = "\$text='Teléfono:';";
-$trans["mbrFldsWorkPhone"]        = "\$text='Teléfono trabajo:';";
-$trans["mbrFldsEmail"]            = "\$text='Email:';";
-$trans["mbrFldsClassify"]         = "\$text='Clasificación:';";
-$trans["mbrFldsGrade"]            = "\$text='Curso:';";
-$trans["mbrFldsTeacher"]          = "\$text='Tutor:';";
-$trans["mbrFldsSubmit"]           = "\$text='Enviar';";
-$trans["mbrFldsCancel"]           = "\$text='Cancelar';";
-$trans["mbrsearchResult"]         = "\$text='Páginas de Resultados: ';";
-$trans["mbrsearchprev"]           = "\$text='Anterior';";
-$trans["mbrsearchnext"]           = "\$text='Siguiente';";
-$trans["mbrsearchNoResults"]      = "\$text='No se encontro un resultado.';";
-$trans["mbrsearchFoundResults"]   = "\$text='resultados encontrados.';";
-$trans["mbrsearchSearchResults"]  = "\$text='Resultados de la búsqueda:';";
-$trans["mbrsearchCardNumber"]     = "\$text='Número de Tarjeta:';";
-$trans["mbrsearchClassification"] = "\$text='Clasificación:';";
+$trans["Mailing Address:"] = "\$text='Mailing Address:';";
+$trans["mbrNewForm"]              = "\$text='Add New';";
+$trans["mbrEditForm"]             = "\$text='Edit';";
+$trans["mbrFldsHeader"]           = "\$text='Member:';";
+$trans["mbrFldsCardNmbr"]         = "\$text='Card Number:';";
+$trans["mbrFldsLastName"]         = "\$text='Last Name:';";
+$trans["mbrFldsFirstName"]        = "\$text='First Name:';";
+$trans["mbrFldsAddr1"]            = "\$text='Address Line 1:';";
+$trans["mbrFldsAddr2"]            = "\$text='Address Line 2:';";
+$trans["mbrFldsCity"]             = "\$text='City:';";
+$trans["mbrFldsStateZip"]         = "\$text='State, Zip:';";
+$trans["mbrFldsHomePhone"]        = "\$text='Home Phone:';";
+$trans["mbrFldsCel"]			= "\$text='Cel: ';";
+$trans["mbrFldsWorkPhone"]        = "\$text='Work Phone:';";
+$trans["mbrFldsBornDt"]			= "\$text='Born Dt: \n (y-m-d)';";
+$trans["mbrFldsPassUser"]			= "\$text='Pass User';";
+$trans["mbrFldsEmail"]            = "\$text='Email Address:';";
+$trans["mbrFldsClassify"]         = "\$text='Classification:';";
+$trans["mbrFldsGrade"]            = "\$text='School Grade:';";
+$trans["mbrFldsTeacher"]          = "\$text='School Teacher:';";
+$trans["mbrFldsMbrShip"]          = "\$text='paid until (yyyy-mm-dd):';";
+$trans["mbrFldsSubmit"]           = "\$text='Submit';";
+$trans["mbrFldsCancel"]           = "\$text='Cancel';";
+$trans["mbrsearchResult"]         = "\$text='Result Pages: ';";
+$trans["mbrsearchprev"]           = "\$text='prev';";
+$trans["mbrsearchnext"]           = "\$text='next';";
+$trans["First name is required."]			= "\$text='First name is required.';";
+$trans["First"]                   = "\$text='First';";
+$trans["Last"]                    = "\$text='Last';";
+$trans["mbrsearchNoResults"]      = "\$text='No results found.';";
+$trans["mbrsearchFoundResults"]   = "\$text=' results found.';";
+$trans["mbrsearchSearchResults"]  = "\$text='Search Results:';";
+$trans["mbrsearchCardNumber"]     = "\$text='Card Number:';";
+$trans["mbrViewLastActDate"]			= "\$text='Last Active Date';";
+$trans["mbrLatestBarcode"]			= "\$text='Latest Barcode';";
+$trans["mbrAutoBarcode"]			= "\$text='Auto Barcode';";
+$trans["mbrInactive"]			= "\$text='Inactive';";
+$trans["mbrActive"]			= "\$text='Active';";
+$trans["mbrsearchStatus"]			= "\$text='Status: ';";
+$trans["mbrFldsStatus"]			= "\$text='Status: ';";
+$trans["mbrsearchClassification"] = "\$text='Classification:';";
+
 #****************************************************************************
 #*  Translation text for page mbr_new.php
 #****************************************************************************
-$trans["mbrNewSuccess"]           = "\$text='usuario añadido a la base de datos correctamente.';";
+$trans["mbrNewSuccess"]           = "\$text='Member has been successfully added.';";
 
 #****************************************************************************
 #*  Translation text for page mbr_edit.php
 #****************************************************************************
-$trans["mbrEditSuccess"]          = "\$text='Datos de usuario actualizados correctamente.';";
+$trans["mbrEditSuccess"]          = "\$text='Member has been successfully updated.';";
+$trans["mbrRenewSuccess"]         = "\$text='Membership was sucessfully renewed for %length% month.';";
+$trans["All items renewed."]      = "\$text='All items renewed.';";
 
 #****************************************************************************
 #*  Translation text for page mbr_view.php
 #****************************************************************************
-$trans["mbrViewHead1"]            = "\$text='Información de usuarios:';";
-$trans["mbrViewName"]             = "\$text='Nombre:';";
-$trans["mbrViewAddr"]             = "\$text='Dirección:';";
-$trans["mbrViewCardNmbr"]         = "\$text='Número de Tarjeta:';";
-$trans["mbrViewClassify"]         = "\$text='Clasificación:';";
-$trans["mbrViewPhone"]            = "\$text='Teléfono:';";
-$trans["mbrViewPhoneHome"]        = "\$text='Casa:';";
-$trans["mbrViewPhoneWork"]        = "\$text='Trabajo:';";
-$trans["mbrViewEmail"]            = "\$text='Email:';";
-$trans["mbrViewGrade"]            = "\$text='Curso:';";
-$trans["mbrViewTeacher"]          = "\$text='Tutor:';";
-$trans["mbrViewHead2"]            = "\$text='Historial Préstamos:';";
+$trans["mbrViewHead1"]            = "\$text='Member Information:';";
+$trans["mbrViewName"]             = "\$text='Name:';";
+$trans["mbrViewAddr"]             = "\$text='Address:';";
+$trans["mbrViewCardNmbr"]         = "\$text='Card Number:';";
+$trans["mbrViewClassify"]         = "\$text='Classification:';";
+$trans["mbrViewPhone"]            = "\$text='Phone:';";
+$trans["mbrViewPhoneHome"]        = "\$text='H:';";
+$trans["mbrViewCel"]			= "\$text='Cel: ';";
+$trans["mbrViewPhoneWork"]        = "\$text='W:';";
+$trans["mbrViewPassUser"]			= "\$text='Pass User';";
+$trans["mbrViewEmail"]            = "\$text='Email Address:';";
+$trans["mbrViewGrade"]            = "\$text='School Grade:';";
+$trans["mbrViewTeacher"]          = "\$text='School Teacher:';";
+$trans["mbrViewMbrShipEnd"]       = "\$text='paid until:';";
+$trans["mbrViewMbrShipNoEnd"]     = "\$text='unlimited/not used';";
+$trans["mbrViewHead2"]            = "\$text='Checkout Stats:';";
 $trans["mbrViewStatColHdr1"]      = "\$text='Material';";
-$trans["mbrViewStatColHdr2"]      = "\$text='Cantidad';";
-$trans["mbrViewStatColHdr3"]      = "\$text='Límite';";
-$trans["mbrViewStatColHdr4"]      = "\$text='Cantidad';";
-$trans["mbrViewStatColHdr5"]      = "\$text='Límite';";
-$trans["mbrViewHead3"]            = "\$text='Préstamo:';";
-$trans["mbrViewBarcode"]          = "\$text='Código de inventario:';";
-$trans["mbrViewCheckOut"]         = "\$text='Prestar';";
-$trans["mbrViewHead4"]            = "\$text='Material actualmente prestado:';";
-$trans["mbrViewOutHdr1"]          = "\$text='Prestado';";
+$trans["mbrViewStatColHdr2"]      = "\$text='Count';";
+$trans["mbrViewStatColHdr3"]      = "\$text='Limits';";
+$trans["mbrViewStatColHdr4"]      = "\$text='Checkout';";
+$trans["mbrViewStatColHdr5"]      = "\$text='Renewal';";
+$trans["mbrViewHead3"]            = "\$text='Bibliography Check Out:';";
+$trans["mbrViewBarcode"]          = "\$text='Barcode Number:';";
+$trans["mbrViewCheckOut"]         = "\$text='Check Out';";
+$trans["mbrViewHead4"]            = "\$text='Bibliographies Currently Checked Out:';";
+$trans["mbrViewOutHdr1"]          = "\$text='Checked Out';";
 $trans["mbrViewOutHdr2"]          = "\$text='Material';";
-$trans["mbrViewOutHdr3"]          = "\$text='Código de inventario';";
-$trans["mbrViewOutHdr4"]          = "\$text='Título';";
-$trans["mbrViewOutHdr5"]          = "\$text='Autor';";
-$trans["mbrViewOutHdr6"]          = "\$text='Fecha de devolución';";
-$trans["mbrViewOutHdr7"]          = "\$text='Días de retraso';";
-$trans["mbrViewOutHdr8"]          = "\$text='Renovar';";
-$trans["mbrViewOutHdr9"]          = "\$text='Hora/s';";
-$trans["mbrViewNoCheckouts"]      = "\$text='No tiene material prestado.';";
-$trans["mbrViewHead5"]            = "\$text='Consulta:';";
-$trans["mbrViewHead6"]            = "\$text='Material actualmente en reserva:';";
-$trans["mbrViewPlaceHold"]        = "\$text='Reservar';";
-$trans["mbrViewHoldHdr1"]         = "\$text='Función';";
-$trans["mbrViewHoldHdr2"]         = "\$text='En reserva';";
+$trans["mbrViewOutHdr3"]          = "\$text='Barcode';";
+$trans["mbrViewOutHdr4"]          = "\$text='Title';";
+$trans["mbrViewOutHdr5"]          = "\$text='Author';";
+$trans["mbrViewOutHdr6"]          = "\$text='Due Back';";
+$trans["mbrViewOutHdr7"]          = "\$text='Days Late';";
+$trans["mbrViewOutHdr8"]          = "\$text='Renewal';";
+$trans["mbrViewOutHdr9"]          = "\$text='time/s';";
+$trans["mbrViewOutHdr10"]         = "\$text='Check In';";
+$trans["To Shelving Cart"]        = "\$text='To Shelving Cart';";
+$trans["Renew item"]              = "\$text='Renew item';";
+$trans["mbrViewNoCheckouts"]      = "\$text='No bibliographies are currently checked out.';";
+$trans["mbrViewHead5"]            = "\$text='Place Hold:';";
+$trans["mbrViewHead6"]            = "\$text='Bibliographies Currently On Hold:';";
+$trans["mbrViewPlaceHold"]        = "\$text='Place Hold';";
+$trans["mbrViewHoldHdr1"]         = "\$text='Function';";
+$trans["mbrViewHoldHdr2"]         = "\$text='Placed On Hold';";
 $trans["mbrViewHoldHdr3"]         = "\$text='Material';";
-$trans["mbrViewHoldHdr4"]         = "\$text='Código de inventario';";
-$trans["mbrViewHoldHdr5"]         = "\$text='Título';";
-$trans["mbrViewHoldHdr6"]         = "\$text='Autor';";
-$trans["mbrViewHoldHdr7"]         = "\$text='Estado';";
-$trans["mbrViewHoldHdr8"]         = "\$text='Fecha de devolución';";
-$trans["mbrViewNoHolds"]          = "\$text='No posee material en reserva.';";
-$trans["mbrViewBalMsg"]           = "\$text='Nota: el usuario tiene un saldo pendiente en su cuenta de %bal%.';";
-$trans["mbrPrintCheckouts"]	  = "\$text='Imprimir Comprobante de Prestamos';";
-$trans["mbrViewDel"]              = "\$text='borrar';";
-
-#$trans["mbrViewStatColHdr4"]      = "\$text='Seleccionar';";
-#$trans["mbrViewStatColHdr5"]      = "\$text='Renovar';";
+$trans["mbrViewHoldHdr4"]         = "\$text='Barcode';";
+$trans["mbrViewHoldHdr5"]         = "\$text='Title';";
+$trans["mbrViewHoldHdr6"]         = "\$text='Author';";
+$trans["mbrViewHoldHdr7"]         = "\$text='Status';";
+$trans["mbrViewHoldHdr8"]         = "\$text='Due Back';";
+$trans["mbrViewNoHolds"]          = "\$text='No bibliographies are currently on hold.';";
+$trans["mbrViewBalMsg"]           = "\$text='Note: Member has an outstanding account balance of %bal%.';";
+$trans["mbrViewShipEnd"]          = "\$text='Attention: Membership of this member has expired!';";
+$trans["mbrPrintCheckouts"]	  = "\$text='print checkouts';";
+$trans["Renew All"]	  	  = "\$text='Renew All';";
+$trans["mbrPrintcarnet"]			= "\$text='Print carnet';";
+$trans["mbrViewDel"]              = "\$text='del';";
+$trans["mbrViewRenew1"]           = "\$text='Renew membership for';";
+$trans["mbrViewRenew2"]           = "\$text='month.<br>Since Today or since Paid-Until-Date, if it's in future.';";
+$trans["Due Date:"]               = "\$text='Due Date:';";
+$trans["Override Due Date"]       = "\$text='Override Due Date';";
+$trans["Cancel"]                  = "\$text='Cancel';";
 
 #****************************************************************************
 #*  Translation text for page checkout.php
 #****************************************************************************
-$trans["checkoutBalErr"]          = "\$text='Los usuarios deben pagar el saldo pendiente en su cuenta antes de solicitar un libro.';";
-$trans["checkoutErr1"]            = "\$text='el número del código de inventario debe ser completamente alfanumérico.';";
-$trans["checkoutErr2"]            = "\$text='No se encontró bibliografía con ese código de inventario.';";
-$trans["checkoutErr3"]            = "\$text='La bibliografía con el código de inventario %barcode% ya ha sido prestada.';";
-$trans["checkoutErr4"]            = "\$text='La bibliografía con código de inventario número %barcode% no está disponible para el préstamo.';";
-$trans["checkoutErr5"]            = "\$text='La bibliografía con código de inventario número %barcode% está actualmente siendo utilizada por otro usuario.';";
-$trans["checkoutErr6"]            = "\$text='El usuario ha alcanzado el tiempo límite de préstamo en el tipo de material bibliográfico especificado.';";
-$trans["checkoutErr7"]            = "\$text='El item con codigo %barcode% ha alcanzo el limite para su renovación.';";
-$trans["checkoutErr8"]            = "\$text='Es demasiado tarde para renovar el item codigo %barcode%.';";
+$trans["checkoutBalErr"]          = "\$text='Member must pay outstanding account balance before checking out.';";
+$trans["checkoutEndErr"]          = "\$text='Member must renew membership before checking out.';";
+$trans["checkoutErr1"]            = "\$text='Barcode number must be all alphanumeric.';";
+$trans["checkoutErr2"]            = "\$text='No bibliography was found with that barcode number.';";
+$trans["checkoutErr3"]            = "\$text='Bibliography with barcode number %barcode% is already checked out.';";
+$trans["checkoutErr4"]            = "\$text='Bibliography with barcode number %barcode% is not available for checkout.';";
+$trans["checkoutErr5"]            = "\$text='Bibliography with barcode number %barcode% is currently on hold for another member.';";
+$trans["checkoutErr6"]            = "\$text='Member has reached the checkout limit for the specified bibliography\'s material type.';";
+$trans["checkoutErr7"]            = "\$text='Bibliography with barcode number %barcode% has reached the member\'s renewal limit.';";
+$trans["checkoutErr8"]            = "\$text='Bibliography with barcode number %barcode% can not be renew as it is already late.';";
 
 #****************************************************************************
 #*  Translation text for page shelving_cart.php
 #****************************************************************************
-$trans["shelvingCartErr1"]        = "\$text='El número del código de inventario debe ser completamente alfanumérico.';";
-$trans["shelvingCartErr2"]        = "\$text='No se encontró ninguna bibliografía con ese número de código de inventario.';";
-$trans["shelvingCartTrans"]       = "\$text='Multa por retraso en la devolución (barcode=%barcode%)';";
+$trans["shelvingCartErr1"]        = "\$text='Barcode number must be all alphanumeric.';";
+$trans["shelvingCartErr2"]        = "\$text='No bibliography was found with that barcode number.';";
+$trans["shelvingCartTrans"]       = "\$text='Late fee (barcode=%barcode%)';";
+
 #****************************************************************************
 #*  Translation text for page checkin_form.php
 #****************************************************************************
-$trans["checkinFormHdr1"]         = "\$text='Devolución:';";
-$trans["checkinFormBarcode"]      = "\$text='Código de inventario:';";
-$trans["checkinFormShelveButton"] = "\$text='Añadir al carrito de reposición en las estanterías';";
-$trans["checkinFormCheckinLink1"] = "\$text='Devolver el material seleccionado';";
-$trans["checkinFormCheckinLink2"] = "\$text='Devolver todo';";
-$trans["checkinFormHdr2"]         = "\$text='Lista actual del carrito de reposición en las estanterías:';";
-$trans["checkinFormColHdr1"]      = "\$text='Fecha de escaneado';";
-$trans["checkinFormColHdr2"]      = "\$text='Código de inventario';";
-$trans["checkinFormColHdr3"]      = "\$text='Título';";
-$trans["checkinFormColHdr4"]      = "\$text='Autor';";
-$trans["checkinFormEmptyCart"]    = "\$text='En la actualidad no hay items en meson para reponerlos en las estanterías.';";
+$trans["checkinFormHdr1"]         = "\$text='Bibliography Check In:';";
+$trans["checkinFormBarcode"]      = "\$text='Barcode Number:';";
+$trans["checkinFormShelveButton"] = "\$text='Add to Shelving Cart';";
+$trans["checkinFormCheckinLink1"] = "\$text='Check in selected items';";
+$trans["checkinFormCheckinLink2"] = "\$text='Check in all items';";
+$trans["checkinFormHdr2"]         = "\$text='Current Shelving Cart List:';";
+$trans["checkinFormColHdr1"]      = "\$text='Date Scanned';";
+$trans["checkinFormColHdr2"]      = "\$text='Barcode';";
+$trans["checkinFormColHdr3"]      = "\$text='Title';";
+$trans["checkinFormColHdr4"]      = "\$text='Author';";
+$trans["checkinFormEmptyCart"]    = "\$text='No bibliographies are currently in shelving cart status.';";
+$trans["Checked in %barcode% for "]    = "\$text='Checked in %barcode% for ';";
+$trans["Checked in %barcode%."]   = "\$text='Checked in %barcode%.';";
 
 #****************************************************************************
 #*  Translation text for page checkin.php
 #****************************************************************************
-$trans["checkinErr1"]             = "\$text='No se ha seleccionado ningún artículo.';";
+$trans["checkinErr1"]             = "\$text='No items have been selected.';";
 
 #****************************************************************************
 #*  Translation text for page hold_message.php
@@ -192,78 +228,96 @@ $trans["holdMessageHdr"]          = "\$text='Bibliography Has Been Placed On Hol
 $trans["holdMessageMsg1"]         = "\$text='The bibliography with barcode number %barcode% that you are attempting to check in has one or more hold requests placed on it.  <b>Please file this bibliography with your held items instead of placing it on your shelving cart.</b>  The status code for this bibliography has been set to hold.';";
 $trans["holdMessageMsg2"]         = "\$text='Return to bibliography check in.';";
 
-$trans["holdMessageHdr"]          = "\$text='La bibliografía está prestada!';";
-$trans["holdMessageMsg1"]         = "\$text='La bibliografía con número de código de inventario %barcode% que estás intentando conseguir tiene una o más peticiones de reserva.  <b>Por favor, retorna el item en las estanterías .</b>  El código de estado de esta bibliografía ha quedado libre para su uso.';";
-$trans["holdMessageMsg2"]         = "\$text='Volver a la devolución del Items.';";
 #****************************************************************************
 #*  Translation text for page place_hold.php
 #****************************************************************************
-$trans["placeHoldErr1"]           = "\$text='El código de inventario debe ser numérico.';";
-$trans["placeHoldErr2"]           = "\$text='Coódigo no existe.';";
-$trans["placeHoldErr3"]           = "\$text='El usuario cancelo la reserva el item -- not placing hold.';";
-$trans["placeHoldErr4"]           = "\$text='Solo se puede reservar Recursos que no esten disponibles.';";
+$trans["placeHoldErr1"]           = "\$text='Barcode number must be numeric.';";
+$trans["placeHoldErr2"]           = "\$text='Barcode does not exist.';";
+$trans["placeHoldErr3"]           = "\$text='This member already has that item checked out -- not placing hold.';";
+$trans["This item is not checked out or on hold."]           = "\$text='This item is not checked out or on hold.';";
 
 #****************************************************************************
 #*  Translation text for page mbr_del_confirm.php
 #****************************************************************************
-$trans["mbrDelConfirmWarn"]       = "\$text = 'El usuario, %name%, tiene %checkoutCount% préstamos y %holdCount% peticiones de uso.  Todos los materiales prestados deben ser devueltos y todas las peticiones de uso borradas antes de eliminar a este usuario.';";
-$trans["mbrDelConfirmReturn"]     = "\$text = 'Volver a la información del usuario';";
-$trans["mbrDelConfirmMsg"]        = "\$text = 'Estás seguro de que quieres borrar al usuario, %name%?  Esto también borrará todo el historial de préstamos de este usuario.';";
-
+$trans["mbrDelConfirmWarn"]       = "\$text = 'Member, %name%, has %checkoutCount% checkout(s) and %holdCount% hold request(s).  All checked out materials must be checked in and all hold requests deleted before deleting this member.';";
+$trans["mbrDelConfirmReturn"]     = "\$text = 'return to member information';";
+$trans["mbrDelConfirmMsg"]        = "\$text = 'Are you sure you want to delete the member, %name%?  This will also delete all checkout history for this member.';";
 
 #****************************************************************************
 #*  Translation text for page mbr_del.php
 #****************************************************************************
-$trans["mbrDelSuccess"]           = "\$text='usuario, %name%, borrado.';";
-$trans["mbrDelReturn"]            = "\$text='Volver a Buscar usuario';";
+$trans["mbrDelSuccess"]           = "\$text='Member, %name%, has been deleted.';";
+$trans["mbrDelReturn"]            = "\$text='return to Member Search';";
 
 #****************************************************************************
 #*  Translation text for page mbr_history.php
 #****************************************************************************
-$trans["mbrHistoryHead1"]         = "\$text='Historial de préstamos del usuario:';";
-$trans["mbrHistoryNoHist"]        = "\$text='No se encontró ningún historial.';";
-$trans["mbrHistoryHdr1"]          = "\$text='Código de inventario';";
-$trans["mbrHistoryHdr2"]          = "\$text='Título';";
-$trans["mbrHistoryHdr3"]          = "\$text='Autor';";
-$trans["mbrHistoryHdr4"]          = "\$text='Nuevo estado';";
-$trans["mbrHistoryHdr5"]          = "\$text='Fecha de cambio de estado';";
-$trans["mbrHistoryHdr6"]          = "\$text='Fecha de devolución';";
+$trans["mbrHistoryHead1"]         = "\$text='Member Checkout History:';";
+$trans["mbrHistoryNoHist"]        = "\$text='No history was found.';";
+$trans["mbrHistoryHdr1"]          = "\$text='Barcode';";
+$trans["mbrHistoryHdr2"]          = "\$text='Title';";
+$trans["mbrHistoryHdr3"]          = "\$text='Author';";
+$trans["mbrHistoryHdr4"]          = "\$text='New Status';";
+$trans["mbrHistoryHdr5"]          = "\$text='Date of Status Change';";
+$trans["mbrHistoryHdr6"]          = "\$text='Due Back Date';";
 
 #****************************************************************************
 #*  Translation text for page mbr_account.php
 #****************************************************************************
-$trans["mbrAccountLabel"]         = "\$text='Añadir una transacción:';";
-$trans["mbrAccountTransTyp"]      = "\$text='Tipo de transacción:';";
-$trans["mbrAccountAmount"]        = "\$text='Cantidad:';";
-$trans["mbrAccountDesc"]          = "\$text='Descripción:';";
-$trans["mbrAccountHead1"]         = "\$text='Multas:';";
-$trans["mbrAccountNoTrans"]       = "\$text='No se encontraron transacciones.';";
-$trans["mbrAccountOpenBal"]       = "\$text='Balance de apertura';";
-$trans["mbrAccountDel"]           = "\$text='borrar';";
-$trans["mbrAccountHdr1"]          = "\$text='Función';";
-$trans["mbrAccountHdr2"]          = "\$text='Fecha';";
-$trans["mbrAccountHdr3"]          = "\$text='Tipo de transacción';";
-$trans["mbrAccountHdr4"]          = "\$text='Descripción';";
-$trans["mbrAccountHdr5"]          = "\$text='Cantidad';";
+$trans["mbrAccountLabel"]         = "\$text='Add a Transaction:';";
+$trans["mbrAccountTransTyp"]      = "\$text='Transaction Type:';";
+$trans["mbrAccountAmount"]        = "\$text='Amount:';";
+$trans["mbrAccountDesc"]          = "\$text='Description:';";
+$trans["mbrAccountHead1"]         = "\$text='Member Account Transactions:';";
+$trans["mbrAccountNoTrans"]       = "\$text='No transactions found.';";
+$trans["mbrAccountOpenBal"]       = "\$text='Opening Balance';";
+$trans["mbrAccountDel"]           = "\$text='del';";
+$trans["mbrAccountHdr1"]          = "\$text='Function';";
+$trans["mbrAccountHdr2"]          = "\$text='Date';";
+$trans["mbrAccountHdr3"]          = "\$text='Trans Type';";
+$trans["mbrAccountHdr4"]          = "\$text='Description';";
+$trans["mbrAccountHdr5"]          = "\$text='Amount';";
 $trans["mbrAccountHdr6"]          = "\$text='Balance';";
+
 #****************************************************************************
 #*  Translation text for page mbr_transaction.php
 #****************************************************************************
-$trans["mbrTransactionSuccess"]   = "\$text='Transacción realizada correctamente.';";
+$trans["mbrTransactionSuccess"]   = "\$text='Transaction successfully completed.';";
+
 #****************************************************************************
 #*  Translation text for page mbr_transaction_del_confirm.php
 #****************************************************************************
-$trans["mbrTransDelConfirmMsg"]   = "\$text='Estás seguro de que quieres eliminar esta transacción?';";
+$trans["mbrTransDelConfirmMsg"]   = "\$text='Are you sure you want to delete this transaction?';";
+
 #****************************************************************************
 #*  Translation text for page mbr_transaction_del.php
 #****************************************************************************
-$trans["mbrTransactionDelSuccess"] = "\$text='Transacción eliminada correctamente.';";
+$trans["mbrTransactionDelSuccess"] = "\$text='Transaction successfully deleted.';";
+
 #****************************************************************************
 #*  Translation text for page mbr_print_checkouts.php
 #****************************************************************************
-$trans["mbrPrintCheckoutsTitle"]  = "\$text='Préstamos de %mbrName%';";
-$trans["mbrPrintCheckoutsHdr1"]   = "\$text='Fecha:';";
-$trans["mbrPrintCheckoutsHdr2"]   = "\$text='usuario:';";
-$trans["mbrPrintCheckoutsHdr3"]   = "\$text='Número de identificación:';";
-$trans["mbrPrintCheckoutsHdr4"]   = "\$text='Clasificación:';";
-$trans["mbrPrintCloseWindow"]     = "\$text='Cerrar ventana';";
+$trans["mbrPrintCheckoutsTitle"]  = "\$text='Checkouts for %mbrName%';";
+$trans["mbrPrintCheckoutsHdr1"]   = "\$text='Current Date:';";
+$trans["mbrPrintCheckoutsHdr2"]   = "\$text='Member:';";
+$trans["mbrPrintCheckoutsHdr3"]   = "\$text='Card Number:';";
+$trans["mbrPrintCheckoutsHdr4"]   = "\$text='Classification:';";
+$trans["mbrPrintCloseWindow"]     = "\$text='Close Window';";
+
+#****************************************************************************
+#*  Translation text for page offline.php
+#****************************************************************************
+$trans["Upload Offline Circulation"]     = "\$text='Upload Offline Circulation';";
+$trans["Upload"]     = "\$text='Upload';";
+$trans["Date:"]     = "\$text='Date:';";
+$trans["Command File:"]     = "\$text='Command File:';";
+$trans["Bad upload file: Expected a command code, but didn't get one"]     = "\$text='Bad upload file: Expected a command code, but didn't get one';";
+$trans["Couldn't check out %item% to %member%: %error%"]     = "\$text='Couldn't check out %item% to %member%: %error%';";
+$trans["Couldn't check in %item%: %error%"]     = "\$text='Couldn't check in %item%: %error%';";
+$trans["Unrecognized command code: %cmd%"]     = "\$text='Unrecognized command code: %cmd%';";
+$trans["Command Sheet"]     = "\$text='Command Sheet';";
+$trans["Actions which did not produce an error have completed. Think carefully before uploading the same file again, or some circulations may be recorded twice."]     = "\$text='Actions which did not produce an error have completed. Think carefully before uploading the same file again, or some circulations may be recorded twice.';";
+$trans["Errors"]     = "\$text='Errors';";
+$trans["Offline Upload Successful."]     = "\$text='Offline Upload Successful.';";
+
+?>
