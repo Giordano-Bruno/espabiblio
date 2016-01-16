@@ -1,10 +1,11 @@
 <?php
 #fix el guardado de disco solo debe usarse una vez
-#fix debe regresar los valores por post para seguir usando los datos y revsar el cambio.
+	require_once("../shared/common.php");
+
 	if (isset($_POST )){
 		$module = $_REQUEST['module'];
 		$lang = $_REQUEST['lang'];
-		$klang = $_REQUEST['lang'];
+		$klang = $_REQUEST['klang'];
 		$user = $_REQUEST['user'];
 		$trans = $_REQUEST['trans'];
 	}
@@ -97,12 +98,8 @@ function insertar($array,$elemento,$pos) {
     }
         return $array;
 }
-/*
-	window.open=("translate.php?module=\"<?php echo $module?>\"&klang=\"<?php echo $Klang?>\"&lang=\"<?php echo $lang?>");
-		window.location="translate.php?module=<?php echo $module?>&klang=<?php echo $Klang?>&lang=<?php echo $lang?>";
-*/
+
 ?>
 <script type="text/javascript">
-		window.location="translate.php";
+		window.location="translate.php?module=<?php echo $module;?>&klang=<?php echo $klang;?>&lang=<?php echo $lang;?>";
 </script>
-

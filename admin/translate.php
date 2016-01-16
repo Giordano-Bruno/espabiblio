@@ -7,7 +7,6 @@
 echo '</br>';echo '$_REQUEST ';echo '<pre>';var_dump ($_REQUEST );echo '</pre>';echo '$_REQUEST ';echo '</br>';
 */
 
-
 	require_once("../shared/common.php");
 	$tab = "admin";
 	$nav = "adminTranslate";
@@ -19,24 +18,22 @@ echo '</br>';echo '$_REQUEST ';echo '<pre>';var_dump ($_REQUEST );echo '</pre>';
 	$loc = new Localize(OBIB_LOCALE,$tab);
 	include('../functions/translate_funtions.php');
 
-	if($_POST["module"] == null){ // Preconfigura la pagina para valores iniciales, selecciona modulo por default.
+	if($_REQUEST["module"] == null){ // Preconfigura la pagina para valores iniciales, selecciona modulo por default.
 		$module ='opac.php';
 	  }else{
 		$module = $_REQUEST["module"];    
 	}
-	if($_POST["klang"] == null){ // Preconfigura la pagina para valores iniciales, selecciona idoma base "spanish".
+	if($_REQUEST["klang"] == null){ // Preconfigura la pagina para valores iniciales, selecciona idoma base "spanish".
 		$klang = OBI_LANG;
 	}else{
 		$klang = $_REQUEST["klang"];
 	}
-	if($_POST["lang"] == null){ // Preconfigura la pagina para valores iniciales, selecciona idoma a ver "Inglish".
+	if($_REQUEST["lang"] == null){ // Preconfigura la pagina para valores iniciales, selecciona idoma a ver "Inglish".
 		$lang ='en';
 	}else{
 		$lang = $_REQUEST["lang"];
 	}
 
-//	$klang = OBI_LANG; //jalg Lee el modulo selecionado segun se elija, sera el directorio de locale ejemplo: en, caprta /en/
-//	$lang = 'en'; //jalg Lee el modulo selecionado segun se elija, sera el directorio de locale ejemplo: en, caprta /en/
 	$local = readDirs(null);
 	$modules = readDirs($klang);
 	ksort($modules); //Ordena los modulos 
@@ -73,7 +70,6 @@ echo '</br>';echo '$_REQUEST ';echo '<pre>';var_dump ($_REQUEST );echo '</pre>';
 				<?php } ?>
 			</select>
 		</form>
-
 <?php 
 	$Base = array(); 
 	$Base = readFiles($klang, $module);//jalg Lee el texto base.
@@ -85,7 +81,6 @@ echo '</br>';echo '$_REQUEST ';echo '<pre>';var_dump ($_REQUEST );echo '</pre>';
 	}
 
 //	ksort($Key); //jalg el texto en ingles indice trans
-
 	if ($lang !== $klang || @!isset($lang) ){
 		$locale = array();
 		$locale = readFiles($lang , $module); //jalg Lee el texto a modificar.
@@ -97,7 +92,6 @@ echo '</br>';echo '$_REQUEST ';echo '<pre>';var_dump ($_REQUEST );echo '</pre>';
 			}
 		}
 	}
-
 	$trans= $Key;
 ?>
 
@@ -111,7 +105,6 @@ echo '</br>';echo '$_REQUEST ';echo '<pre>';var_dump ($_REQUEST );echo '</pre>';
 			<th width="40%" nowrap><?php echo $loc->getText("Archivo Base: ") . OBIB_LOCALE_ROOT . $klang . '/' . $modules[$module] ;?> </th>
 			<th width="40%" nowrap><?php echo $loc->getText("Archivo Modificar: ") . OBIB_LOCALE_ROOT. $lang . '/' . $module ;?> </th>
 		</tr>
-
 		<?php
 			$index++;
 			foreach ($trans as $k => $langs) {

@@ -18,24 +18,22 @@ echo '</br>';echo '$_REQUEST ';echo '<pre>';var_dump ($_REQUEST );echo '</pre>';
 	$loc = new Localize(OBIB_LOCALE,$tab);
 	include('../functions/translate_funtions.php');
 
-	if($_POST["module"] == null){ // Preconfigura la pagina para valores iniciales, selecciona modulo por default.
+	if($_REQUEST["module"] == null){ // Preconfigura la pagina para valores iniciales, selecciona modulo por default.
 		$module ='opac.php';
 	  }else{
 		$module = $_REQUEST["module"];    
 	}
-	if($_POST["klang"] == null){ // Preconfigura la pagina para valores iniciales, selecciona idoma base "spanish".
-		$klang = OBIB_LOCALE_ROOT;
+	if($_REQUEST["klang"] == null){ // Preconfigura la pagina para valores iniciales, selecciona idoma base "spanish".
+		$klang = OBI_LANG;
 	}else{
 		$klang = $_REQUEST["klang"];
 	}
-	if($_POST["lang"] == null){ // Preconfigura la pagina para valores iniciales, selecciona idoma a ver "Inglish".
+	if($_REQUEST["lang"] == null){ // Preconfigura la pagina para valores iniciales, selecciona idoma a ver "Inglish".
 		$lang ='en';
 	}else{
 		$lang = $_REQUEST["lang"];
 	}
 
-//	$klang = OBIB_LOCALE_ROOT; //jalg Lee el modulo selecionado segun se elija, sera el directorio de locale ejemplo: en, caprta /en/
-//	$lang = 'en'; //jalg Lee el modulo selecionado segun se elija, sera el directorio de locale ejemplo: en, caprta /en/
 	$local = readDirs(null);
 	$modules = readDirs($klang);
 	ksort($modules); //Ordena los modulos 
@@ -84,7 +82,6 @@ echo '</br>';echo '$_REQUEST ';echo '<pre>';var_dump ($_REQUEST );echo '</pre>';
 	}
 
 //	ksort($Key); //jalg el texto en ingles indice trans
-
 	if ($lang !== $klang || @!isset($lang) ){
 		$locale = array();
 		$locale = readFiles($lang , $module); //jalg Lee el texto a modificar.
@@ -96,7 +93,6 @@ echo '</br>';echo '$_REQUEST ';echo '<pre>';var_dump ($_REQUEST );echo '</pre>';
 			}
 		}
 	}
-
 	$trans= $Key;
 ?>
 
@@ -107,8 +103,8 @@ echo '</br>';echo '$_REQUEST ';echo '<pre>';var_dump ($_REQUEST );echo '</pre>';
 	<table width="100%" border="1" cellpadding="1" cellspacing="1" class="table table-bordered table-striped">
 		<tr>
 			<th width="10%" nowrap><?php echo $loc->getText("Clave -getText-: ") ;?> </th>
-			<th width="40%" nowrap><?php echo $loc->getText("Archivo Base: ") . OBI_DIR . $klang . '/' . $modules[$module] ;?> </th>
-			<th width="40%" nowrap><?php echo $loc->getText("Archivo Modificar: ") . OBI_DIR. $lang . '/' . $module ;?> </th>
+			<th width="40%" nowrap><?php echo $loc->getText("Archivo Base: ") . OBIB_LOCALE_ROOT . $klang . '/' . $modules[$module] ;?> </th>
+			<th width="40%" nowrap><?php echo $loc->getText("Archivo Modificar: ") . OBIB_LOCALE_ROOT. $lang . '/' . $module ;?> </th>
 		</tr>
 
 		<?php

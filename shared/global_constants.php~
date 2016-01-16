@@ -2,9 +2,6 @@
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
  */
- 
-#fix define('OBI_DIR',"../locale/");#fix cambiar por OBIB_LOCALE_ROOT y quitar
-
 /****************************************************************************
  * result types:
  * OBIB_ASSOC - associative array result type
@@ -37,7 +34,6 @@ define("OBIB_ADVANCED_SEARCH", "20");
 /****************************************************************************
  * search types for catalog CDD, CDU, IBIC, CUTTER:
   **************************************************************************** */
-
 define("OBIB_SEARCH_CDU_CLV", "31");
 define("OBIB_SEARCH_CDU_NUM", "32");
 define("OBIB_SEARCH_CDU_DES", "33");
@@ -55,9 +51,9 @@ define("OBIB_SEARCH_CUTTER_DES", "48");
  *  Misc. system constants
  **************************************************************************** */
 date_default_timezone_set('America/Mexico_City');//jalg
-define("OBIB_CODE_VERSION",		"GB BETA 34.1");
-define("OBIB_LATEST_DB_VERSION",	"GB-0.33");
-define("OBIB_DEFAULT_STATUS",		"in");
+define("OBIB_CODE_VERSION",		"GB BETA 34.11");//Cambio al añadir invet y mejorar translate #añadir comentarios a changelot
+define("OBIB_LATEST_DB_VERSION",	"GB-0.34");//cambios por añadir el precio en las copias d elibro
+define("OBIB_DEFAULT_STATUS",		"in");# Fix por que se repite el valor " IN "
 define("OBIB_STATUS_IN",		"in");//Por revisar
 define("OBIB_STATUS_OUT",		"out");//Revisado
 define("OBIB_STATUS_ON_LOAN",		"ln");//En calidad de préstamo
@@ -73,8 +69,10 @@ define("OBIB_MYSQL_DATETIME_TYPE",	"datetime");
 define("OBIB_MYSQL_DATETIME_FORMAT",	"Y-m-d H:i:s");
 define("OBIB_MYSQL_DATE_TYPE",		"date");
 define("OBIB_MYSQL_DATE_FORMAT",	"Y-m-d");
-define("OBIB_LOCALE_ROOT","../locale/");
 define("DB_TABLENAME_PREFIX", 		"");// # Not fully implemented yet.
+define('OBI_LANG',"es");//selecciona el idioma por default a usar cuando se install o cuando translate
+define("OBIB_TITLE_LARGE", "375");// define el largo de caracteres a mostrar en titulos despues d elas busquedas biblio_view.php
+define("OBIB_BOOTSTRAP", TRUE);// Permite usar el CSS BOOTSTRAP o no. TRUE O FALSE #Fix falta generar un CSS especifico e intregrar repsonsive o movile CSS
 
 /****************************************************************************
  *  Path Directories
@@ -82,6 +80,7 @@ define("DB_TABLENAME_PREFIX", 		"");// # Not fully implemented yet.
 # Change this if your document root isn't a '/', e.g., /library/
 # Server for keeping portadas desde servidor externo jalg
 define("DOCUMENT_ROOT", "/");
+define("OBIB_LOCALE_ROOT","../locale/");
 define("MEDIA_PATH", "media");
 define("COVER_PATH", "/media/covers");
 define("COVER_PATH_TMP", "/media/tmp");
@@ -89,6 +88,3 @@ define("FOTO_PATH", "/media/lectores");
 define("AUTOR_PATH", "/media/autores");
 define("DIGI_PATH", "/media/digitales");
 define('OBI_PORTADAS',"http://covers.openlibrary.org/b/isbn/");
-define('OBI_LANG',"es");//selecciona el idioma por defaul a user ento intall scrp
-define("OBIB_TITLE_LARGE", "375");// define el largo de caracteres a mostrar en titulos
-define("OBIB_BOOTSTRAP", TRUE);// Permite usar el CSS BOOTSTRAP o no. TRUE O FALSE
