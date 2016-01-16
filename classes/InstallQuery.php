@@ -2,6 +2,8 @@
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
  */
+			//$updateDir = '../install/GB-0.33/update';//#FIX integrar cambios de precio y otros.revisar si es necesario en la instalacio jalg
+
 require_once("../shared/global_constants.php");
 require_once("../classes/Query.php");
 
@@ -80,11 +82,10 @@ class InstallQuery extends Query {
 	$CUTTER		=	false,
 	$version	=	OBIB_LATEST_DB_VERSION,
 	$tablePrfx	=	DB_TABLENAME_PREFIX) {
-
-			$rootDir   = '../install/' . $version . '/sql';
-			$ComunDir = '../install/GB-0.33/comun';
+  			$rootDir   = '../install/' . $version . '/sql';
+			$ComunDir =  '../install/GB-0.34/comun';
 			$localeDir = '../locale/' . $locale . '/sql/' . $version;
-			$updateDir = '../install/GB-0.33/update';//revisar si es necesario en la instalacio jalg
+			$updateDir = '../install/GB-0.33/update';//#FIX integrar cambios de precio y otros.revisar si es necesario en la instalacio jalg
 
 		if( !($parament == 'CDU' || $parament == 'CDD' || $parament == 'IBIC' || $parament == 'CUTTER')) {//jal jul-2013 para discrimitavos
 			    $this->executeSqlFilesInDir($ComunDir , $tablePrfx);
@@ -128,12 +129,16 @@ class InstallQuery extends Query {
     if (is_dir($dir)) {
       if ($dh = opendir($dir)) {
         while (($filename = readdir($dh)) !== false) {
-          
-          if(is_dir($dir . '/' . $filename) && !($filename == '.' || $filename == '..')) {
+                  if(is_dir($dir . '/' . $filename) && !($filename == '.' || $filename == '..')) {
             $this->executeSqlFilesInDir($dir . '/' . $filename, $tablePrfx);
           }
           else if(preg_match('/\\.sql$/', $filename)) {
             $this->executeSqlFile($dir.'/'.$filename, $tablePrfx);
+echo '</br>$filename;  ';
+echo $filename;
+echo "</br>";
+echo '</br>$dir;  ';
+echo $dir;
           }
         }
         closedir($dh);

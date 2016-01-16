@@ -51,8 +51,8 @@ define("OBIB_SEARCH_CUTTER_DES", "48");
  *  Misc. system constants
  **************************************************************************** */
 date_default_timezone_set('America/Mexico_City');//jalg
-define("OBIB_CODE_VERSION",		"GB BETA 34.11");//Cambio al añadir invet y mejorar translate #añadir comentarios a changelot
-define("OBIB_LATEST_DB_VERSION",	"GB-0.34");//cambios por añadir el precio en las copias d elibro
+define("OBIB_CODE_VERSION",		"GB BETA 34.1");//Cambio al añadir invet y mejorar translate #añadir comentarios a changelot
+define("OBIB_LATEST_DB_VERSION",	"GB-0.33");//cambios por añadir el precio en las copias d elibro
 define("OBIB_DEFAULT_STATUS",		"in");# Fix por que se repite el valor " IN "
 define("OBIB_STATUS_IN",		"in");//Por revisar
 define("OBIB_STATUS_OUT",		"out");//Revisado

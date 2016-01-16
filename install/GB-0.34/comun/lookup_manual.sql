@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS `lookup_manual` (
+  `qmid` int(11) NOT NULL AUTO_INCREMENT,
+  `isbn` varchar(10) NOT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `hits` tinyint(4) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`qmid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

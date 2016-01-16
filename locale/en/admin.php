@@ -447,9 +447,7 @@ $trans["Edit Member Field"]                       = "\$text = 'Edit Member Field
 $trans["Custom Member Fields"]                    = "\$text = 'Custom Member Fields';";
 $trans["Member field, %desc%, has been added."]   = "\$text = 'Member field, %desc%, has been added.';";
 $trans["Add custom member field"]                 = "\$text = 'Add custom member field';";
-
 $trans['backup_upload_warn_aughtung']				= <<< EOL
 ALERT!!! AUGHTUNG!!! uploading of aside dump drops all current biblio contents !!!</br>
 You must pass again administrator autentifycation.</br>
 EOL;
-?>
