@@ -46,6 +46,7 @@ $trans["help"]                     = "\$text = 'Help';";
 #****************************************************************************
 $trans["homeHomeLink"]             = "\$text = 'Home';";
 $trans["homeLicenseLink"]          = "\$text = 'License';";
+$trans["homeCreditsLink"]           = "\$text = 'Credits';";
 
 #****************************************************************************
 #*  Translation text for page admin.php
@@ -55,8 +56,11 @@ $trans["adminStaff"]               = "\$text = 'Staff Admin';";
 $trans["adminSettings"]            = "\$text = 'Library Settings';";
 $trans["adminMaterialTypes"]       = "\$text = 'Material Types';";
 $trans["adminCollections"]         = "\$text = 'Collections';";
+$trans["adminCheckoutPriv"]     = "\$text = 'Checkout Privs';";
+$trans["Cover Lookup Options"]  = "\$text = 'Cover Lookup Options';";
 $trans["adminThemes"]              = "\$text = 'Themes';";
 $trans["adminTranslation"]         = "\$text = 'Translation';";
+$trans["adminImportExport"]        = "\$text = 'Import / Export';";
 $trans["Member Types"]             = "\$text = 'Member Types';";
 $trans["Member Fields"]            = "\$text = 'Member Fields';";
 $trans["Copy Fields"]              = "\$text = 'Copy Fields';";
@@ -81,6 +85,9 @@ $trans["catalogHolds"]             = "\$text = 'Hold Requests';";
 $trans["catalogDelete"]            = "\$text = 'Delete';";
 $trans["catalogBibNewLike"]        = "\$text = 'New Like';";
 $trans["catalogBibNew"]            = "\$text = 'New Bibliography';";
+$trans["catalogBibBulkDelete"]   = "\$text = 'Bulk Delete Bibliographies';";
+$trans["CSVImport"]                = "\$text = 'Import from CSV file';";
+$trans["Upload Marc Data"]         = "\$text = 'Upload MARC Data';";
 $trans["Upload Marc Data"]         = "\$text = 'Upload Marc Data';";
 $trans["History"]                  = "\$text = 'History';";
 
@@ -91,9 +98,13 @@ $trans["reportsSummary"]           = "\$text = 'Reports Summary';";
 $trans["reportsReportListLink"]    = "\$text = 'Report List';";
 $trans["reportsLabelsLink"]        = "\$text = 'Print Labels';";
 $trans["reportsLettersLink"]        = "\$text = 'Print Letters';";
-$trans["Report Results"]           = "\$text = 'Report Results';";
-$trans["Report List"]              = "\$text = 'Report List';";
-$trans["Report Criteria"]          = "\$text = 'Report Criteria';";
+$trans["reportsResult"]               = "\$text = 'Report Results';";
+$trans["reportsCriteria"]               = "\$text = 'Report Criteria';";
+$trans["reportsFailedImport"]     = "\$text = 'Failed Imports';";
+$trans["reportsNoCover"]            = "\$text = 'No-Cover Items';";
+$trans["Report Results"]           = "\$text = 'Report Results';";#check
+$trans["Report List"]              = "\$text = 'Report List';";#check
+$trans["Report Criteria"]          = "\$text = 'Report Criteria';";#check
 
 #****************************************************************************
 #*  Translation text for page opac.php
@@ -115,4 +126,11 @@ $trans["memberSearch"]= "\$text = 'Member Search';";
 $trans["newMember"]= "\$text = 'New Member';";
 $trans["Offline Circulation"]= "\$text = 'Offline Circulation';";
 //$trans["account"]        	= "\$text = 'Account';";
-?>
+
+#****************************************************************************
+#*  Translation text for page lookup.php for lookup2
+#****************************************************************************
+$trans["lookup"]                = "\$text = 'Online Search';";
+$trans["lookup_opts"]       		= "\$text = 'Z39.50 Options';";
+$trans["lookup_hosts"]       		= "\$text = 'Z39.50 Servers';";
+$trans["lookup_bulk"]       		= "\$text = 'Bulk ISBN Lookup';";

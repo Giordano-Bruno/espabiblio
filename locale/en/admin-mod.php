@@ -141,20 +141,6 @@ $trans["admin_materials_editEnd"]                 = "\$text = ', has been update
 #*  Translation text for page materials_list.php
 #****************************************************************************
 $trans["admin_materials_listAddmaterialtypes"]                 = "\$text = 'Add New Material Type';";
-$trans["admin-transSubmit"]			= "\$text='Submit';";
-$trans["admin-transNewEntry"]			= "\$text='Add New Entry';";
-$trans["admin-transDel"]			= "\$text='Delete';";
-$trans["lang"]			= "\$text='Spanish';";
-$trans["English"]			= "\$text='English';";
-$trans["Clave"]			= "\$text='Key';";
-$trans["admin-transPrev"]			= "\$text='Test function for observations or failure to inform joanlanga @ hotmail';";
-$trans["admin-transAdver"]			= "\$text='Back up your files dela locale folder';";
-$trans["admin-Translate"]			= "\$text='Admin Translate';";
-$trans["Note-1-admin"]			= "\$text='If the value of the month in the history of purging is greater than zero, the values in reporting statistics change over time. Data from the statistics reports should be kept out of Espabiblio for future reference.';";
-$trans["admin_materials_listMaterialstate"]			= "\$text='Status Materials';";
-$trans["admin_materials_Abrev"]			= "\$text='Abrev.';";
-$trans["admin_materials_Comment_end"]			= "\$text='Those marked with * are not modifiable';";
-$trans["Medienstatus"]			= "\$text='Status Materials';";
 $trans["admin_materials_listAddmaterialstate"]                 = "\$text = 'Add New Media State hinzuf�gen';";
 $trans["admin_materials_listMaterialtypes"]                 = "\$text = 'Material Types:';";
 $trans["admin_materials_listFunction"]                 = "\$text = 'Function';";
@@ -204,7 +190,6 @@ $trans["admin_settingsUpdated"]                 = "\$text = 'Data has been updat
 $trans["admin_settingsEditsettings"]                 = "\$text = 'Edit Library Settings:';";
 $trans["admin_settingsLibName"]                 = "\$text = 'Library Name:';";
 $trans["admin_settingsLibimageurl"]                 = "\$text = 'Library Image URL:';";
-$trans["admin_settingsLibaders"]			= "\$text='Library address:';";
 $trans["admin_settingsOnlyshowimginheader"]                 = "\$text = 'Only Show Image in Header:';";
 $trans["admin_settingsLibhours"]                 = "\$text = 'Library Hours:';";
 $trans["admin_settingsLibphone"]                 = "\$text = 'Library Phone:';";
@@ -226,8 +211,6 @@ $trans["admin_settingsInactiveDays"]             = "\$text = 'Auto update inacti
 $trans["admin_settingsFontNormal"]                  = "\$text = 'Print Fonts:';";
 $trans["admin_settingsFontSize"]                  = "\$text = 'Print Fonts Size:';";
 $trans["Max. hold length:"]                              = "\$text = 'Max. hold length:';";
-$trans["admin_settingsViewlist"]			= "\$text='View list';";
-$trans["admin_settingsHoldMaxDays"]			= "\$text='Hold Max Days';";
 $trans["Add new member classificaiton"]       = "\$text = 'Add new member classificaiton';";
 $trans["If the month value for purging history is higher than zero, values in statistics reports shift over time.<br>Data from statistics reports should be saved outside OpenBiblio for future reference."]                 = "\$text = 'If the month value for purging history is higher than zero, values in statistics reports shift over time.<br>Data from statistics reports should be saved outside OpenBiblio for future reference.';";
 
@@ -459,7 +442,6 @@ $trans["lookup_optsFictionCode"]       = "\$text = 'Default for Auto Collection:
 $trans["lookup_optsLocFictionCodes"]   = "\$text = 'LoC Fiction Codes';";
 $trans["lookup_optsDewFictionCodes"]   = "\$text = 'Dewey Fiction codes:';";
 $trans["lookup_callNmbrType"]          = "\$text = 'Your call Number Type is invalid!';";
-$trans["Add New Host"]			= "\$text='Add New Host';";
 $trans["lookup_optsUpdtBtn"]           = "\$text = 'Update';";
 #****************************************************************************
 #****************************************************************************
@@ -477,8 +459,6 @@ $trans["lookup_hostsSeqNo"]    	     	 = "\$text = 'Order';";
 $trans["lookup_hostsActive"]           = "\$text = 'Use';";
 $trans["lookup_hostsHost"]       			 = "\$text = 'URL:port';";
 $trans["lookup_hostsName"]     				 = "\$text = 'Name';";
-$trans["lookup_hostsSchema"]			= "\$text='hosts Schema: ';";
-$trans["lookup_hostsContext"]			= "\$text='Hosts Context: ';";
 $trans["lookup_hostsDb"]        			 = "\$text = 'Database';";
 $trans["lookup_hostsUser"]      			 = "\$text = 'User Id';";
 $trans["lookup_hostsPw"]        			 = "\$text = 'Password';";
@@ -557,7 +537,6 @@ $trans["Days must be numeric."]                           = "\$text = 'Days must
 #****************************************************************************
 $trans["Copy field, %desc%, has been deleted."] = "\$text = 'Copy field, %desc%, has been deleted.';";
 $trans["return to copy field list"]              = "\$text = 'return to copy field list';";
-$trans["Add new custom field list"]			= "\$text='Add new custom field list	';";
 $trans["return to copy fields list"]             = "\$text = 'return to copy field list';";
 $trans["Are you sure you want to delete field '%desc%'?"] = "\$text = 'Are you sure you want to delete field \'%desc%\'?';";
 $trans["Copy field, %desc%, has been updated."] = "\$text = 'Copy field, %desc%, has been updated.';";
@@ -571,7 +550,6 @@ $trans["Code"]                                  = "\$text = 'Code';";
 $trans["Description"]                           = "\$text = 'Description';";
 $trans["del"]                                   = "\$text = 'del';";
 $trans["Copy field, %desc%, has been added."]   = "\$text = 'Copy field, %desc%, has been added.';";
-$trans["Are you sure you want to delete field %desc% ?"]			= "\$text='Are you sure you want to delete field %desc% ?';";
 $trans["Add custom copy field"]                 = "\$text = 'Add custom copy field';";
 
 #****************************************************************************

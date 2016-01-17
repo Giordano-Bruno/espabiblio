@@ -1,3 +1,4 @@
+<center><font class="error">This help system is still under construction.  More sections will be added in future releases.</font></center>
 <h1>Contents:</h1>
 <ol>
   <li>OPAC and Search Results pages</li>

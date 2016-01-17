@@ -96,6 +96,10 @@ $trans["reportCriteriaStartOnLabel"] = "\$text = 'Start printing on label:';";
 $trans["reportCriteriaOutput"]     = "\$text = 'Output Type:';";
 $trans["reportCriteriaOutputHTML"] = "\$text = 'HTML';";
 $trans["reportCriteriaOutputCSV"]  = "\$text = 'CSV';";
+$trans["HTML (page-by-page)"] = "\$text = 'HTML (page-by-page)';";
+$trans["HTML (one big page)"]  = "\$text = 'HTML (one big page)';";
+$trans["CSV"]                                = "\$text = 'CSV';";
+$trans["Microsoft Excel"]            = "\$text = 'Microsoft Excel';";
 $trans["Reverse"]  		   = "\$text = 'Reverse';";
 $trans["Report Criteria"]          = "\$text = 'Report Criteria';";
 
@@ -105,6 +109,10 @@ $trans["Report Criteria"]          = "\$text = 'Report Criteria';";
 $trans["runReportReturnLink1"]     = "\$text = 'report selection criteria';";
 $trans["runReportReturnLink2"]     = "\$text = 'report list';";
 $trans["runReportTotal"]           = "\$text = 'Total Rows:';";
+$trans["Print list"]                        = "\$text = 'Print list';";
+$trans["Labels"]                           = "\$text = 'Labels';";
+$trans["reportsResultNotFound"]  = "\$text = 'No results found.';";
+$trans["reportsResultFound"]        = "\$text = '%results% results found.';";
 $trans["Result Pages: "]           = "\$text = 'Result Pages: ';";
 $trans["&laquo;Prev"]              = "\$text = '&laquo;Prev';";
 $trans["Next&raquo;"]              = "\$text = 'Next&raquo;';";
@@ -130,6 +138,8 @@ $trans["noauthMsg"]                = "\$text = 'You are not authorized to use th
 #****************************************************************************
 #*  Report TitlesReport Criteria
 #****************************************************************************
+$trans["Copy Search"]                                       = "\$text = 'Copy Search';";
+$trans["Item Checkout History"]                     = "\$text = 'Item Checkout History';";
 $trans["reportHolds"]              = "\$text = 'Hold Requests Containing Member Contact Info';";
 $trans["reportCheckouts"]          = "\$text = 'Bibliography Checkout Listing';";
 $trans["Over Due Letters"]         = "\$text = 'Over Due Letters';";
@@ -209,6 +219,7 @@ $trans["Sort By"]                  = "\$text = 'Sort By';";
 $trans["Cataloging"]               = "\$text = 'Cataloging';";
 $trans["Circulation"]              = "\$text = 'Circulation';";
 $trans["Statistics"]               = "\$text = 'Statistics';";
+$trans["Bulk summary"]            = "\$text = 'Bulk summary';";
 
 #****************************************************************************
 #*  Label Titles
@@ -230,7 +241,6 @@ $trans["biblio.call_nmbr3"]        = "\$text = 'Call 3';";
 $trans["biblio.title_remainder"]   = "\$text = 'Title Remainder';";
 $trans["biblio.responsibility_stmt"] = "\$text = 'Stmt of Resp';";
 $trans["biblio.opac_flg"]          = "\$text = 'OPAC Flag';";
-
 $trans["biblio_copy.barcode_nmbr"] = "\$text = 'Barcode';";
 $trans["biblio.title"]             = "\$text = 'Title';";
 $trans["biblio.author"]            = "\$text = 'Author';";
@@ -254,5 +264,63 @@ $trans["title"]                    = "\$text = 'Title';";
 $trans["author"]                   = "\$text = 'Author';";
 $trans["due_back_dt"]              = "\$text = 'Due Back';";
 $trans["checkoutCount"]            = "\$text = 'Checkout Count';";
+$trans["reportDateMonth01"]   = "\$text = 'January';";
+$trans["reportDateMonth02"]   = "\$text = 'February';";
+$trans["reportDateMonth03"]   = "\$text = 'March';";
+$trans["reportDateMonth04"]   = "\$text = 'April';";
+$trans["reportDateMonth05"]   = "\$text = 'May';";
+$trans["reportDateMonth06"]   = "\$text = 'June';";
+$trans["reportDateMonth07"]   = "\$text = 'July';";
+$trans["reportDateMonth08"]   = "\$text = 'August';";
+$trans["reportDateMonth09"]   = "\$text = 'September';";
+$trans["reportDateMonth10"]   = "\$text = 'October';";
+$trans["reportDateMonth11"]   = "\$text = 'November';";
+$trans["reportDateMonth12"]   = "\$text = 'December';";
+$trans["Barcode"] = "\$text = 'Barcode';";
+$trans["Title"]       = "\$text = 'Title';";
+$trans["Barcode Starts With"] = "\$text = 'Barcode Starts With';";
+$trans["Newer than"]               = "\$text = 'Newer than';";
+$trans["Sort By"]                       = "\$text = 'Sort By';";
+$trans["Format"]                       = "\$text = 'Format';";
+$trans["Minimum balance"]     = "\$text = 'Minimum balance';";
+$trans["Call Number"]              = "\$text = 'Call Number';";
+$trans["Placed before"]           = "\$text = 'Placed before';";
+$trans["Placed since"]              = "\$text = 'Placed since';";
+$trans["As of"]                           = "\$text = 'As of';";
+$trans["Due before"]               = "\$text = 'Due before';";
+$trans["Out since"]                   = "\$text = 'Out since';";
+$trans["reportsReverse"]        = "\$text = '(Reverse)';";
+$trans["Member Name"]          = "\$text = 'Member name';";
+$trans["Balance Due"]              = "\$text = 'Balance';";
+$trans["bulkReportBibID"]        = "\$text = 'Biblio ID';";
+$trans["bulkReportBibName"]  = "\$text = 'Biblio Name';";
+$trans["bulkReportNoItem"]     = "\$text = 'No failed items yet.';";
+$trans["bulkReportAllCovered"]       = "\$text = 'All items have their book cover.';";
+$trans["bulkReportConfirmPurge"]  = "\$text = 'Are you sure to purge ISBN list?';";
+$trans["bulkReportPurgeDone"]       = "\$text = 'All items has been purged from failed list.';";
+$trans["bulkReportConfirmRemoveISBN"] = "\$text = 'Are you sure to remove ISBN: %isbn%?';";
+$trans["bulkReportISBNRemoved"]  = "\$text = 'ISBN %isbn% has been removed from failed list.';";
+$trans["bulkReportZeroHits"]           = "\$text = 'Found %zero_hits% hidden items (nothing copy), <a href=\"bulk_report.php?type=manual&act=cleartemp\">clear now.</a>';";
+$trans["bulkReportZeroHitsClear"]  = "\$text = 'Hidden items (no copy) has been removed from failed list.';";
+$trans["function"]                       = "\$text = 'Function';";
+$trans["add"]                               = "\$text = 'add';";
+$trans["edit"]                               = "\$text = 'edit';";
+$trans["remove"]                        = "\$text = 'remove';";
+$trans["Hits"]                               = "\$text = 'Hits';";
+$trans["Created"]                        = "\$text = 'Created Date';";
+$trans["Export to file"]               = "\$text = 'Export to file';";
+$trans["Purge all items"]            = "\$text = 'Purge all items';";
+$trans["Submit"]                          = "\$text = 'Submit';";
+$trans["Call Num."]                     = "\$text = 'Call Num.';";
+$trans["Author"]                          = "\$text = 'Author';";
+$trans["collection"]                     = "\$text = 'Collection';";
+$trans["Checkout Date"]           = "\$text = 'Checkout Date';";
+$trans["Due Date"]                     = "\$text = 'Due Date';";
+$trans["Hold Date"]                    = "\$text = 'Hold Date';";
+$trans["Member Barcode"]       = "\$text = 'Member Barcode';";
+$trans['rptFormattedDate']      = "\$text = date('j M Y', strtotime('%date%'));";
+$trans['rptFormattedShortDate'] = "\$text = date('j F Y', strtotime('%date%'));";
+$trans['rptLetterDear']              = "\$text = 'Dear %lastName% %firstName%:';";
+$trans['rptLetterDetails']          = "\$text = 'Our records show that the following library items are checked out under your name and are past due.  Please return them as soon as possible and pay any late fees due.';";
+$trans['rptLetterFooter']           = "\$text = 'Sincerely,<br />The library staff at ' . OBIB_LIBRARY_NAME;";
 
-?>

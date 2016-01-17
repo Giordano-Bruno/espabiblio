@@ -39,10 +39,17 @@
 #****************************************************************************
 $trans["sharedCancel"]             = "\$text = 'Cancel';";
 $trans["sharedDelete"]             = "\$text = 'Delete';";
+$trans["sharedComfirmDelete"]    = "\$text = 'Yes, delete all selected items';";
+$trans["sharedDeleteWarning"]    = "\$text = 'This action cannot be undone. Are you sure?';";
+$trans["sharedRecordIsDelete"]    = "\$text = 'record is deleted.';";
+$trans["sharedRecordsAreDeleted"]    = "\$text = 'records are deleted.';";
+$trans["sharedListOfDeletedItems"]    = "\$text = 'List of the items will be deleted';";
 
 #****************************************************************************
 #*  Translation text for page biblio_view.php
 #****************************************************************************
+$trans["Are you sure to remove this picture?"]  = "\$text = 'Are you sure to remove this picture?';";
+$trans["Remove"]  = "\$text = 'Remove';";
 $trans["biblioViewTble1Hdr"]       = "\$text = 'Bibliography Information';";
 $trans["biblioViewMaterialType"]   = "\$text = 'Material Type';";
 $trans["biblioViewCollection"]     = "\$text = 'Collection';";
@@ -65,6 +72,7 @@ $trans["biblioViewNewCopy"]        = "\$text = 'Add New Copy';";
 $trans["biblioViewNeweCopy"]       = "\$text = 'Add New Electronic Copy';";
 $trans["biblioViewYes"]            = "\$text = 'yes';";
 $trans["biblioViewNo"]             = "\$text = 'no';";
+$trans["biblioViewPictureHeader"]  = "\$text = 'Bibliograhy Picture';";
 
 #****************************************************************************
 #*  Translation text for page biblio_search.php
@@ -72,6 +80,8 @@ $trans["biblioViewNo"]             = "\$text = 'no';";
 $trans["biblioSearchNoResults"]    = "\$text = 'No results found.';";
 $trans["biblioSearchResults"]      = "\$text = 'Search Results';";
 $trans["biblioSearchResultPages"]  = "\$text = 'Result Pages';";
+$trans["biblioSearchFirst"]        = "\$text = 'first';";
+$trans["biblioSearchLast"]         = "\$text = 'last';";
 $trans["biblioSearchPrev"]         = "\$text = 'prev';";
 $trans["biblioSearchNext"]         = "\$text = 'next';";
 $trans["First"]                    = "\$text = 'First';";
@@ -98,6 +108,23 @@ $trans["biblioSearchOutIn"]        = "\$text = 'check out/in';";
 $trans["biblioSearchDetail"]       = "\$text = 'Show detailed Bibliography information';";
 $trans["biblioSearchBCode2Chk"]    = "\$text = 'Barcode to Check Out or Check In Form';";
 $trans["biblioSearchBCode2Hold"]   = "\$text = 'Barcode to Hold Form';";
+
+#****************************************************************************
+#*  Translation text for page advanced_search.php
+#****************************************************************************
+$trans["advsAdvancedSearch"]       = "\$text = 'Advanced Search';";
+$trans["advsMaterialType"]         = "\$text = 'Material Type';"; 
+$trans["advsCollectionType"]       = "\$text = 'Collection Type';";
+$trans["advsSearch"]               = "\$text = 'Search';";
+$trans["advsClear"]                = "\$text = 'Clear';";
+$trans["advsPublishedYear"]          = "\$text = 'Published Year';";
+$trans["advsLanguage"]                = "\$text = 'Language';";
+$trans["optThai"]                = "\$text = 'Thai';";
+$trans["optEnglish"]                = "\$text = 'English';";
+$trans["optFrench"]                = "\$text = 'French';";
+$trans["cancel"]                   = "\$text = 'Cancel';";
+$trans["or"]                       = "\$text = 'or';";
+$trans["any"]                      = "\$text = 'ANY';";
 
 #****************************************************************************
 #*  Translation text for page loginform.php
@@ -161,5 +188,3 @@ $trans["footerDatabaseVersion"]    = "\$text='database version';";
 $trans["footerCopyright"]          = "\$text='Copyright';";
 $trans["footerUnderThe"]           = "\$text='under the';";
 $trans["footerGPL"]                = "\$text='GNU General Public License';";
-
-?>

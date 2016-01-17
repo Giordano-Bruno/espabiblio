@@ -40,14 +40,19 @@
 #****************************************************************************
 #*  Translation text for page index.php
 #****************************************************************************
-
-
 $trans["indexCat"]			= "\$text='Catalogacíón';";
-
 $trans["creditsHeading"]		= "\$text='Créditos de los desarrolladores de este programa';";
 $trans["homeChangeLogLink"]		= "\$text='Cambios de las diferentes versiones y fallos (bug) conocidos.';";
 $trans["indexAdmin"]			= "\$text='Administración';";
 $trans["indexAdminDesc1"]		= "\$text='Administración de bibliotecarios y de datos administrativos.';";
+$trans["indexAdminDesc2"]		= "\$text='Administración de bibliotecarios (añadir nuevos, editar, cambiar contraseñas, borrar)';";
+$trans["indexAdminDesc3"]		= "\$text='Configuración general de la biblioteca';";
+$trans["indexAdminDesc4"]		= "\$text='Lista de tipos de material';";
+$trans["indexAdminDesc5"]		= "\$text='Administración de Grupos de usuarios';";
+$trans["indexAdminDesc6"]		= "\$text='Administración de Grados de usuario';";
+$trans["indexAdminDesc7"]		= "\$text='Personalización de Campos de datos para las copias de las bibliografías';";
+$trans["indexAdminDesc8"]		= "\$text='Administración de Tipos de materiales';";
+$trans["indexAdminDesc9"]		= "\$text='Administración del Estados de los Materiales';";
 $trans["indexAdminDesc10"]		= "\$text='Administración de las colecciones';";
 $trans["indexAdminDesc11"]		= "\$text='Gestión de Privilegios de préstamos';";
 $trans["indexAdminDesc12"]		= "\$text='Gestión búsquedas de caratulas en (Amazon AWS) -Requiere registro previo';";
@@ -58,18 +63,10 @@ $trans["indexAdminDesc16"]		= "\$text='Importar lista de usuarios desde un archi
 $trans["indexAdminDesc17"]		= "\$text='Importar lista bibliográfica desde un archivo CSV';";
 $trans["indexAdminDesc18"]		= "\$text='Importar lista bibliográfica desde un archivo MARC';";
 $trans["indexAdminDesc19"]		= "\$text='Exportar todos los datos de la biblioteca a un archivo CSV';";
-$trans["indexAdminDesc2"]		= "\$text='Administración de bibliotecarios (añadir nuevos, editar, cambiar contraseñas, borrar)';";
 $trans["indexAdminDesc20"]		= "\$text='Ver configuración del Servidor mediante phpinfo.php';";
 $trans["indexAdminDesc21"]		= "\$text='Editor de temas de diseño';";
-$trans["indexAdminDesc3"]		= "\$text='Configuración general de la biblioteca';";
-$trans["indexAdminDesc4"]		= "\$text='Lista de tipos de material';";
-$trans["indexAdminDesc5"]		= "\$text='Administración de Grupos de usuarios';";
-$trans["indexAdminDesc6"]		= "\$text='Administración de Grados de usuario';";
-$trans["indexAdminDesc7"]		= "\$text='Personalización de Campos de datos para las copias de las bibliografías';";
-$trans["indexAdminDesc8"]		= "\$text='Administración de Tipos de materiales';";
-$trans["indexAdminDesc9"]		= "\$text='Administración del Estados de los Materiales';";
 $trans["indexAdminDesc22"]		= "\$text='Administrador de Traducciones';";
-
+$trans["indexAdminDesc23"]		= "\$text='Control de inventarios';";
 $trans["indexCatDesc1"]			= "\$text='Administración de datos bibliográficos.';";
 $trans["indexCatDesc2"]			= "\$text='Administración bibliográfica (nuevo, buscar, editar, borrar, Control de copias )';";
 $trans["indexCatDesc3"]			= "\$text='Administración bibliográfica con capacidad de presentar fotos de portadas y autores';";
@@ -93,10 +90,6 @@ $trans["indexCircDesc7"]		= "\$text='Actualización por movimientos de materiale
 $trans["indexDesc"]			= "\$text='Descripción';";
 $trans["indexGen"]			= "\$text='Otras Funciones de caracteres general';";
 $trans["indexGenDesc1"]			= "\$text='Estas son capacidades de la Versión -Giordano Bruno- que no son propiamente del programa openbiblio.';";
-$trans["indexGenDesc10"]		= "\$text='/tests selenium. Prueba de rendimientos reales sobre el openiblio, CUIDADO Ya que Borra La información de la biblioteca';";
-$trans["indexGenDesc11"]		= "\$text='/tools. Herramientas para control de versiones de desarrollo basado en el bash de Linux';";
-$trans["indexGenDesc12"]		= "\$text='Otras Herramientas para OSE y robots';";
-$trans["indexGenDesc13"]		= "\$text='Funcion circ2, para que los usuarios puedan ver su estatus y pedir reservas de libros';";
 $trans["indexGenDesc2"]			= "\$text='Indexación para Búsquedas de google y google analycts.';";
 $trans["indexGenDesc3"]			= "\$text='Herraminetas CAPCHA';";
 $trans["indexGenDesc4"]			= "\$text='3rdparty para drupal y wordpress. Proporciona api\'s para trabajar con dichos programas';";
@@ -105,21 +98,14 @@ $trans["indexGenDesc6"]			= "\$text='/cron. Proporciona funciones de para sincro
 $trans["indexGenDesc7"]			= "\$text='/doc. En esta Carpeta encontraras manuales, Presentaciones y libros referentes a Openbiblio, Espabiblio, Bibliotecas, Etc';";
 $trans["indexGenDesc8"]			= "\$text='/front. En esta carpeta se un CMS basado en WordPres y enlazado a Openbiblio.';";
 $trans["indexGenDesc9"]			= "\$text='/phpthumb. Permite manipular y efectos en las imágenes';";
+$trans["indexGenDesc10"]		= "\$text='/tests selenium. Prueba de rendimientos reales sobre el openiblio, CUIDADO Ya que Borra La información de la biblioteca';";
+$trans["indexGenDesc11"]		= "\$text='/tools. Herramientas para control de versiones de desarrollo basado en el bash de Linux';";
+$trans["indexGenDesc12"]		= "\$text='Otras Herramientas para OSE y robots';";
+$trans["indexGenDesc13"]		= "\$text='Funcion circ2, para que los usuarios puedan ver su estatus y pedir reservas de libros';";
 $trans["indexHeading"]			= "\$text='Bienvenido a su Programa para la gestión de su Biblioteca y Biblioteca Digital.';";
 $trans["indexIntro"]			= "\$text='Use: Las pestañas superiores son para acceder a las diferentes zonas de administración y el menú lateral para las funciones.';";
-
-
-
 $trans["indexReports"]			= "\$text='Informes';";
 $trans["indexReportsDesc1"]		= "\$text='En esta página puedes ejecutar informes a partir de los datos de la biblioteca.';";
-$trans["indexReportsDesc10"]		= "\$text='Lista de socios con artículos pendientes de devolución.';";
-$trans["indexReportsDesc11"]		= "\$text='Listado de bibliografía prestada.';";
-$trans["indexReportsDesc12"]		= "\$text='Peticiones de préstamo que contienen información de contacto con el socio.';";
-$trans["indexReportsDesc13"]		= "\$text='Estadísticas de Bibliografías más populares.';";
-$trans["indexReportsDesc14"]		= "\$text='Estadísticas de Los autores más populares.';";
-$trans["indexReportsDesc15"]		= "\$text='Resumen a granel [Bulk summary].';";
-$trans["indexReportsDesc16"]		= "\$text='Importaciones fallidas.';";
-$trans["indexReportsDesc17"]		= "\$text='Artículos sin portada.';";
 $trans["indexReportsDesc2"]		= "\$text='Informes.';";
 $trans["indexReportsDesc3"]		= "\$text='Etiquetas.';";
 $trans["indexReportsDesc4"]		= "\$text='Catalogación.';";
@@ -128,6 +114,14 @@ $trans["indexReportsDesc6"]		= "\$text='Búsqueda de copia.';";
 $trans["indexReportsDesc7"]		= "\$text='Lista de Títulos duplicados.';";
 $trans["indexReportsDesc8"]		= "\$text='Historial de Artículos Pedidos.';";
 $trans["indexReportsDesc9"]		= "\$text='Lista de artículos pendientes de devolución por los socios.';";
+$trans["indexReportsDesc10"]		= "\$text='Lista de socios con artículos pendientes de devolución.';";
+$trans["indexReportsDesc11"]		= "\$text='Listado de bibliografía prestada.';";
+$trans["indexReportsDesc12"]		= "\$text='Peticiones de préstamo que contienen información de contacto con el socio.';";
+$trans["indexReportsDesc13"]		= "\$text='Estadísticas de Bibliografías más populares.';";
+$trans["indexReportsDesc14"]		= "\$text='Estadísticas de Los autores más populares.';";
+$trans["indexReportsDesc15"]		= "\$text='Resumen a granel [Bulk summary].';";
+$trans["indexReportsDesc16"]		= "\$text='Importaciones fallidas.';";
+$trans["indexReportsDesc17"]		= "\$text='Artículos sin portada.';";
 $trans["indexTab"]			= "\$text='Página (pestaña)';";
 $trans["licenseHeading"]		= "\$text='Licencia, Ingles y español';";
 $trans["readmeHeading"]			= "\$text='Leeme antes de Usar o instalar.';";

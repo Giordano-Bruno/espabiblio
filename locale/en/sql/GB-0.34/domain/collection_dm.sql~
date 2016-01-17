@@ -10,4 +10,3 @@ insert into %prfx%collection_dm values (null,'New Books','N',14,0.10);
 insert into %prfx%collection_dm values (null,'Periodics','N',14,0.05);
 insert into %prfx%collection_dm values (null,'Reference','N',0,0.00);
 insert into %prfx%collection_dm values (null,'Videos and DVDs','N',3,1.00);
-insert into %prfx%collection_dm values (null,'Digital Book','N',3,1.00);

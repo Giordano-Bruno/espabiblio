@@ -85,7 +85,7 @@
         <li><?php echo $loc->getText("indexAdminDesc20"); ?></li>
         <li><?php echo $loc->getText("indexAdminDesc21"); ?></li>
         <li><?php echo $loc->getText("indexAdminDesc22"); ?></li>
-        <li><?php echo $loc->getText("indexAdminDesc23"); ?></li>
+        <li><?php echo $loc->getText("indexAdminDesc22"); ?></li>
       </ul>
     </td>
   </tr>

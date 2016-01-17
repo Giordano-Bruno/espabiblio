@@ -39,6 +39,8 @@
 #****************************************************************************
 $trans["circCancel"]              = "\$text = 'Cancel';";
 $trans["circDelete"]              = "\$text = 'Delete';";
+$trans["circSuspend"]             = "\$text = 'Suspend';";
+$trans["circPermanentlyDelete"]   = "\$text = 'Permanently Delete';";
 $trans["circLogout"]              = "\$text = 'Logout';";
 $trans["circAdd"]                 = "\$text = 'Add';";
 $trans["mbrDupBarcode"]           = "\$text = 'Barcode number, %barcode%, is currently in use.';";
@@ -71,6 +73,7 @@ $trans["mbrFldsHomePhone"]        = "\$text='Home Phone:';";
 $trans["mbrFldsWorkPhone"]        = "\$text='Work Phone:';";
 $trans["mbrFldsEmail"]            = "\$text='Email Address:';";
 $trans["mbrFldsClassify"]         = "\$text='Classification:';";
+$trans["mbrFldsStatus"]           = "\$text='Status:';";
 $trans["mbrFldsGrade"]            = "\$text='School Grade:';";
 $trans["mbrFldsTeacher"]          = "\$text='School Teacher:';";
 $trans["mbrFldsMbrShip"]          = "\$text='paid until (yyyy-mm-dd):';";
@@ -86,6 +89,14 @@ $trans["mbrsearchFoundResults"]   = "\$text=' results found.';";
 $trans["mbrsearchSearchResults"]  = "\$text='Search Results:';";
 $trans["mbrsearchCardNumber"]     = "\$text='Card Number:';";
 $trans["mbrsearchClassification"] = "\$text='Classification:';";
+$trans["mbrFldsStatus"]           = "\$text='Status:';";
+$trans["mbrsearchStatus"]         = "\$text='Status:';";
+$trans["mbrActive"]               = "\$text='active';";
+$trans["mbrInactive"]             = "\$text='inactive';";
+$trans["mbrAutoBarcode"]          = "\$text='use auto barcode';";
+$trans["mbrLatestBarcode"]        = "\$text='The latest barcode no.';";
+$trans["mbrViewLastActDate"]      = "\$text='Last activity:';";
+$trans["mbrFormattedDate"]        = "\$text=date('j F Y - H:i', strtotime('%date%'));";
 
 #****************************************************************************
 #*  Translation text for page mbr_new.php
@@ -151,10 +162,12 @@ $trans["mbrViewHoldHdr7"]         = "\$text='Status';";
 $trans["mbrViewHoldHdr8"]         = "\$text='Due Back';";
 $trans["mbrViewNoHolds"]          = "\$text='No bibliographies are currently on hold.';";
 $trans["mbrViewBalMsg"]           = "\$text='Note: Member has an outstanding account balance of %bal%.';";
+$trans["mbrViewBalMsg2"]          = "\$text = 'Note: this bibliography has %fee% late fee.';";
 $trans["mbrViewShipEnd"]          = "\$text='Attention: Membership of this member has expired!';";
 $trans["mbrPrintCheckouts"]	  = "\$text='print checkouts';";
 $trans["Renew All"]	  	  = "\$text='Renew All';";
 $trans["mbrViewDel"]              = "\$text='del';";
+$trans["mbrViewStatus"]           = "\$text='Status:';";
 $trans["mbrViewRenew1"]           = "\$text='Renew membership for';";
 $trans["mbrViewRenew2"]           = "\$text='month.<br>Since Today or since Paid-Until-Date, if it's in future.';";
 $trans["Due Date:"]               = "\$text='Due Date:';";
@@ -174,12 +187,14 @@ $trans["checkoutErr5"]            = "\$text='Bibliography with barcode number %b
 $trans["checkoutErr6"]            = "\$text='Member has reached the checkout limit for the specified bibliography\'s material type.';";
 $trans["checkoutErr7"]            = "\$text='Bibliography with barcode number %barcode% has reached the member\'s renewal limit.';";
 $trans["checkoutErr8"]            = "\$text='Bibliography with barcode number %barcode% can not be renew as it is already late.';";
+$trans["checkoutErr9"]            = "\$text='This member was inactive, cannot check out, renew or hold any copies.';";
 
 #****************************************************************************
 #*  Translation text for page shelving_cart.php
 #****************************************************************************
 $trans["shelvingCartErr1"]        = "\$text='Barcode number must be all alphanumeric.';";
 $trans["shelvingCartErr2"]        = "\$text='No bibliography was found with that barcode number.';";
+$trans["shelvingCartErr3"]        = "\$text='This copy is not checked out yet.';";
 $trans["shelvingCartTrans"]       = "\$text='Late fee (barcode=%barcode%)';";
 
 #****************************************************************************
@@ -196,6 +211,8 @@ $trans["checkinFormColHdr2"]      = "\$text='Barcode';";
 $trans["checkinFormColHdr3"]      = "\$text='Title';";
 $trans["checkinFormColHdr4"]      = "\$text='Author';";
 $trans["checkinFormEmptyCart"]    = "\$text='No bibliographies are currently in shelving cart status.';";
+$trans["checkinDone1"]                  = "\$text='Checked in %barcode% for %fname% %lname%.';";
+$trans["checkinDone2"]                  = "\$text='Checked in %barcode%.';";
 $trans["Checked in %barcode% for "]    = "\$text='Checked in %barcode% for ';";
 $trans["Checked in %barcode%."]   = "\$text='Checked in %barcode%.';";
 
@@ -217,6 +234,8 @@ $trans["holdMessageMsg2"]         = "\$text='Return to bibliography check in.';"
 $trans["placeHoldErr1"]           = "\$text='Barcode number must be numeric.';";
 $trans["placeHoldErr2"]           = "\$text='Barcode does not exist.';";
 $trans["placeHoldErr3"]           = "\$text='This member already has that item checked out -- not placing hold.';";
+$trans["placeHoldErrNotChkOut"]       = "\$text='This item is not checked out.';";
+$trans["placeHoldErrDup"]       = "\$text='This member already requested to hold this copy.';";
 $trans["This item is not checked out or on hold."]           = "\$text='This item is not checked out or on hold.';";
 
 #****************************************************************************
@@ -230,6 +249,7 @@ $trans["mbrDelConfirmMsg"]        = "\$text = 'Are you sure you want to delete t
 #*  Translation text for page mbr_del.php
 #****************************************************************************
 $trans["mbrDelSuccess"]           = "\$text='Member, %name%, has been deleted.';";
+$trans["mbrSuspendSuccess"]       = "\$text='Member, %name%, has been suspended.';";
 $trans["mbrDelReturn"]            = "\$text='return to Member Search';";
 
 #****************************************************************************
@@ -261,6 +281,7 @@ $trans["mbrAccountHdr3"]          = "\$text='Trans Type';";
 $trans["mbrAccountHdr4"]          = "\$text='Description';";
 $trans["mbrAccountHdr5"]          = "\$text='Amount';";
 $trans["mbrAccountHdr6"]          = "\$text='Balance';";
+$trans["mbrAccountLink"]           = "\$text='view transaction of this member';";
 
 #****************************************************************************
 #*  Translation text for page mbr_transaction.php
@@ -286,6 +307,21 @@ $trans["mbrPrintCheckoutsHdr2"]   = "\$text='Member:';";
 $trans["mbrPrintCheckoutsHdr3"]   = "\$text='Card Number:';";
 $trans["mbrPrintCheckoutsHdr4"]   = "\$text='Classification:';";
 $trans["mbrPrintCloseWindow"]     = "\$text='Close Window';";
+
+#****************************************************************************
+#*  Translation text for page csv_import.php
+#****************************************************************************
+$trans["CSVImportHeader"]     = "\$text='Import member list from CSV file';";
+$trans["mbrCannotOpenFile"]   = "\$text='Cannot open file';";
+$trans["mbrCannotUploadFile"] = "\$text='Cannot upload file';";
+$trans["mbrImportCompleted"]  = "\$text='Members have been imported';";
+
+# Error message
+$trans["Card number is required."]  = "\$text = 'Card number is required.';";
+$trans["Card number must be all alphabetic and numeric characters."] = "\$text = 'Card number must be all alphabetic and numeric characters.';";
+$trans["Last name is required."]       = "\$text = 'Last name is required.';";
+$trans["First name is required."]       = "\$text = 'First name is required.';";
+$trans["Status options is incorrect."] = "\$text = 'Status options is incorrect.';";
 
 #****************************************************************************
 #*  Translation text for page offline.php

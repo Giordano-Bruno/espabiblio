@@ -44,6 +44,13 @@ $trans["biblioError1"]            = "\$text = 'Call number is required.';";
 #****************************************************************************
 $trans["biblioFieldError1"]       = "\$text = 'Field is required.';";
 $trans["biblioFieldError2"]       = "\$text = 'Tag must be numeric.';";
+$trans["biblioFieldErrorPictureType"]             = "\$text = 'This file type is not image (support jpeg, gif, png).';";
+$trans["biblioFieldErrorPictureLoadFailed"]   = "\$text = 'Failed to load image informations.';";
+$trans["biblioFieldErrorCoverLookupFailed"] = "\$text = 'Failed to connect online cover lookup service.';";
+$trans["biblioFieldErrorDuplicatedISBN"]       = "\$text = 'This ISBN is already in used,';";
+$trans["biblioFieldViewExistingISBN"]            = "\$text = 'view existing item.';";
+$trans["biblioFieldErrorDuplicatedTitle"]       = "\$text = 'This title is already in used,';";
+$trans["biblioFieldViewExistingTitle"]            = "\$text = 'view existing item, or specify ISBN.';";
 
 #****************************************************************************
 #*  Translation text for class BiblioQuery
@@ -67,7 +74,8 @@ $trans["biblioSearchQueryErr3"]   = "\$text = 'Error reading bibliography inform
 #*  Translation text for class BiblioCopy
 #****************************************************************************
 $trans["biblioCopyError1"]        = "\$text = 'Barcode number is required.';";
-$trans["biblioCopyError2"]        = "\$text = 'Invalid characters in barcode number.';";
+//$trans["biblioCopyError2"]        = "\$text = 'Invalid characters in barcode number.';";
+$trans["biblioCopyError2"]        = "\$text = 'Barcode number must be all alphabetic and/or numeric characters.';";
 
 #****************************************************************************
 #*  Translation text for class BiblioCopyQuery
@@ -195,6 +203,18 @@ $trans["memberAccountQueryErr2"]    = "\$text = 'Error inserting member account 
 $trans["memberAccountQueryErr3"]    = "\$text = 'Error deleting member account information.';";
 
 #****************************************************************************
+#*  Translation text for class MemberAccountQuery
+#****************************************************************************
+$trans["CSVErrorInvalidFile"]                   = "\$text = 'invalid upload files.';";
+$trans["CSVErrorInvalidFileFormat"]       = "\$text = 'invalid file format.';";
+$trans["CSVErrorOversized"]                   = "\$text = 'file size limit exceeded.';";
+$trans["CSVErrorReadFile"]                      = "\$text = 'unable to open uploaded files.';";
+$trans["CSVErrorMissingHeader"]           = "\$text = 'Missing header';";
+$trans["CSVErrorIncorrectHeader"]           = "\$text = 'Incorrect header';";
+$trans["CSVErrorInvalidData"]           = "\$text = 'Invalid CSV format start with line %line%';";
+$trans["CSVErrorMissingRequireField"] = "\$text = 'Missing required fields (ISBN, ชื่อผู้แต่ง, ชื่อเรื่อง) with line %line%';";
+
+#****************************************************************************
 #*  Translation text for class CircQuery
 #****************************************************************************
 $trans["Can't understand date: %err%"]                            = "\$text = 'Can't understand date: %err%';";
@@ -213,8 +233,4 @@ $trans["Can't change status to an earlier date on item %bcode%."] = "\$text = 'C
 $trans["Can't change status more than once per second on item %bcode%."]  = "\$text = 'Can't change status more than once per second on item %bcode%.';";
 $trans["Won't do checkins for future dates."]                     = "\$text = 'Won't do checkins for future dates.';";
 $trans["Late fee (barcode=%barcode%)"]                            = "\$text = 'Late fee (barcode=%barcode%)';";
-
-
-$trans[""]  = "\$text = '';";
-
-?>
+$trans[""]  = "\$text = '';";#fix check

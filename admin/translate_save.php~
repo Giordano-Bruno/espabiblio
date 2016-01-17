@@ -7,7 +7,7 @@
 		$lang = $_REQUEST['lang'];
 		$klang = $_REQUEST['klang'];
 		$user = $_REQUEST['user'];
-		$trans = $_REQUEST['trans'];
+		$trans = stripslashes($_REQUEST['trans']);
 	}
 
 	$core_filename = OBIB_LOCALE_ROOT.$lang.'/'.$module;

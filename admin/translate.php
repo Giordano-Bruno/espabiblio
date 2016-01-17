@@ -80,7 +80,7 @@ echo '</br>';echo '$_REQUEST ';echo '<pre>';var_dump ($_REQUEST );echo '</pre>';
 		}
 	}
 
-//	ksort($Key); //jalg el texto en ingles indice trans
+//	ksort($Key); //oredena por la clave, pero se desordenan los cmapos en el archivo a guardar si no existe la key.
 	if ($lang !== $klang || @!isset($lang) ){
 		$locale = array();
 		$locale = readFiles($lang , $module); //jalg Lee el texto a modificar.
@@ -132,10 +132,10 @@ echo '</br>';echo '$_REQUEST ';echo '<pre>';var_dump ($_REQUEST );echo '</pre>';
 					echo ('<input type="hidden" name="trans['.$index.'][ky]" value="'. $k .'" size="40" class="text" />');
 					echo ('<input type="hidden" name="trans['.$index.']['.$lang.']" value="'. $langs[$lang] .'" size="40" class="text" />');
 						if (mb_strlen($langs[$lang]) < 50) {
-							echo ('<input type="text" name="trans['.$index.'][mv] "value="'. $langs[$lang] .'" size="50" class="text" />');
+							echo ('<input type="text" name="trans['.$index.'][mv] " value="'. $langs[$lang] .'" size="50" class="text" />' );
 						} else {
 							$rows = round(mb_strlen($langs[$lang] / 50)) +1 ;
-							echo ('<textarea name="trans['.$index.'][mv]" cols="60" class="small" rows="' . $rows . '">' . $langs[$lang] . '</textarea>');
+							echo ('<textarea name="trans['.$index.'][mv]" cols="80" class="small" rows="' . $rows . '">' . $langs[$lang] . '</textarea>');
 						}
 				?>
 				</td>
