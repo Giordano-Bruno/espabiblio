@@ -370,7 +370,6 @@ function changePage(page,sort)
 
 <!--**************************************************************************
     *  Mostrar foto de autores joanlga@hotmail.com  campo marc 902c
-    ************************************************************************** -->
   <td nowrap="true" class="primary" valign="top" align="center" rowspan="2">
 <?php if ( isset($LbiblioFlds['902c']) ) {  //determina si tiene foto el autor?>
 	<a href="
@@ -445,6 +444,8 @@ $Ruta_Autor = ".." . AUTOR_PATH . "/" . H($biblio->getAuthor());
     <?php   }  ?>
 
    </td>
+    ************************************************************************** -->
+
 <!--**************************************************************************
     *  Mostrar  titulos joanlga@hotmail.com 
     ************************************************************************** -->

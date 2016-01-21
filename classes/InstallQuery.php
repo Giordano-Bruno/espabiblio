@@ -3,6 +3,8 @@
  * See the file COPYRIGHT.html for more details.
  */
 			//$updateDir = '../install/GB-0.33/update';//#FIX integrar cambios de precio y otros.revisar si es necesario en la instalacio jalg
+set_time_limit ( 300 );
+
 
 require_once("../shared/global_constants.php");
 require_once("../classes/Query.php");

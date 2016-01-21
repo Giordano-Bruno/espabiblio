@@ -44,17 +44,13 @@
   if (isset($_POST['CUTTER'])) {//jalg para uso discrimitavo catalogo en base de datos
       $CUTTER  = ($_POST["CUTTER"] == "yes");
   }
+include("../install/header.php");
 
-  include("../install/header.php");
-?>
+echo '<br>';
+echo $loc->getText("install_head");
+echo '<br>';
 
-<br>
-<h3> <?php echo $loc->getText("install_head"); ?> </h3>
-<?php echo $loc->getText("install_head"); ?>
-</br>
-
-<?php
-  require_once("../install/create_dir.php");
+require_once("../install/create_dir.php");
 
   # testing connection and current version
   $installQ = new InstallQuery();

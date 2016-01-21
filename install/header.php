@@ -2,7 +2,6 @@
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
  */
- 
 ?>
 <html>
 <head>
@@ -10,7 +9,7 @@
 <style type="text/css">
   <?php include("../css/style.css"); ?>
 </style>
-<meta name="description" content="OpenBiblio Library Automation System">
+<meta name="description" content="Espabiblio Giordano Bruno Library Automation System and Digic  Library.">
 <!-- **************************************************************************************
      * jalg para ver icono en la pestaña del explorador, para personalizar cambiar el favicon.ico en la raIZ
      **************************************************************************************-->
@@ -40,3 +39,4 @@
      * beginning of main body
      **************************************************************************************-->
 <font class="primary">
+</font>

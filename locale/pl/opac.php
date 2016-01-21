@@ -1,6 +1,12 @@
 <?php
 /* This file is part of a copyrighted work; it is distributed with NO WARRANTY.
  * See the file COPYRIGHT.html for more details.
+
+* jalg 2012  se agregaron variables para corregir trauducion en la ficha de administracion de biblioteca. dias 
+* jalg 2012 se agrego $trans["admin_settingsViewlist"] permite activar o desactivar la funcion del listado general de libros. 
+#* MODIFICADO POR JOSE ANTONIO LARA joanlaga@hotmail.com PARA SOPORTE DE Z39.50 (2012)
+#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
+
  */
  
 /**********************************************************************************
@@ -38,18 +44,17 @@
 #****************************************************************************
 #*  Translation text for page index.php
 #****************************************************************************
-$trans["opac_Header"]        = "\$text='Katalog wyszukiwania On-line (OPAC)';";
-$trans["opac_WelcomeMsg"]    = "\$text=
-  'Witamy w katalogu publicznym naszej biblioteki. Możesz swobodnie wyszukiwać informacje. <br>
-   Prosimy pamiętać, że należy przestrzegać <a href=\"http://www.library.org\"> regulaminu naszej biblioteki </a>.<br>
-   Biblioteka jest zlokalizowana w <b> budynku szkoły w sali 115</b>
-';";
-$trans["opac_SearchTitle"]   = "\$text='Wyszukiwanie w opisach bibliograficznych:';";
+$trans["opac_Header"]        = "\$text='Katalog Biblioteki (OPAC)';";
+$trans["opac_WelcomeMsg"]    = "\$text= 'Witamy w internetowym katalogu naszej biblioteki.';";
+$trans["opac_SearchTitle"]   = "\$text='Przeszukuj rekordy zawierające frazę:';";
 $trans["opac_Keyword"]       = "\$text='Słowo kluczowe';";
 $trans["opac_Title"]         = "\$text='Tytuł';";
 $trans["opac_Author"]        = "\$text='Autor';";
-$trans["opac_Subject"]       = "\$text='Temat';";
+$trans["opac_Subject"]       = "\$text='Tematyka';";
 $trans["opac_Callno"]        = "\$text='Numer';";
 $trans["opac_Search"]        = "\$text='Szukaj';";
+$trans["opac_Language"]        = "\$text='Język';";
 
-?>
+
+#* No estan en Openbiblio 7.1 adecuacion por jalg joanlga@hotmail.com
+$trans["opac_ISBN"]        = "\$text='ISBN';";

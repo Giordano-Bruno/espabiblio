@@ -6,15 +6,15 @@
 require_once("../shared/common.php");
 $tab = "cataloging";
 $nav = "";
-  $helpPage = "MarcUpload";
+$helpPage = "MarcUpload";
   
 require_once("../classes/Biblio.php");
 require_once("../classes/BiblioField.php");
 require_once("../classes/BiblioQuery.php");
-
 require_once("../functions/fileIOFuncs.php");
 require_once("../shared/logincheck.php");
 require_once("../classes/Localize.php");
+
 $loc = new Localize(OBIB_LOCALE,$tab);
 
 if (count($_FILES) == 0) {
@@ -26,9 +26,9 @@ include("../shared/header.php");
 
 require_once("import_usmarc_excludes.php");
 
-$recordterminator="\35";
-$fieldterminator="\36";
-$delimiter="\37";
+$recordterminator="\35";// #
+$fieldterminator="\36";// $
+$delimiter="\37"; // %
 
 $usmarc_str = fileGetContents($_FILES["usmarc_data"]["tmp_name"]);
 // Detect & convert data.
@@ -75,13 +75,13 @@ foreach($records as $record) {
   }
   
   $j=0;
-  //foreach( split($fieldterminator,substr($record,$start)) as $field) { //JANLG cambio por Deprecated: Function split() 02/2014
+//foreach( split($fieldterminator,substr($record,$start)) as $field) { //JANLG cambio por Deprecated: Function split() 02/2014
 foreach( explode($fieldterminator,substr($record,$start)) as $field) {
     if ($codes[$j]{0} == '0' and $codes[$j]{1} == '0') {
       $j++;
       continue;  // We don't support control fields yet
     }
-    // Skip three characters to drop indicators and the first delimiter.
+// Skip three characters to drop indicators and the first delimiter.
 //    foreach(split($delimiter,substr($field, 3)) as $subfield) {
      foreach(explode($delimiter,substr($field, 3)) as $subfield) { //JANLG cambio por Deprecated: Function split() 02/2014
       $ident = $subfield{0};
@@ -108,11 +108,6 @@ foreach( explode($fieldterminator,substr($record,$start)) as $field) {
 
 if ($_POST["test"]=="true") {
   if (count($biblios) > 0) {
-/*
-echo "<pre>";
-print_r($biblios);  	
-echo "</pre>";
-*/
     echo '<a href="./upload_usmarc_form.php">Back</a>.<hr />';
     foreach ($biblios as $biblio) {
       echo '<h3>'.$loc->getText("MarcUploadMarcRecord").'</h3>';
@@ -134,7 +129,6 @@ echo "</pre>";
     echo '<p>'.$loc->getText("MarcUploadNoRowsDesc").'</p>';
   }
   echo '<hr /><h3>'.$loc->getText("MarcUploadRawData").'</h3>';
-  
   echo '<hr /><a href="./upload_usmarc_form.php">Back</a>.';
 } else {
   $bq = new BiblioQuery();
@@ -150,12 +144,11 @@ echo "</pre>";
     }
   }
   $bq->close();
-
 }
 
-  echo $loc->getText("MarcUploadRecordsUploaded");
-  echo ": ".H(count($biblios));
-	
+echo $loc->getText("MarcUploadRecordsUploaded");
+echo ": ".H(count($biblios));
+
 include("../shared/footer.php");
 
 function utf8_compliant($str) {
