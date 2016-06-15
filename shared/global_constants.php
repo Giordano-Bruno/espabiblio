@@ -71,6 +71,7 @@ define("OBIB_MYSQL_DATE_TYPE",		"date");
 define("OBIB_MYSQL_DATE_FORMAT",	"Y-m-d");
 define("DB_TABLENAME_PREFIX", 		"");// # Not fully implemented yet.
 define('OBI_LANG',"es");//selecciona el idioma por default a usar cuando se install o cuando translate
+//define('OBIB_CHARSET',"es");//selecciona la codificacion
 define("OBIB_TITLE_LARGE", "375");// define el largo de caracteres a mostrar en titulos despues d elas busquedas biblio_view.php
 define("OBIB_BOOTSTRAP", TRUE);// Permite usar el CSS BOOTSTRAP o no. TRUE O FALSE #Fix falta generar un CSS especifico e intregrar repsonsive o movile CSS
 
