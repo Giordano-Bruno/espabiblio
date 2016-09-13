@@ -14,8 +14,9 @@ echo ">\n";
 echo "<head>\n";
 
 // code character set if specified
-if (OBIB_CHARSET != "UTF-8") { ?>
-<meta http-equiv="content-type" content="text/html; charset=<?php echo H(OBIB_CHARSET); ?>">
+if (OBIB_CHARSET != "") { ?>
+  <meta http-equiv="content-type" content="text/html; charset=<?php echo H(OBIB_CHARSET); ?>">
+  <meta charset=<?php echo H(OBIB_CHARSET); ?>">
 <?php } ?>
 
 <!-- **************************************************************************************
