@@ -80,6 +80,10 @@ class BiblioSearchQuery extends Query {
     $joins = '';
     $short = '';
 
+	  if($words == ''){ //mod 2017 2 mar añadido para evitar error en menu de Eliminar Bibliografías por lotes
+		  	$words =array('keyword_type_1' =>  'title');
+	}//mod 2017 2 mar
+	  
     $words = array_unique(unserialize(strtolower(serialize($words))));
 
     if ((sizeof($words) == 0) || ($words[0] == "" && !is_array($words))) { //11-2015 para que no marque error cuando no se manda una cadena de busqueda
